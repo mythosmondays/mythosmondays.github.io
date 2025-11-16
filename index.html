@@ -2,105 +2,85 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Mythos Mondays – Official Brainrot Creator Portfolio</title>
+  <title>Mythos Mondays – Official Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Official portfolio website of Mythos Mondays – AI & brainrot creator with 370k+ followers on TikTok. Custom AI characters, short-form video editing, Canva designs and creative web visuals." />
-  <meta name="author" content="Mythos Mondays" />
-
-  <!-- Open Graph for TikTok / socials -->
-  <meta property="og:title" content="Mythos Mondays – Official Creator Page" />
-  <meta property="og:description" content="Brainrot & AI character creator – TikTok content, custom videos and creative visuals for brands." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://your-domain.github.io" />
-  <meta property="og:image" content="https://your-domain.github.io/assets/preview.jpg" />
+  <meta name="description" content="Official page of Mythos Mondays – brainrot & AI character creator on TikTok. Free wallpapers, Etsy shop and video gallery." />
 
   <style>
     :root {
       --bg: #05060b;
-      --bg-alt: #0c1018;
+      --bg-soft: #0b0f1a;
+      --card: #101522;
       --accent: #ff4b8b;
-      --accent-soft: rgba(255, 75, 139, 0.15);
+      --accent2: #ffb45a;
       --text-main: #f9fafb;
-      --text-muted: #a5afc5;
-      --border-subtle: rgba(255, 255, 255, 0.06);
-      --card-bg: rgba(11, 15, 25, 0.85);
-      --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.6);
-      --radius-lg: 20px;
-      --radius-pill: 999px;
-      --max-width: 1120px;
+      --text-muted: #a7afc4;
+      --border: rgba(255,255,255,0.12);
+      --radius: 18px;
+      --shadow: 0 18px 50px rgba(0,0,0,0.7);
+      --max-width: 1100px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
-      background: radial-gradient(circle at top, #171b2f 0, #05060b 50%);
+      background: radial-gradient(circle at top, #1b2044 0, #05060b 55%);
       color: var(--text-main);
-      line-height: 1.6;
+      line-height: 1.5;
       scroll-behavior: smooth;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; border-radius: 14px; }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    /* Layout */
-
-    .page-wrapper {
+    .page {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
     }
 
+    /* HEADER */
+
     header {
       position: sticky;
       top: 0;
-      z-index: 50;
-      backdrop-filter: blur(24px);
-      background: linear-gradient(to bottom, rgba(5, 6, 11, 0.95), rgba(5, 6, 11, 0.7));
-      border-bottom: 1px solid var(--border-subtle);
+      z-index: 30;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(to bottom, rgba(5,6,11,0.96), rgba(5,6,11,0.75));
+      border-bottom: 1px solid var(--border);
     }
 
     .nav-inner {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 0.8rem 1.25rem;
+      padding: 0.7rem 1.2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
     }
 
-    .brand {
+    .nav-left {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 0.8rem;
     }
 
-    .brand-avatar {
+    .avatar-wrap {
       width: 40px;
       height: 40px;
-      border-radius: 50%;
-      border: 2px solid var(--accent);
+      border-radius: 999px;
       overflow: hidden;
-      box-shadow: 0 0 0 3px rgba(255, 75, 139, 0.25);
-      background: radial-gradient(circle at 30% 0, #ffd28f, #283043);
+      border: 2px solid var(--accent);
+      box-shadow: 0 0 0 3px rgba(255,75,139,0.25);
+      background: radial-gradient(circle at 30% 0, #ffd48f, #283046);
     }
 
-    .brand-avatar-inner {
+    .avatar {
       width: 100%;
       height: 100%;
-      background-image: url("assets/profile-placeholder.png"); /* TODO: replace with your crocodile avatar */
+      background-image: url("assets/IMG_7795.PNG"); /* Profilbild */
       background-size: cover;
       background-position: center;
     }
@@ -112,12 +92,12 @@
 
     .brand-name {
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 0.95rem;
       letter-spacing: 0.04em;
       text-transform: uppercase;
     }
 
-    .brand-tagline {
+    .brand-sub {
       font-size: 0.8rem;
       color: var(--text-muted);
     }
@@ -125,13 +105,12 @@
     nav ul {
       list-style: none;
       display: flex;
-      align-items: center;
-      gap: 1rem;
-      font-size: 0.9rem;
+      gap: 0.8rem;
+      font-size: 0.85rem;
     }
 
     nav a {
-      padding: 0.3rem 0.8rem;
+      padding: 0.25rem 0.8rem;
       border-radius: 999px;
       color: var(--text-muted);
       border: 1px solid transparent;
@@ -139,190 +118,146 @@
 
     nav a:hover {
       color: var(--text-main);
-      background: rgba(255, 255, 255, 0.02);
-      border-color: var(--border-subtle);
+      border-color: var(--border);
+      background: rgba(255,255,255,0.02);
     }
 
     .nav-cta {
-      padding: 0.35rem 1rem;
-      border-radius: var(--radius-pill);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      border: none;
       font-size: 0.85rem;
       font-weight: 600;
-      background: linear-gradient(135deg, #ff4b8b, #ff9a62);
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
       color: #05060b;
-      border: none;
+      box-shadow: var(--shadow);
       cursor: pointer;
-      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.7);
       display: inline-flex;
       align-items: center;
-      gap: 0.35rem;
+      gap: 0.3rem;
     }
 
-    .nav-cta span {
-      font-size: 1.1rem;
-    }
-
-    main {
-      flex: 1;
-    }
+    main { flex: 1; }
 
     section {
-      padding: 3.5rem 1.25rem;
+      padding: 3rem 1.2rem;
     }
 
-    .section-inner {
+    .inner {
       max-width: var(--max-width);
       margin: 0 auto;
     }
 
-    .section-label {
+    .label {
       font-size: 0.75rem;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--accent);
-      font-weight: 600;
+      color: var(--accent2);
       margin-bottom: 0.4rem;
     }
 
-    .section-title {
-      font-size: clamp(1.6rem, 2.5vw, 2rem);
+    .title {
+      font-size: clamp(1.7rem, 3vw, 2.1rem);
       font-weight: 700;
-      margin-bottom: 1rem;
+      margin-bottom: 0.6rem;
     }
 
-    .section-description {
-      max-width: 640px;
-      color: var(--text-muted);
+    .desc {
       font-size: 0.95rem;
-      margin-bottom: 2rem;
+      color: var(--text-muted);
+      max-width: 640px;
     }
 
-    /* Hero */
+    /* HERO */
 
-    #hero {
-      padding-top: 4rem;
-      padding-bottom: 3rem;
-    }
+    #hero { padding-top: 3.4rem; }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
-      gap: 2.5rem;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.1fr);
+      gap: 2rem;
       align-items: center;
-    }
-
-    .hero-badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero-badge {
-      font-size: 0.75rem;
-      padding: 0.35rem 0.8rem;
-      border-radius: 999px;
-      border: 1px solid var(--border-subtle);
-      background: rgba(10, 14, 25, 0.9);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      color: var(--text-muted);
-    }
-
-    .hero-badge strong {
-      color: var(--text-main);
     }
 
     .hero-title {
-      font-size: clamp(2.2rem, 4vw, 3rem);
-      line-height: 1.02;
+      font-size: clamp(2.1rem, 4vw, 2.8rem);
       font-weight: 800;
-      margin-bottom: 0.75rem;
+      line-height: 1.05;
+      margin-bottom: 0.6rem;
     }
 
     .hero-highlight {
-      background: linear-gradient(135deg, #ff9a62, #ff4b8b);
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
       -webkit-background-clip: text;
       color: transparent;
     }
 
-    .hero-subtitle {
+    .hero-sub {
       color: var(--text-muted);
       font-size: 0.98rem;
-      max-width: 560px;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.3rem;
+      max-width: 520px;
     }
 
-    .hero-actions {
+    .hero-buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-bottom: 1.5rem;
+      gap: 0.7rem;
+      margin-bottom: 1.1rem;
     }
 
-    .btn-primary,
+    .btn-main,
     .btn-ghost {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 0.4rem;
-      font-size: 0.9rem;
-      font-weight: 600;
-      padding: 0.75rem 1.4rem;
-      border-radius: var(--radius-pill);
+      padding: 0.7rem 1.3rem;
+      border-radius: 999px;
       border: 1px solid transparent;
+      font-size: 0.88rem;
+      font-weight: 600;
       cursor: pointer;
       text-decoration: none;
     }
 
-    .btn-primary {
-      background: linear-gradient(135deg, #ff4b8b, #ff9a62);
+    .btn-main {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
       color: #05060b;
-      box-shadow: var(--shadow-soft);
+      box-shadow: var(--shadow);
     }
 
     .btn-ghost {
-      background: rgba(10, 14, 25, 0.9);
-      border-color: var(--border-subtle);
+      background: rgba(10,12,22,0.95);
+      border-color: var(--border);
       color: var(--text-muted);
     }
 
     .btn-ghost:hover {
-      border-color: var(--accent);
       color: var(--text-main);
+      border-color: var(--accent);
     }
 
-    .hero-meta {
+    .hero-stats {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.5rem;
-      font-size: 0.8rem;
+      gap: 1.4rem;
+      font-size: 0.86rem;
       color: var(--text-muted);
     }
 
-    .hero-meta-item span {
+    .hero-stat strong {
       display: block;
-    }
-
-    .hero-meta-label {
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      font-weight: 600;
-      margin-bottom: 0.2rem;
-    }
-
-    .hero-meta-value {
-      font-size: 0.95rem;
+      font-size: 1rem;
       color: var(--text-main);
     }
 
     .hero-card {
-      background: radial-gradient(circle at top, #2c3259 0, #05060b 50%);
-      border-radius: var(--radius-lg);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 1.3rem;
-      box-shadow: var(--shadow-soft);
+      background: radial-gradient(circle at top, #2a325a 0, #05060b 55%);
+      border-radius: 26px;
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 1.4rem;
+      box-shadow: var(--shadow);
       position: relative;
       overflow: hidden;
     }
@@ -331,425 +266,304 @@
       content: "";
       position: absolute;
       inset: -40%;
-      background: radial-gradient(circle at top, rgba(255, 75, 139, 0.14), transparent 60%);
-      opacity: 0.9;
+      background: radial-gradient(circle at top, rgba(255,75,139,0.15), transparent 65%);
       pointer-events: none;
     }
 
-    .hero-card-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      margin-bottom: 1rem;
+    .hero-card-inner {
       position: relative;
       z-index: 1;
     }
 
-    .hero-card-profile {
+    .hero-profile-row {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 1rem;
+      margin-bottom: 1rem;
     }
 
-    .hero-card-avatar {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: 2px solid rgba(255, 255, 255, 0.9);
+    .hero-big-avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 999px;
       overflow: hidden;
-      background-image: url("assets/profile-placeholder.png");
+      border: 3px solid #fff;
+      background-image: url("assets/IMG_7795.PNG");
       background-size: cover;
       background-position: center;
     }
 
-    .hero-card-verified {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.25rem;
-      padding: 0.15rem 0.6rem;
-      border-radius: 999px;
-      background: rgba(12, 16, 32, 0.9);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      font-size: 0.7rem;
+    .hero-name-block span {
+      display: block;
+    }
+
+    .hero-handle {
+      font-weight: 700;
+    }
+
+    .hero-tag {
+      font-size: 0.8rem;
       color: var(--text-muted);
     }
 
-    .hero-card-verified span {
+    .badge-veri {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(5,7,15,0.95);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+    }
+
+    .badge-veri span {
       font-size: 0.9rem;
       color: #4fd1ff;
     }
 
-    .hero-card-body {
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-card-stats {
+    .hero-stats-row {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 0.75rem;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 0.7rem;
       margin-bottom: 1rem;
+      font-size: 0.83rem;
     }
 
     .stat-pill {
-      background: rgba(4, 7, 20, 0.85);
+      background: rgba(5,7,16,0.92);
       border-radius: 14px;
-      padding: 0.6rem 0.75rem;
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      font-size: 0.8rem;
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 0.55rem 0.7rem;
     }
 
     .stat-label {
-      display: block;
       font-size: 0.7rem;
       text-transform: uppercase;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.14em;
       color: var(--text-muted);
-      margin-bottom: 0.1rem;
+      margin-bottom: 0.15rem;
     }
 
     .stat-value {
       font-weight: 700;
-      font-size: 0.95rem;
     }
 
-    .hero-card-footer {
+    .social-row {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 0.75rem;
-      font-size: 0.78rem;
-      color: var(--text-muted);
+      gap: 0.5rem;
+      margin-top: 0.6rem;
     }
 
-    .social-icons {
-      display: flex;
-      gap: 0.4rem;
-    }
-
-    .social-icon {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      display: flex;
+    .social-pill {
+      flex: 1;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.9rem;
-      background: rgba(4, 7, 18, 0.9);
+      gap: 0.35rem;
+      padding: 0.4rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(4,7,15,0.95);
+      font-size: 0.78rem;
+      cursor: pointer;
     }
 
-    /* About + Services */
-
-    .two-column {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
-      gap: 2rem;
+    .icon-circle {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      background: #fff;
+      color: #000;
     }
 
-    .card {
-      background: var(--card-bg);
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border-subtle);
-      padding: 1.5rem;
-      box-shadow: var(--shadow-soft);
+    /* VIDEO CAROUSEL */
+
+    #videos .inner { padding-top: 0.4rem; }
+
+    .video-carousel-wrapper {
+      margin-top: 1.6rem;
+      position: relative;
     }
 
-    .about-list {
-      list-style: none;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    .video-track {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
       gap: 0.9rem;
-      margin-top: 1rem;
+      padding-bottom: 0.3rem;
+      scroll-snap-type: x mandatory;
     }
 
-    .about-item {
-      border-radius: 12px;
-      padding: 0.75rem 0.9rem;
-      background: rgba(12, 16, 28, 0.9);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      font-size: 0.85rem;
+    .video-card {
+      min-width: 230px;
+      max-width: 230px;
+      background: var(--card);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 0.7rem;
+      scroll-snap-align: start;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
     }
 
-    .about-item strong {
-      display: block;
-      margin-bottom: 0.25rem;
-      font-size: 0.82rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
+    .video-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+      border-color: var(--accent);
     }
 
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1rem;
-      margin-top: 0.5rem;
+    .video-thumb {
+      width: 100%;
+      height: 140px;
+      border-radius: 14px;
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 0.5rem;
     }
 
-    .service-card {
-      border-radius: 16px;
-      background: radial-gradient(circle at top left, var(--accent-soft), rgba(4, 7, 18, 0.98));
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 1rem;
+    .video-title {
       font-size: 0.9rem;
-    }
-
-    .service-pill {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.25rem 0.7rem;
-      border-radius: 999px;
-      font-size: 0.75rem;
-      margin-bottom: 0.4rem;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      color: var(--text-muted);
-    }
-
-    .service-title {
-      font-weight: 600;
-      margin-bottom: 0.3rem;
-    }
-
-    .service-list {
-      margin-top: 0.45rem;
-      padding-left: 1rem;
-      font-size: 0.82rem;
-      color: var(--text-muted);
-    }
-
-    /* Portfolio / Shop */
-
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 1rem;
-    }
-
-    .portfolio-card, .shop-card {
-      border-radius: 16px;
-      background: rgba(8, 11, 22, 0.96);
-      border: 1px solid var(--border-subtle);
-      padding: 0.9rem;
-      font-size: 0.86rem;
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.2rem 0.6rem;
-      font-size: 0.7rem;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      color: var(--text-muted);
-      margin-bottom: 0.4rem;
-    }
-
-    .card-title {
       font-weight: 600;
       margin-bottom: 0.1rem;
     }
 
-    .card-meta {
+    .video-meta {
       font-size: 0.78rem;
       color: var(--text-muted);
+      margin-bottom: 0.1rem;
+    }
+
+    .video-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.6);
+      background: rgba(5,6,12,0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+      z-index: 5;
+    }
+
+    .video-arrow.left { left: -12px; }
+    .video-arrow.right { right: -12px; }
+
+    /* FREE + SHOP */
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .card-simple {
+      background: var(--bg-soft);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 0.9rem;
+      font-size: 0.88rem;
+    }
+
+    .card-simple h3 {
+      font-size: 0.98rem;
+      margin-top: 0.55rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .card-simple p {
+      color: var(--text-muted);
+      font-size: 0.86rem;
       margin-bottom: 0.5rem;
     }
 
+    .chip {
+      display: inline-block;
+      padding: 0.18rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.2);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+
     .card-link {
-      margin-top: 0.4rem;
-      font-size: 0.8rem;
-      color: var(--accent);
+      font-size: 0.82rem;
+      color: var(--accent2);
       text-decoration: underline;
       text-underline-offset: 3px;
     }
 
-    /* Pricing / Testimonials / FAQ */
+    /* FOLLOW / CONTACT */
 
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1rem;
-    }
-
-    .pricing-card {
-      border-radius: 18px;
-      background: rgba(8, 11, 22, 0.96);
-      border: 1px solid var(--border-subtle);
-      padding: 1rem 1.1rem;
-      font-size: 0.86rem;
-    }
-
-    .price-tag {
-      font-size: 1rem;
-      font-weight: 700;
-      margin: 0.4rem 0;
-    }
-
-    .pricing-note {
-      font-size: 0.77rem;
-      color: var(--text-muted);
-      margin-bottom: 0.5rem;
-    }
-
-    .pricing-list {
-      padding-left: 1rem;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1rem;
-    }
-
-    .testimonial-card {
-      border-radius: 18px;
-      background: rgba(9, 12, 22, 0.96);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 1rem;
-      font-size: 0.86rem;
-    }
-
-    .testimonial-quote {
-      font-style: italic;
-      margin-bottom: 0.6rem;
-    }
-
-    .testimonial-name {
-      font-weight: 600;
-      font-size: 0.8rem;
-    }
-
-    .testimonial-role {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-    }
-
-    .faq-list {
-      margin-top: 0.5rem;
-      display: grid;
-      gap: 0.7rem;
-      font-size: 0.86rem;
-    }
-
-    .faq-item {
-      border-radius: 14px;
-      background: rgba(8, 11, 20, 0.96);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      padding: 0.8rem 0.9rem;
-    }
-
-    .faq-q {
-      font-weight: 600;
-      font-size: 0.85rem;
-      margin-bottom: 0.25rem;
-    }
-
-    .faq-a {
-      color: var(--text-muted);
-      font-size: 0.84rem;
-    }
-
-    /* Contact */
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 2rem;
-    }
-
-    form {
-      display: grid;
-      gap: 0.85rem;
-    }
-
-    label {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--text-muted);
-      margin-bottom: 0.1rem;
-      display: inline-block;
-    }
-
-    input, textarea, select {
-      width: 100%;
-      padding: 0.7rem 0.85rem;
-      border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      background: rgba(6, 9, 18, 0.95);
-      color: var(--text-main);
-      font-size: 0.9rem;
-      outline: none;
-    }
-
-    input:focus, textarea:focus, select:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 1px rgba(255, 75, 139, 0.6);
-    }
-
-    textarea {
-      min-height: 140px;
-      resize: vertical;
-    }
-
-    .form-row-two {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 0.75rem;
-    }
-
-    .form-helper {
-      font-size: 0.74rem;
-      color: var(--text-muted);
-      margin-top: -0.2rem;
-    }
-
-    .contact-sidebar {
-      font-size: 0.86rem;
-      color: var(--text-muted);
-    }
-
-    .contact-highlight {
-      padding: 0.9rem 1rem;
-      border-radius: 16px;
-      border: 1px dashed rgba(255, 255, 255, 0.4);
-      background: radial-gradient(circle at top left, var(--accent-soft), rgba(5, 6, 12, 0.95));
-      margin-bottom: 1rem;
-      color: var(--text-main);
-    }
-
-    .contact-list {
-      list-style: none;
-      display: grid;
-      gap: 0.5rem;
-      margin-top: 0.4rem;
-    }
-
-    .contact-list li span {
-      font-weight: 600;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      display: block;
-      margin-bottom: 0.1rem;
-    }
-
-    .contact-socials {
-      margin-top: 1rem;
+    .follow-row {
       display: flex;
-      flex-direction: column;
-      gap: 0.3rem;
-      font-size: 0.82rem;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-top: 1.3rem;
     }
 
-    /* Footer */
+    .follow-btn {
+      flex: 1;
+      min-width: 180px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.55rem;
+      padding: 0.6rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(9,11,22,0.95);
+      font-size: 0.86rem;
+    }
+
+    .follow-btn strong {
+      font-size: 0.9rem;
+    }
+
+    .contact-box {
+      margin-top: 1.6rem;
+      background: var(--bg-soft);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 1.1rem;
+      font-size: 0.9rem;
+    }
+
+    .contact-box p {
+      margin-bottom: 0.6rem;
+      color: var(--text-muted);
+    }
+
+    .pill-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.4);
+      font-size: 0.86rem;
+      background: #05060b;
+      color: var(--text-main);
+    }
+
+    /* FOOTER */
 
     footer {
-      border-top: 1px solid var(--border-subtle);
-      padding: 1.2rem 1.25rem 2rem;
+      border-top: 1px solid var(--border);
+      padding: 1.2rem 1.2rem 2rem;
       background: #05060b;
     }
 
@@ -759,15 +573,15 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 1rem;
+      gap: 0.8rem;
       font-size: 0.78rem;
       color: var(--text-muted);
     }
 
     .footer-links {
       display: flex;
+      gap: 0.75rem;
       flex-wrap: wrap;
-      gap: 0.7rem;
     }
 
     .footer-links a {
@@ -775,588 +589,358 @@
       text-underline-offset: 2px;
     }
 
-    /* Responsive */
+    /* RESPONSIVE */
 
     @media (max-width: 880px) {
-      .hero-grid,
-      .two-column,
-      .contact-grid {
+      .hero-grid {
         grid-template-columns: minmax(0, 1fr);
       }
-
-      header {
-        position: static;
-      }
-
-      nav ul {
-        display: none;
-      }
-
-      .nav-cta {
-        margin-left: auto;
-      }
+      nav ul { display: none; }
+      header { position: static; }
     }
 
     @media (max-width: 600px) {
-      section {
-        padding: 2.6rem 1.1rem;
-      }
-
-      .hero-title {
-        font-size: 2rem;
-      }
-
-      .hero-card-stats {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+      section { padding: 2.4rem 1.1rem; }
+      .video-arrow.left { left: 4px; }
+      .video-arrow.right { right: 4px; }
     }
   </style>
 </head>
 <body>
-<div class="page-wrapper">
+<div class="page">
 
-  <!-- ===== Header ===== -->
+  <!-- HEADER -->
   <header>
     <div class="nav-inner">
-      <div class="brand">
-        <div class="brand-avatar">
-          <div class="brand-avatar-inner"></div>
+      <div class="nav-left">
+        <div class="avatar-wrap">
+          <div class="avatar"></div>
         </div>
         <div class="brand-text">
           <span class="brand-name">Mythos Mondays</span>
-          <span class="brand-tagline">Brainrot & AI Character Creator</span>
+          <span class="brand-sub">Brainrot · AI Characters</span>
         </div>
       </div>
 
-      <nav aria-label="Main navigation">
+      <nav>
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Work</a></li>
+          <li><a href="#videos">Videos</a></li>
+          <li><a href="#free">Free wallpapers</a></li>
           <li><a href="#shop">Shop</a></li>
-          <li><a href="#pricing">Packages</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#follow">Links</a></li>
         </ul>
       </nav>
 
-      <a href="#contact" class="nav-cta">
-        <span>✉️</span>
-        Book a project
-      </a>
+      <a href="#follow" class="nav-cta">✨ All my links</a>
     </div>
   </header>
 
   <main>
-    <!-- ===== Hero ===== -->
+
+    <!-- HERO -->
     <section id="hero">
-      <div class="section-inner hero-grid">
+      <div class="inner hero-grid">
         <div>
-          <div class="hero-badge-row">
-            <div class="hero-badge">
-              <span>🎥</span>
-              <span><strong>370k+</strong> TikTok followers</span>
-            </div>
-            <div class="hero-badge">
-              <span>🧠</span>
-              <span>Brainrot, AI characters & short-form storytelling</span>
-            </div>
-          </div>
-
           <h1 class="hero-title">
-            Mythos Mondays – <span class="hero-highlight">official creator hub</span> for brands & collabs.
+            <span class="hero-highlight">Mythos Mondays</span><br />
+            Official brainrot & AI character hub.
           </h1>
-
-          <p class="hero-subtitle">
-            I create hyper-cute, surreal AI characters and high-retention brainrot videos that keep people
-            watching to the very last frame. If you want your product or idea turned into a scroll-stopping TikTok,
-            YouTube Short or ad – this is where we start.
+          <p class="hero-sub">
+            370k+ people watching tiny creatures scream and dance.  
+            Hier findest du meine Links, free Wallpapers und digitale Produkte.
           </p>
 
-          <div class="hero-actions">
-            <a href="#contact" class="btn-primary">
-              ✉️ Hire me for a project
+          <div class="hero-buttons">
+            <a class="btn-main" href="https://www.tiktok.com/@mythosmondays" target="_blank" rel="noreferrer">
+              ♫ Watch on TikTok
             </a>
-            <a href="#portfolio" class="btn-ghost">
-              ▶️ Watch sample work
+            <a class="btn-ghost" href="#shop">
+              🛒 Go to shop
             </a>
           </div>
 
-          <div class="hero-meta">
-            <div class="hero-meta-item">
-              <span class="hero-meta-label">Niche</span>
-              <span class="hero-meta-value">AI characters · Brainrot · Cute 3D style</span>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <strong>370k+</strong>
+              Followers on TikTok
             </div>
-            <div class="hero-meta-item">
-              <span class="hero-meta-label">Based in</span>
-              <span class="hero-meta-value">Europe · working worldwide</span>
+            <div class="hero-stat">
+              <strong>31.9M+</strong>
+              Total likes
             </div>
-            <div class="hero-meta-item">
-              <span class="hero-meta-label">Available for</span>
-              <span class="hero-meta-value">UGC, brand collabs, custom edits & web visuals</span>
+            <div class="hero-stat">
+              <strong>50M+</strong>
+              Top video views
             </div>
           </div>
         </div>
 
-        <aside class="hero-card" aria-label="Social proof & stats">
-          <div class="hero-card-header">
-            <div class="hero-card-profile">
-              <div class="hero-card-avatar"></div>
-              <div>
-                <div class="hero-card-verified">
-                  <span>✓</span> Official creator
+        <aside class="hero-card">
+          <div class="hero-card-inner">
+            <div class="hero-profile-row">
+              <div class="hero-big-avatar"></div>
+              <div class="hero-name-block">
+                <span class="hero-handle">@mythosmondays</span>
+                <span class="hero-tag">Brainrot creator · AI animals</span>
+                <div class="badge-veri">
+                  <span>✓</span> Official creator page
                 </div>
-                <div style="font-size:0.85rem;font-weight:600;">@mythosmondays</div>
-                <div style="font-size:0.76rem;color:var(--text-muted);">TikTok · Brainrot Creator</div>
-              </div>
-            </div>
-            <div style="text-align:right;font-size:0.8rem;">
-              <div style="color:var(--text-muted);">Platform</div>
-              <div style="font-weight:600;">TikTok · YouTube Shorts</div>
-            </div>
-          </div>
-
-          <div class="hero-card-body">
-            <div class="hero-card-stats">
-              <div class="stat-pill">
-                <span class="stat-label">Followers</span>
-                <span class="stat-value">370k+</span>
-              </div>
-              <div class="stat-pill">
-                <span class="stat-label">Likes</span>
-                <span class="stat-value">31.9M+</span>
-              </div>
-              <div class="stat-pill">
-                <span class="stat-label">Top video</span>
-                <span class="stat-value">50M+ views</span>
               </div>
             </div>
 
-            <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:0.75rem;">
-              I design full short-form concepts from hook to final frame: AI-generated characters,
-              storyboards, sound-sync and edits optimised for watch-time.
+            <div class="hero-stats-row">
+              <div class="stat-pill">
+                <div class="stat-label">Followers</div>
+                <div class="stat-value">370k+</div>
+              </div>
+              <div class="stat-pill">
+                <div class="stat-label">Likes</div>
+                <div class="stat-value">31.9M+</div>
+              </div>
+              <div class="stat-pill">
+                <div class="stat-label">Style</div>
+                <div class="stat-value">Cute · Chaos · Brainrot</div>
+              </div>
+            </div>
+
+            <p style="font-size:0.84rem;color:var(--text-muted);margin-bottom:0.7rem;">
+              AI-Charaktere, 3D-Look und starke Hooks – perfekt für TikTok / Shorts / Reels.
             </p>
 
-            <div class="hero-card-footer">
-              <div>
-                <div style="font-size:0.75rem;color:var(--text-muted);">Primary contact</div>
-                <div style="font-size:0.82rem;">mythos.mondays.contact@gmail.com</div>
-              </div>
-              <div class="social-icons" aria-label="Social links">
-                <a href="https://www.tiktok.com/@mythosmondays" class="social-icon" aria-label="TikTok" target="_blank" rel="noreferrer">♫</a>
-                <a href="https://youtube.com" class="social-icon" aria-label="YouTube" target="_blank" rel="noreferrer">▶</a>
-                <a href="https://github.com" class="social-icon" aria-label="GitHub" target="_blank" rel="noreferrer">{"{}"}</a>
-              </div>
+            <div class="social-row">
+              <a class="social-pill" href="https://www.tiktok.com/@mythosmondays" target="_blank" rel="noreferrer">
+                <span class="icon-circle">TT</span> TikTok
+              </a>
+              <a class="social-pill" href="https://youtube.com" target="_blank" rel="noreferrer">
+                <span class="icon-circle">YT</span> YouTube
+              </a>
             </div>
           </div>
         </aside>
       </div>
     </section>
 
-    <!-- ===== About & Services ===== -->
-    <section id="about">
-      <div class="section-inner two-column">
-        <div>
-          <div class="section-label">About</div>
-          <h2 class="section-title">Who is behind Mythos Mondays?</h2>
-          <p class="section-description">
-            Mythos Mondays is a one-person studio creating looping, high-energy brainrot content with
-            AI-generated 3D characters. Every video is built around a strong hook, a playful universe,
-            and visuals that make people stop scrolling.
-          </p>
-
-          <div class="card">
-            <p style="font-size:0.9rem;">
-              I combine tools like Midjourney / custom AI pipelines, Canva and professional editing software
-              to deliver ready-to-post content for TikTok, YouTube Shorts, Reels and more.
-            </p>
-            <ul class="about-list">
-              <li class="about-item">
-                <strong>Core skills</strong>
-                AI visual design, character concepts, short-form scripting, pacing, meme culture.
-              </li>
-              <li class="about-item">
-                <strong>Tools</strong>
-                CapCut, Canva, AI image models, GitHub Pages, basic HTML/CSS for simple web experiences.
-              </li>
-              <li class="about-item">
-                <strong>Collab options</strong>
-                One-off UGC videos, recurring content packages, creative consulting for your channel.
-              </li>
-              <li class="about-item">
-                <strong>Languages</strong>
-                English & German – available for global campaigns.
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div id="services">
-          <div class="section-label">Services</div>
-          <h2 class="section-title">What I can do for you</h2>
-          <p class="section-description">
-            Below are the main ways we can work together. All packages can be customised to your brand,
-            product and budget.
-          </p>
-
-          <div class="services-grid">
-            <article class="service-card">
-              <div class="service-pill">Service · UGC / Creator</div>
-              <h3 class="service-title">Custom brainrot TikTok / Reels</h3>
-              <p>
-                I create a full short-form concept around your product or idea, including AI characters and edits
-                optimised for watch-time.
-              </p>
-              <ul class="service-list">
-                <li>Concept & script (hook, mid, payoff)</li>
-                <li>AI character & scene generation</li>
-                <li>Full video editing & export</li>
-                <li>Usage rights for your brand channels</li>
-              </ul>
-            </article>
-
-            <article class="service-card">
-              <div class="service-pill">Service · Design</div>
-              <h3 class="service-title">Canva visuals & thumbnails</h3>
-              <p>
-                Scroll-stopping YouTube thumbnails, social banners and graphics built in Canva for easy future edits.
-              </p>
-              <ul class="service-list">
-                <li>Channel branding kits</li>
-                <li>Thumbnail sets for series</li>
-                <li>Template packs you can reuse</li>
-              </ul>
-            </article>
-
-            <article class="service-card">
-              <div class="service-pill">Service · Web</div>
-              <h3 class="service-title">Simple creator landing pages</h3>
-              <p>
-                Clean one-page websites (like this one) hosted on GitHub Pages – perfect for portfolios
-                or campaign landing pages.
-              </p>
-              <ul class="service-list">
-                <li>Responsive HTML/CSS layout</li>
-                <li>Contact form integration (Formspree / similar)</li>
-                <li>Link hubs to all your social platforms</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Portfolio ===== -->
-    <section id="portfolio">
-      <div class="section-inner">
-        <div class="section-label">Work</div>
-        <h2 class="section-title">Selected videos & concepts</h2>
-        <p class="section-description">
-          A quick snapshot of the kind of performance you can expect. More examples and private
-          case studies are available on request.
+    <!-- VIDEOS -->
+    <section id="videos">
+      <div class="inner">
+        <div class="label">Videos</div>
+        <h2 class="title">Some of my favourite TikToks</h2>
+        <p class="desc">
+          Scroll durch die Clips. Klick auf eine Karte, um direkt das TikTok-Video zu öffnen.
         </p>
 
-        <div class="cards-grid">
-          <article class="portfolio-card">
-            <div class="badge">TikTok · Viral brainrot</div>
-            <h3 class="card-title">Baby sea-creatures on the beach</h3>
-            <p class="card-meta">50M+ views · retention-focused loop · AI characters & sound-synced beats</p>
-            <p>
-              Ultra-cute characters in sneakers running along the shoreline, combined with a catchy audio loop
-              that encourages re-watching.
-            </p>
-            <a class="card-link" href="https://www.tiktok.com/@mythosmondays" target="_blank" rel="noreferrer">
-              View on TikTok ↗
+        <div class="video-carousel-wrapper">
+          <button class="video-arrow left" type="button" aria-label="Previous videos">‹</button>
+          <button class="video-arrow right" type="button" aria-label="Next videos">›</button>
+
+          <div class="video-track" id="video-track">
+            <!-- 1: niedrigste Views -->
+            <article class="video-card" data-url="https://vm.tiktok.com/ZNdE3xGMv/">
+              <div class="video-thumb" style="background-image:url('assets/IMG_7786.PNG');"></div>
+              <div class="video-title">TikTok #1</div>
+              <div class="video-meta">Brainrot · AI creatures</div>
+              <div style="font-size:0.78rem;color:var(--text-muted);">
+                Erster Clip in der Reihe (niedrigste Views).
+              </div>
+            </article>
+
+            <!-- 2 -->
+            <article class="video-card" data-url="https://vm.tiktok.com/ZNdE3x4rx/">
+              <div class="video-thumb" style="background-image:url('assets/IMG_7789.PNG');"></div>
+              <div class="video-title">TikTok #2</div>
+              <div class="video-meta">Brainrot · AI creatures</div>
+              <div style="font-size:0.78rem;color:var(--text-muted);">
+                Zweiter Clip – mehr Views als #1.
+              </div>
+            </article>
+
+            <!-- 3 -->
+            <article class="video-card" data-url="https://vm.tiktok.com/ZNdE3gsA7/">
+              <div class="video-thumb" style="background-image:url('assets/IMG_7793.PNG');"></div>
+              <div class="video-title">TikTok #3</div>
+              <div class="video-meta">Brainrot · AI creatures</div>
+              <div style="font-size:0.78rem;color:var(--text-muted);">
+                Mittleres Video der Reihe.
+              </div>
+            </article>
+
+            <!-- 4 -->
+            <article class="video-card" data-url="https://vm.tiktok.com/ZNdE3t84L/">
+              <div class="video-thumb" style="background-image:url('assets/IMG_7794.PNG');"></div>
+              <div class="video-title">TikTok #4</div>
+              <div class="video-meta">Brainrot · AI creatures</div>
+              <div style="font-size:0.78rem;color:var(--text-muted);">
+                Zweithöchste Views in dieser Auswahl.
+              </div>
+            </article>
+
+            <!-- 5: höchste Views -->
+            <article class="video-card" data-url="https://vm.tiktok.com/ZNdE3PxBv/">
+              <div class="video-thumb" style="background-image:url('assets/IMG_7795.PNG');"></div>
+              <div class="video-title">TikTok #5</div>
+              <div class="video-meta">Brainrot · AI creatures</div>
+              <div style="font-size:0.78rem;color:var(--text-muted);">
+                Video mit den meisten Views aus dieser Reihe.
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FREE WALLPAPERS -->
+    <section id="free">
+      <div class="inner">
+        <div class="label">Free stuff</div>
+        <h2 class="title">Free wallpapers & backgrounds</h2>
+        <p class="desc">
+          Hier findest du ein paar meiner kostenlosen Hintergründe.  
+          Der Download läuft über Ko-fi – einfach klicken.
+        </p>
+
+        <div class="grid-3">
+          <article class="card-simple">
+            <span class="chip">Free · Ko-fi</span>
+            <img src="assets/IMG_7786.PNG" alt="Cute AI creature wallpaper 1" />
+            <h3>Beach creature pack</h3>
+            <p>Mehrere 4K-Wallpapers mit kleinen Strand-Tieren.</p>
+            <a class="card-link" href="https://ko-fi.com/YOUR_PROFILE" target="_blank" rel="noreferrer">
+              Download on Ko-fi ↗
             </a>
           </article>
 
-          <article class="portfolio-card">
-            <div class="badge">TikTok · Storytelling</div>
-            <h3 class="card-title">Brainrot battle – Italian animals vs. others</h3>
-            <p class="card-meta">13M+ views · character lineup · dynamic motion & text</p>
-            <p>
-              A versus-style concept where stylised animal characters face off in a rapid-fire edit, designed to
-              hook viewers within the first 2 seconds.
-            </p>
-            <a class="card-link" href="https://www.tiktok.com/@mythosmondays" target="_blank" rel="noreferrer">
-              Watch sample clips ↗
+          <article class="card-simple">
+            <span class="chip">Free · Ko-fi</span>
+            <img src="assets/IMG_7789.PNG" alt="Cute AI creature wallpaper 2" />
+            <h3>Space cat wallpaper</h3>
+            <p>Große Augen, kleines Chaos im All.</p>
+            <a class="card-link" href="https://ko-fi.com/YOUR_PROFILE" target="_blank" rel="noreferrer">
+              Download on Ko-fi ↗
             </a>
           </article>
 
-          <article class="portfolio-card">
-            <div class="badge">YouTube Shorts</div>
-            <h3 class="card-title">Cute AI pets in everyday chaos</h3>
-            <p class="card-meta">Cross-posted content · high CTR thumbnails</p>
-            <p>
-              Repurposed TikTok content tailored for YouTube Shorts with custom thumbnails and timing adjustments
-              for different audience behaviour.
-            </p>
-            <a class="card-link" href="https://youtube.com" target="_blank" rel="noreferrer">
-              Open YouTube channel ↗
+          <article class="card-simple">
+            <span class="chip">Free · Ko-fi</span>
+            <img src="assets/IMG_7793.PNG" alt="Cute AI creature wallpaper 3" />
+            <h3>Sneaker dolphin</h3>
+            <p>Dein Handyhintergrund, aber brainrot.</p>
+            <a class="card-link" href="https://ko-fi.com/YOUR_PROFILE" target="_blank" rel="noreferrer">
+              Download on Ko-fi ↗
             </a>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ===== Shop / Products ===== -->
+    <!-- SHOP / ETSY -->
     <section id="shop">
-      <div class="section-inner">
-        <div class="section-label">Shop</div>
-        <h2 class="section-title">Digital products & side projects</h2>
-        <p class="section-description">
-          Besides custom client work, I also create downloadable resources for creators – such as colouring books,
-          templates and presets.
+      <div class="inner">
+        <div class="label">Shop</div>
+        <h2 class="title">Digital products on Etsy</h2>
+        <p class="desc">
+          Coloring-Books, Assets und mehr – alles läuft über meinen Etsy-Shop.
         </p>
 
-        <div class="cards-grid">
-          <article class="shop-card">
-            <div class="badge">Etsy · KDP</div>
-            <h3 class="card-title">AI-designed colouring books</h3>
-            <p class="card-meta">Digital / print-on-demand</p>
-            <p>
-              Cute and surreal AI characters in printable colouring pages. Perfect for kids, teens and anyone who
-              loves weirdly adorable worlds.
-            </p>
-            <a class="card-link" href="https://etsy.com" target="_blank" rel="noreferrer">
-              Visit Etsy shop ↗
+        <div class="grid-3">
+          <article class="card-simple">
+            <span class="chip">Etsy</span>
+            <img src="assets/IMG_7794.PNG" alt="Coloring book product" />
+            <h3>Cute creature coloring book</h3>
+            <p>PDF zum Ausdrucken mit vielen AI-Charakteren.</p>
+            <a class="card-link" href="https://www.etsy.com/shop/YOUR_SHOP" target="_blank" rel="noreferrer">
+              View on Etsy ↗
             </a>
           </article>
 
-          <article class="shop-card">
-            <div class="badge">GitHub · Resources</div>
-            <h3 class="card-title">Free & paid creator templates</h3>
-            <p class="card-meta">Hosted on GitHub · HTML / Canva links</p>
-            <p>
-              Simple landing page templates, basic HTML/CSS starter kits and Canva links to help other creators
-              launch their own portfolios.
-            </p>
-            <a class="card-link" href="https://github.com" target="_blank" rel="noreferrer">
-              Explore GitHub repos ↗
+          <article class="card-simple">
+            <span class="chip">Etsy</span>
+            <img src="assets/IMG_7795.PNG" alt="Digital pack" />
+            <h3>Brainrot poster pack</h3>
+            <p>HD-Poster zum Ausdrucken, ready für dein Zimmer.</p>
+            <a class="card-link" href="https://www.etsy.com/shop/YOUR_SHOP" target="_blank" rel="noreferrer">
+              View on Etsy ↗
             </a>
           </article>
 
-          <article class="shop-card">
-            <div class="badge">Coming soon</div>
-            <h3 class="card-title">Preset packs & sound ideas</h3>
-            <p class="card-meta">Planned</p>
-            <p>
-              A pack of transitions, text styles and sound concepts specifically tuned to the brainrot niche.
-              Join the waitlist via the contact form.
-            </p>
+          <article class="card-simple">
+            <span class="chip">Etsy</span>
+            <img src="assets/IMG_7793.PNG" alt="Bundle" />
+            <h3>Bundle: wallpapers + extras</h3>
+            <p>Für alle, die alles haben wollen.</p>
+            <a class="card-link" href="https://www.etsy.com/shop/YOUR_SHOP" target="_blank" rel="noreferrer">
+              View on Etsy ↗
+            </a>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ===== Pricing & Testimonials ===== -->
-    <section id="pricing">
-      <div class="section-inner">
-        <div class="section-label">Packages</div>
-        <h2 class="section-title">Example packages & starting points</h2>
-        <p class="section-description">
-          Every project is different, but these example packages give you a rough idea of scope and pricing.
-          Custom quotes are always possible.
+    <!-- FOLLOW / CONTACT -->
+    <section id="follow">
+      <div class="inner">
+        <div class="label">Links & contact</div>
+        <h2 class="title">Follow & contact</h2>
+        <p class="desc">
+          Hier sind alle wichtigen Links. Wenn du ein Projekt mit mir starten willst,
+          schreib mir einfach eine kurze Mail.
         </p>
 
-        <div class="pricing-grid">
-          <article class="pricing-card">
-            <div class="badge">Package · Starter</div>
-            <h3 class="card-title">Single TikTok / Reel</h3>
-            <p class="price-tag">from €XX</p>
-            <p class="pricing-note">Perfect to test if my style fits your brand.</p>
-            <ul class="pricing-list">
-              <li>1x short-form video (up to 30–45s)</li>
-              <li>Concept, AI visuals & edit included</li>
-              <li>1 feedback / revision round</li>
-              <li>Usage on your brand channels</li>
-            </ul>
-          </article>
-
-          <article class="pricing-card">
-            <div class="badge">Package · Growth</div>
-            <h3 class="card-title">Monthly content bundle</h3>
-            <p class="price-tag">from €XX / month</p>
-            <p class="pricing-note">For brands that want consistent brainrot-style content.</p>
-            <ul class="pricing-list">
-              <li>4–8 videos per month</li>
-              <li>Concepts based on your goals (reach, sales, awareness)</li>
-              <li>Priority communication via email</li>
-              <li>Basic performance feedback / ideas</li>
-            </ul>
-          </article>
-
-          <article class="pricing-card">
-            <div class="badge">Package · Custom</div>
-            <h3 class="card-title">Campaign / character universe</h3>
-            <p class="price-tag">custom quote</p>
-            <p class="pricing-note">Let’s build a whole character world around your brand.</p>
-            <ul class="pricing-list">
-              <li>Concept for recurring AI characters</li>
-              <li>Storylines & recurring series ideas</li>
-              <li>Multi-platform optimisation (TikTok, Shorts, Reels)</li>
-              <li>Optional simple landing page like this one</li>
-            </ul>
-          </article>
-        </div>
-
-        <div style="margin-top:2.5rem;">
-          <div class="section-label">Social proof</div>
-          <h2 class="section-title">What collaborators say</h2>
-          <p class="section-description">
-            A few words from people I have worked with. More detailed case studies are available privately.
-          </p>
-          <div class="testimonials-grid">
-            <article class="testimonial-card">
-              <p class="testimonial-quote">
-                “We wanted something weird, cute and attention-grabbing – Mythos delivered exactly that and our
-                video outperformed our usual content by a huge margin.”
-              </p>
-              <div class="testimonial-name">Brand collaboration – short-form ad</div>
-              <div class="testimonial-role">UGC / creator partnership</div>
-            </article>
-            <article class="testimonial-card">
-              <p class="testimonial-quote">
-                “Fast communication, strong ideas for hooks and a really unique visual style. The files were
-                delivered ready-to-post and performed well.”
-              </p>
-              <div class="testimonial-name">Online shop owner</div>
-              <div class="testimonial-role">3-video test package</div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== FAQ & Contact ===== -->
-    <section id="contact">
-      <div class="section-inner contact-grid">
-        <div>
-          <div class="section-label">Contact</div>
-          <h2 class="section-title">Let’s build something weird & memorable.</h2>
-          <p class="section-description">
-            Tell me a bit about your brand, your product and what you’d like to achieve. I read every message
-            personally and usually reply within 24–48 hours.
-          </p>
-
-          <!--
-            IMPORTANT:
-            For GitHub Pages you need a form handler (e.g. Formspree).
-            1. Go to https://formspree.io, create a form and get your endpoint.
-            2. Replace the value of action="" below with your Formspree URL.
-          -->
-          <form id="contact-form" action="https://formspree.io/f/YOUR-FORMSPREE-ID" method="POST">
-            <div class="form-row-two">
-              <div>
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" placeholder="Your name / brand" required />
-              </div>
-              <div>
-                <label for="email">Email</label>
-                <input id="email" name="_replyto" type="email" placeholder="you@email.com" required />
-              </div>
-            </div>
-
-            <div class="form-row-two">
-              <div>
-                <label for="project-type">Project type</label>
-                <select id="project-type" name="project_type">
-                  <option value="TikTok/UGC video">TikTok / UGC video</option>
-                  <option value="Monthly content package">Monthly content package</option>
-                  <option value="Canva / design work">Canva / design work</option>
-                  <option value="Landing page / website">Landing page / website</option>
-                  <option value="Other / not sure yet">Other / not sure yet</option>
-                </select>
-              </div>
-              <div>
-                <label for="budget">Budget (optional)</label>
-                <input id="budget" name="budget" type="text" placeholder="e.g. €200–500" />
-              </div>
-            </div>
-
+        <div class="follow-row">
+          <a class="follow-btn" href="https://www.tiktok.com/@mythosmondays" target="_blank" rel="noreferrer">
+            <span class="icon-circle">TT</span>
             <div>
-              <label for="message">Project details</label>
-              <textarea id="message" name="message" placeholder="Tell me about your brand, your product and what kind of video or visuals you need." required></textarea>
-              <p class="form-helper">
-                Include links to your existing social profiles if you have them. All information stays private.
-              </p>
+              <strong>TikTok</strong><br />
+              Hauptkanal mit allen Brainrot-Videos.
             </div>
+          </a>
 
-            <button class="btn-primary" type="submit">
-              ✉️ Send inquiry
-            </button>
-          </form>
+          <a class="follow-btn" href="https://youtube.com" target="_blank" rel="noreferrer">
+            <span class="icon-circle">YT</span>
+            <div>
+              <strong>YouTube</strong><br />
+              Shorts & Experimente mit den Charakteren.
+            </div>
+          </a>
 
-          <p id="form-status" class="form-helper" style="margin-top:0.6rem;"></p>
+          <a class="follow-btn" href="https://www.etsy.com/shop/YOUR_SHOP" target="_blank" rel="noreferrer">
+            <span class="icon-circle">E</span>
+            <div>
+              <strong>Etsy</strong><br />
+              Coloring-Books & digitale Produkte.
+            </div>
+          </a>
+
+          <a class="follow-btn" href="https://ko-fi.com/YOUR_PROFILE" target="_blank" rel="noreferrer">
+            <span class="icon-circle">K</span>
+            <div>
+              <strong>Ko-fi</strong><br />
+              Free Wallpapers & Support.
+            </div>
+          </a>
         </div>
 
-        <aside class="contact-sidebar">
-          <div class="contact-highlight">
-            <strong>Business & media inquiries</strong><br />
-            For all partnerships, project requests, and media questions please use the form or email me directly.
-          </div>
-
-          <ul class="contact-list">
-            <li>
-              <span>Email</span>
-              mythos.mondays.contact@gmail.com
-              <!-- TODO: update if you change your address -->
-            </li>
-            <li>
-              <span>Primary platform</span>
-              TikTok – <a href="https://www.tiktok.com/@mythosmondays" target="_blank" rel="noreferrer">@mythosmondays</a>
-            </li>
-            <li>
-              <span>Secondary platforms</span>
-              YouTube Shorts · GitHub · Etsy (for digital products)
-            </li>
-          </ul>
-
-          <div class="contact-socials">
-            <strong>Quick links</strong>
-            <a href="https://www.tiktok.com/@mythosmondays" target="_blank" rel="noreferrer">TikTok profile ↗</a>
-            <a href="https://youtube.com" target="_blank" rel="noreferrer">YouTube channel ↗</a>
-            <a href="https://etsy.com" target="_blank" rel="noreferrer">Etsy shop ↗</a>
-            <a href="https://github.com" target="_blank" rel="noreferrer">GitHub profile ↗</a>
-          </div>
-
-          <div style="margin-top:1.2rem;">
-            <div class="section-label">FAQ</div>
-            <div class="faq-list">
-              <div class="faq-item">
-                <div class="faq-q">Do you appear on camera yourself?</div>
-                <div class="faq-a">
-                  No – my content is focused on AI-generated 3D characters and surreal universes. This keeps
-                  everything consistent and brand-friendly.
-                </div>
-              </div>
-              <div class="faq-item">
-                <div class="faq-q">Can I use the videos on paid ads?</div>
-                <div class="faq-a">
-                  Yes, that’s possible – we just need to agree on usage rights in advance (organic only vs. paid usage).
-                </div>
-              </div>
-              <div class="faq-item">
-                <div class="faq-q">Which languages do you work in?</div>
-                <div class="faq-a">
-                  I work in English and German. Subtitles or text elements can be adapted for your market.
-                </div>
-              </div>
-            </div>
-          </div>
-        </aside>
+        <div class="contact-box">
+          <p>
+            Für Anfragen zu Kooperationen, Videos oder Projekten – bitte einfach per Mail melden.
+          </p>
+          <a class="pill-email" href="mailto:mythos.mondays.contact@gmail.com">
+            ✉ mythos.mondays.contact@gmail.com
+          </a>
+          <p style="font-size:0.8rem;margin-top:0.6rem;">
+            Antworte in Deutsch oder Englisch. Bitte kurz schreiben, worum es geht (z.B. Brand, Budget, Idee).
+          </p>
+        </div>
       </div>
     </section>
+
   </main>
 
-  <!-- ===== Footer ===== -->
   <footer>
     <div class="footer-inner">
-      <div>
-        © <span id="year"></span> Mythos Mondays · All rights reserved.
-      </div>
+      <div>© <span id="year"></span> Mythos Mondays · Official creator page.</div>
       <div class="footer-links">
         <a href="/imprint.html">Imprint</a>
-        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/privacy.html">Privacy</a>
         <a href="/terms.html">Terms</a>
       </div>
     </div>
@@ -1365,21 +949,30 @@
 </div>
 
 <script>
-  // Update year automatically
+  // Jahr automatisch
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  // Simple success message for the contact form
-  const form = document.getElementById("contact-form");
-  const status = document.getElementById("form-status");
-
-  form.addEventListener("submit", function (event) {
-    // If you integrate a real service like Formspree,
-    // you can remove this preventDefault and let the form submit.
-    event.preventDefault();
-
-    status.textContent = "Thanks for your message! This demo form is set up – once the email service is connected, your inquiry will go straight to my inbox.";
-    form.reset();
+  // Video-Karten klickbar machen
+  const videoCards = document.querySelectorAll(".video-card");
+  videoCards.forEach(card => {
+    card.addEventListener("click", () => {
+      const url = card.getAttribute("data-url");
+      if (url) window.open(url, "_blank");
+    });
   });
+
+  // Carousel-Pfeile
+  const track = document.getElementById("video-track");
+  const leftBtn = document.querySelector(".video-arrow.left");
+  const rightBtn = document.querySelector(".video-arrow.right");
+
+  function scrollByAmount(dir) {
+    const amount = track.clientWidth * 0.9;
+    track.scrollBy({ left: dir * amount, behavior: "smooth" });
+  }
+
+  leftBtn.addEventListener("click", () => scrollByAmount(-1));
+  rightBtn.addEventListener("click", () => scrollByAmount(1));
 </script>
 </body>
 </html>
