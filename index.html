@@ -2,30 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Mythos Mondays – Official Page</title>
+  <title>Mythos Mondays – Official Creator Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Official page of Mythos Mondays – brainrot & AI character creator on TikTok. Free wallpapers, Etsy shop and video gallery." />
+  <meta name="description" content="Official creator page of Mythos Mondays – brainrot & AI character videos on TikTok. Watch highlights, get free wallpapers, visit the Etsy shop and send collaboration requests." />
 
   <style>
     :root {
       --bg: #05060b;
-      --bg-soft: #0b0f1a;
-      --card: #101522;
+      --bg-soft: #0c101b;
+      --card: #101523;
       --accent: #ff4b8b;
       --accent2: #ffb45a;
+      --accent-soft: rgba(255, 75, 139, 0.12);
       --text-main: #f9fafb;
       --text-muted: #a7afc4;
       --border: rgba(255,255,255,0.12);
       --radius: 18px;
       --shadow: 0 18px 50px rgba(0,0,0,0.7);
-      --max-width: 1100px;
+      --max-width: 1120px;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
-      background: radial-gradient(circle at top, #1b2044 0, #05060b 55%);
+      background: radial-gradient(circle at top, #1b2146 0, #05060b 55%);
       color: var(--text-main);
       line-height: 1.5;
       scroll-behavior: smooth;
@@ -45,9 +46,9 @@
     header {
       position: sticky;
       top: 0;
-      z-index: 30;
+      z-index: 40;
       backdrop-filter: blur(18px);
-      background: linear-gradient(to bottom, rgba(5,6,11,0.96), rgba(5,6,11,0.75));
+      background: linear-gradient(to bottom, rgba(5,6,11,0.96), rgba(5,6,11,0.8));
       border-bottom: 1px solid var(--border);
     }
 
@@ -80,7 +81,7 @@
     .avatar {
       width: 100%;
       height: 100%;
-      background-image: url("assets/IMG_7795.PNG"); /* Profilbild */
+      background-image: url("IMG_3108.jpg"); /* logo */
       background-size: cover;
       background-position: center;
     }
@@ -122,8 +123,38 @@
       background: rgba(255,255,255,0.02);
     }
 
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .lang-switch {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(8,10,20,0.85);
+      border: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.78rem;
+    }
+
+    .lang-switch span {
+      opacity: 0.7;
+      cursor: pointer;
+      padding: 0.15rem 0.35rem;
+      border-radius: 999px;
+    }
+
+    .lang-switch span.active {
+      opacity: 1;
+      font-weight: 600;
+      background: rgba(255,255,255,0.1);
+    }
+
     .nav-cta {
-      padding: 0.4rem 1rem;
+      padding: 0.4rem 1.1rem;
       border-radius: 999px;
       border: none;
       font-size: 0.85rem;
@@ -288,7 +319,7 @@
       border-radius: 999px;
       overflow: hidden;
       border: 3px solid #fff;
-      background-image: url("assets/IMG_7795.PNG");
+      background-image: url("IMG_3108.jpg");
       background-size: cover;
       background-position: center;
     }
@@ -399,6 +430,12 @@
       gap: 0.9rem;
       padding-bottom: 0.3rem;
       scroll-snap-type: x mandatory;
+
+      /* hide scrollbar */
+      scrollbar-width: none;
+    }
+    .video-track::-webkit-scrollbar {
+      display: none;
     }
 
     .video-card {
@@ -460,7 +497,7 @@
     .video-arrow.left { left: -12px; }
     .video-arrow.right { right: -12px; }
 
-    /* FREE + SHOP */
+    /* GRID CARDS (FREE + SHOP) */
 
     .grid-3 {
       display: grid;
@@ -506,57 +543,103 @@
       text-underline-offset: 3px;
     }
 
-    /* FOLLOW / CONTACT */
+    /* CONTACT / LINKS */
 
-    .follow-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.7rem;
-      margin-top: 1.3rem;
-    }
-
-    .follow-btn {
-      flex: 1;
-      min-width: 180px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 0.55rem;
-      padding: 0.6rem 0.9rem;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(9,11,22,0.95);
-      font-size: 0.86rem;
-    }
-
-    .follow-btn strong {
-      font-size: 0.9rem;
-    }
-
-    .contact-box {
+    .split-2 {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 2rem;
       margin-top: 1.6rem;
-      background: var(--bg-soft);
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      padding: 1.1rem;
-      font-size: 0.9rem;
     }
 
-    .contact-box p {
-      margin-bottom: 0.6rem;
+    form {
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      margin-bottom: 0.1rem;
+      display: inline-block;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 0.7rem 0.85rem;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(6,9,18,0.95);
+      color: var(--text-main);
+      font-size: 0.9rem;
+      outline: none;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px rgba(255, 75, 139, 0.6);
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .form-row-two {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .form-helper {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: -0.15rem;
+    }
+
+    .contact-side {
+      font-size: 0.86rem;
       color: var(--text-muted);
     }
 
-    .pill-email {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.45rem 0.9rem;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.4);
-      font-size: 0.86rem;
-      background: #05060b;
+    .contact-highlight {
+      padding: 0.9rem 1rem;
+      border-radius: 16px;
+      border: 1px dashed rgba(255,255,255,0.4);
+      background: radial-gradient(circle at top left, var(--accent-soft), rgba(5,6,12,0.95));
+      margin-bottom: 1rem;
       color: var(--text-main);
+      font-size: 0.9rem;
+    }
+
+    .contact-list {
+      list-style: none;
+      display: grid;
+      gap: 0.6rem;
+      margin-top: 0.4rem;
+    }
+
+    .contact-list span {
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      display: block;
+      margin-bottom: 0.1rem;
+    }
+
+    .quick-links {
+      margin-top: 1rem;
+      display: grid;
+      gap: 0.4rem;
+      font-size: 0.84rem;
+    }
+
+    .quick-links a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
     /* FOOTER */
@@ -597,12 +680,16 @@
       }
       nav ul { display: none; }
       header { position: static; }
+      .split-2 {
+        grid-template-columns: minmax(0, 1fr);
+      }
     }
 
     @media (max-width: 600px) {
       section { padding: 2.4rem 1.1rem; }
       .video-arrow.left { left: 4px; }
       .video-arrow.right { right: 4px; }
+      .nav-inner { padding-inline: 0.9rem; }
     }
   </style>
 </head>
@@ -617,21 +704,31 @@
           <div class="avatar"></div>
         </div>
         <div class="brand-text">
-          <span class="brand-name">Mythos Mondays</span>
-          <span class="brand-sub">Brainrot · AI Characters</span>
+          <span class="brand-name" data-i18n="brand_name">Mythos Mondays</span>
+          <span class="brand-sub" data-i18n="brand_tagline">Brainrot · AI Characters</span>
         </div>
       </div>
 
       <nav>
         <ul>
-          <li><a href="#videos">Videos</a></li>
-          <li><a href="#free">Free wallpapers</a></li>
-          <li><a href="#shop">Shop</a></li>
-          <li><a href="#follow">Links</a></li>
+          <li><a href="#videos" data-i18n="nav_videos">Videos</a></li>
+          <li><a href="#free" data-i18n="nav_free">Free wallpapers</a></li>
+          <li><a href="#shop" data-i18n="nav_shop">Shop</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
         </ul>
       </nav>
 
-      <a href="#follow" class="nav-cta">✨ All my links</a>
+      <div class="nav-right">
+        <div class="lang-switch" aria-label="Language switch">
+          <span data-lang-btn="en" class="active">EN</span>
+          <span data-lang-btn="de">DE</span>
+          <span data-lang-btn="es">ES</span>
+          <span data-lang-btn="it">IT</span>
+          <span data-lang-btn="zh">中文</span>
+          <span data-lang-btn="ja">日本語</span>
+        </div>
+        <a href="#contact" class="nav-cta" data-i18n="nav_cta">✨ Work with me</a>
+      </div>
     </div>
   </header>
 
@@ -641,36 +738,36 @@
     <section id="hero">
       <div class="inner hero-grid">
         <div>
-          <h1 class="hero-title">
+          <h1 class="hero-title" data-i18n="hero_title">
             <span class="hero-highlight">Mythos Mondays</span><br />
             Official brainrot & AI character hub.
           </h1>
-          <p class="hero-sub">
-            370k+ people watching tiny creatures scream and dance.  
-            Hier findest du meine Links, free Wallpapers und digitale Produkte.
+          <p class="hero-sub" data-i18n="hero_subtitle">
+            I create viral brainrot videos with tiny screaming creatures and AI-generated 3D worlds.
+            This is my official page for brands, partners and everyone who wants wallpapers or products.
           </p>
 
           <div class="hero-buttons">
-            <a class="btn-main" href="https://www.tiktok.com/@mythosmondays" target="_blank" rel="noreferrer">
+            <a class="btn-main" href="https://www.tiktok.com/@mythosmondays" target="_blank" rel="noreferrer" data-i18n="hero_btn_tiktok">
               ♫ Watch on TikTok
             </a>
-            <a class="btn-ghost" href="#shop">
-              🛒 Go to shop
+            <a class="btn-ghost" href="#shop" data-i18n="hero_btn_shop">
+              🛒 Open shop section
             </a>
           </div>
 
           <div class="hero-stats">
             <div class="hero-stat">
               <strong>370k+</strong>
-              Followers on TikTok
+              <span data-i18n="hero_stat_followers">followers on TikTok</span>
             </div>
             <div class="hero-stat">
               <strong>31.9M+</strong>
-              Total likes
+              <span data-i18n="hero_stat_likes">total likes</span>
             </div>
             <div class="hero-stat">
               <strong>50M+</strong>
-              Top video views
+              <span data-i18n="hero_stat_topvideo">views on the top video</span>
             </div>
           </div>
         </div>
@@ -681,38 +778,40 @@
               <div class="hero-big-avatar"></div>
               <div class="hero-name-block">
                 <span class="hero-handle">@mythosmondays</span>
-                <span class="hero-tag">Brainrot creator · AI animals</span>
+                <span class="hero-tag" data-i18n="hero_tagline">Brainrot creator · AI animals</span>
                 <div class="badge-veri">
-                  <span>✓</span> Official creator page
+                  <span>✓</span> <span data-i18n="hero_badge">Official creator page</span>
                 </div>
               </div>
             </div>
 
             <div class="hero-stats-row">
               <div class="stat-pill">
-                <div class="stat-label">Followers</div>
+                <div class="stat-label" data-i18n="stat_label_followers">Followers</div>
                 <div class="stat-value">370k+</div>
               </div>
               <div class="stat-pill">
-                <div class="stat-label">Likes</div>
+                <div class="stat-label" data-i18n="stat_label_likes">Likes</div>
                 <div class="stat-value">31.9M+</div>
               </div>
               <div class="stat-pill">
-                <div class="stat-label">Style</div>
-                <div class="stat-value">Cute · Chaos · Brainrot</div>
+                <div class="stat-label" data-i18n="stat_label_style">Style</div>
+                <div class="stat-value" data-i18n="stat_value_style">Cute · Chaos · Brainrot</div>
               </div>
             </div>
 
-            <p style="font-size:0.84rem;color:var(--text-muted);margin-bottom:0.7rem;">
-              AI-Charaktere, 3D-Look und starke Hooks – perfekt für TikTok / Shorts / Reels.
+            <p style="font-size:0.84rem;color:var(--text-muted);margin-bottom:0.7rem;" data-i18n="hero_card_desc">
+              Short-form video concepts from hook to final frame: AI characters, storyboards and edits tuned for high watch time on TikTok, Shorts and Reels.
             </p>
 
             <div class="social-row">
               <a class="social-pill" href="https://www.tiktok.com/@mythosmondays" target="_blank" rel="noreferrer">
-                <span class="icon-circle">TT</span> TikTok
+                <span class="icon-circle">TT</span>
+                <span data-i18n="social_tiktok">TikTok channel</span>
               </a>
               <a class="social-pill" href="https://youtube.com" target="_blank" rel="noreferrer">
-                <span class="icon-circle">YT</span> YouTube
+                <span class="icon-circle">YT</span>
+                <span data-i18n="social_youtube">YouTube Shorts</span>
               </a>
             </div>
           </div>
@@ -723,10 +822,10 @@
     <!-- VIDEOS -->
     <section id="videos">
       <div class="inner">
-        <div class="label">Videos</div>
-        <h2 class="title">Some of my favourite TikToks</h2>
-        <p class="desc">
-          Scroll durch die Clips. Klick auf eine Karte, um direkt das TikTok-Video zu öffnen.
+        <div class="label" data-i18n="videos_label">Videos</div>
+        <h2 class="title" data-i18n="videos_title">Some of my favourite TikToks</h2>
+        <p class="desc" data-i18n="videos_desc">
+          Scroll through the clips. Tap a card to open the original TikTok in a new tab.
         </p>
 
         <div class="video-carousel-wrapper">
@@ -734,53 +833,48 @@
           <button class="video-arrow right" type="button" aria-label="Next videos">›</button>
 
           <div class="video-track" id="video-track">
-            <!-- 1: niedrigste Views -->
             <article class="video-card" data-url="https://vm.tiktok.com/ZNdE3xGMv/">
-              <div class="video-thumb" style="background-image:url('assets/IMG_7786.PNG');"></div>
-              <div class="video-title">TikTok #1</div>
-              <div class="video-meta">Brainrot · AI creatures</div>
-              <div style="font-size:0.78rem;color:var(--text-muted);">
-                Erster Clip in der Reihe (niedrigste Views).
+              <div class="video-thumb" style="background-image:url('IMG_7786.PNG');"></div>
+              <div class="video-title" data-i18n="video1_title">TikTok #1</div>
+              <div class="video-meta" data-i18n="video1_meta">Brainrot · AI creatures</div>
+              <div style="font-size:0.78rem;color:var(--text-muted);" data-i18n="video1_desc">
+                First clip in this selection (lowest views).
               </div>
             </article>
 
-            <!-- 2 -->
             <article class="video-card" data-url="https://vm.tiktok.com/ZNdE3x4rx/">
-              <div class="video-thumb" style="background-image:url('assets/IMG_7789.PNG');"></div>
-              <div class="video-title">TikTok #2</div>
-              <div class="video-meta">Brainrot · AI creatures</div>
-              <div style="font-size:0.78rem;color:var(--text-muted);">
-                Zweiter Clip – mehr Views als #1.
+              <div class="video-thumb" style="background-image:url('IMG_7789.PNG');"></div>
+              <div class="video-title" data-i18n="video2_title">TikTok #2</div>
+              <div class="video-meta" data-i18n="video2_meta">Brainrot · AI creatures</div>
+              <div style="font-size:0.78rem;color:var(--text-muted);" data-i18n="video2_desc">
+                Second clip in the row – more views than #1.
               </div>
             </article>
 
-            <!-- 3 -->
             <article class="video-card" data-url="https://vm.tiktok.com/ZNdE3gsA7/">
-              <div class="video-thumb" style="background-image:url('assets/IMG_7793.PNG');"></div>
-              <div class="video-title">TikTok #3</div>
-              <div class="video-meta">Brainrot · AI creatures</div>
-              <div style="font-size:0.78rem;color:var(--text-muted);">
-                Mittleres Video der Reihe.
+              <div class="video-thumb" style="background-image:url('IMG_7793.PNG');"></div>
+              <div class="video-title" data-i18n="video3_title">TikTok #3</div>
+              <div class="video-meta" data-i18n="video3_meta">Brainrot · AI creatures</div>
+              <div style="font-size:0.78rem;color:var(--text-muted);" data-i18n="video3_desc">
+                Middle video of this selection.
               </div>
             </article>
 
-            <!-- 4 -->
             <article class="video-card" data-url="https://vm.tiktok.com/ZNdE3t84L/">
-              <div class="video-thumb" style="background-image:url('assets/IMG_7794.PNG');"></div>
-              <div class="video-title">TikTok #4</div>
-              <div class="video-meta">Brainrot · AI creatures</div>
-              <div style="font-size:0.78rem;color:var(--text-muted);">
-                Zweithöchste Views in dieser Auswahl.
+              <div class="video-thumb" style="background-image:url('IMG_7794.PNG');"></div>
+              <div class="video-title" data-i18n="video4_title">TikTok #4</div>
+              <div class="video-meta" data-i18n="video4_meta">Brainrot · AI creatures</div>
+              <div style="font-size:0.78rem;color:var(--text-muted);" data-i18n="video4_desc">
+                Second highest views in this line-up.
               </div>
             </article>
 
-            <!-- 5: höchste Views -->
             <article class="video-card" data-url="https://vm.tiktok.com/ZNdE3PxBv/">
-              <div class="video-thumb" style="background-image:url('assets/IMG_7795.PNG');"></div>
-              <div class="video-title">TikTok #5</div>
-              <div class="video-meta">Brainrot · AI creatures</div>
-              <div style="font-size:0.78rem;color:var(--text-muted);">
-                Video mit den meisten Views aus dieser Reihe.
+              <div class="video-thumb" style="background-image:url('IMG_7795.PNG');"></div>
+              <div class="video-title" data-i18n="video5_title">TikTok #5</div>
+              <div class="video-meta" data-i18n="video5_meta">Brainrot · AI creatures</div>
+              <div style="font-size:0.78rem;color:var(--text-muted);" data-i18n="video5_desc">
+                The most-viewed video in this selection.
               </div>
             </article>
           </div>
@@ -791,40 +885,39 @@
     <!-- FREE WALLPAPERS -->
     <section id="free">
       <div class="inner">
-        <div class="label">Free stuff</div>
-        <h2 class="title">Free wallpapers & backgrounds</h2>
-        <p class="desc">
-          Hier findest du ein paar meiner kostenlosen Hintergründe.  
-          Der Download läuft über Ko-fi – einfach klicken.
+        <div class="label" data-i18n="free_label">Free stuff</div>
+        <h2 class="title" data-i18n="free_title">Free wallpapers & backgrounds</h2>
+        <p class="desc" data-i18n="free_desc">
+          Download some of my wallpapers for free. The actual download happens on Ko-fi.
         </p>
 
         <div class="grid-3">
           <article class="card-simple">
-            <span class="chip">Free · Ko-fi</span>
-            <img src="assets/IMG_7786.PNG" alt="Cute AI creature wallpaper 1" />
-            <h3>Beach creature pack</h3>
-            <p>Mehrere 4K-Wallpapers mit kleinen Strand-Tieren.</p>
-            <a class="card-link" href="https://ko-fi.com/YOUR_PROFILE" target="_blank" rel="noreferrer">
+            <span class="chip" data-i18n="free_chip">Free · Ko-fi</span>
+            <img src="IMG_7786.PNG" alt="Wallpaper preview 1" />
+            <h3 data-i18n="free1_title">Beach creature pack</h3>
+            <p data-i18n="free1_desc">Multiple 4K wallpapers with tiny creatures on the beach.</p>
+            <a class="card-link" href="https://ko-fi.com/YOUR_PROFILE" target="_blank" rel="noreferrer" data-i18n="free_link">
               Download on Ko-fi ↗
             </a>
           </article>
 
           <article class="card-simple">
-            <span class="chip">Free · Ko-fi</span>
-            <img src="assets/IMG_7789.PNG" alt="Cute AI creature wallpaper 2" />
-            <h3>Space cat wallpaper</h3>
-            <p>Große Augen, kleines Chaos im All.</p>
-            <a class="card-link" href="https://ko-fi.com/YOUR_PROFILE" target="_blank" rel="noreferrer">
+            <span class="chip" data-i18n="free_chip">Free · Ko-fi</span>
+            <img src="IMG_7789.PNG" alt="Wallpaper preview 2" />
+            <h3 data-i18n="free2_title">Space cat wallpaper</h3>
+            <p data-i18n="free2_desc">Big eyes, small chaos and a lot of stars.</p>
+            <a class="card-link" href="https://ko-fi.com/YOUR_PROFILE" target="_blank" rel="noreferrer" data-i18n="free_link">
               Download on Ko-fi ↗
             </a>
           </article>
 
           <article class="card-simple">
-            <span class="chip">Free · Ko-fi</span>
-            <img src="assets/IMG_7793.PNG" alt="Cute AI creature wallpaper 3" />
-            <h3>Sneaker dolphin</h3>
-            <p>Dein Handyhintergrund, aber brainrot.</p>
-            <a class="card-link" href="https://ko-fi.com/YOUR_PROFILE" target="_blank" rel="noreferrer">
+            <span class="chip" data-i18n="free_chip">Free · Ko-fi</span>
+            <img src="IMG_7793.PNG" alt="Wallpaper preview 3" />
+            <h3 data-i18n="free3_title">Sneaker dolphin</h3>
+            <p data-i18n="free3_desc">Your phone background, but brainrot style.</p>
+            <a class="card-link" href="https://ko-fi.com/YOUR_PROFILE" target="_blank" rel="noreferrer" data-i18n="free_link">
               Download on Ko-fi ↗
             </a>
           </article>
@@ -835,39 +928,39 @@
     <!-- SHOP / ETSY -->
     <section id="shop">
       <div class="inner">
-        <div class="label">Shop</div>
-        <h2 class="title">Digital products on Etsy</h2>
-        <p class="desc">
-          Coloring-Books, Assets und mehr – alles läuft über meinen Etsy-Shop.
+        <div class="label" data-i18n="shop_label">Shop</div>
+        <h2 class="title" data-i18n="shop_title">Digital products on Etsy</h2>
+        <p class="desc" data-i18n="shop_desc">
+          Coloring books, poster files and digital packs – all handled through my Etsy shop.
         </p>
 
         <div class="grid-3">
           <article class="card-simple">
-            <span class="chip">Etsy</span>
-            <img src="assets/IMG_7794.PNG" alt="Coloring book product" />
-            <h3>Cute creature coloring book</h3>
-            <p>PDF zum Ausdrucken mit vielen AI-Charakteren.</p>
-            <a class="card-link" href="https://www.etsy.com/shop/YOUR_SHOP" target="_blank" rel="noreferrer">
+            <span class="chip" data-i18n="shop_chip">Etsy</span>
+            <img src="IMG_7794.PNG" alt="Product preview 1" />
+            <h3 data-i18n="shop1_title">Cute creature coloring book</h3>
+            <p data-i18n="shop1_desc">Printable PDF with many AI characters and scenes.</p>
+            <a class="card-link" href="https://www.etsy.com/shop/YOUR_SHOP" target="_blank" rel="noreferrer" data-i18n="shop_link">
               View on Etsy ↗
             </a>
           </article>
 
           <article class="card-simple">
-            <span class="chip">Etsy</span>
-            <img src="assets/IMG_7795.PNG" alt="Digital pack" />
-            <h3>Brainrot poster pack</h3>
-            <p>HD-Poster zum Ausdrucken, ready für dein Zimmer.</p>
-            <a class="card-link" href="https://www.etsy.com/shop/YOUR_SHOP" target="_blank" rel="noreferrer">
+            <span class="chip" data-i18n="shop_chip">Etsy</span>
+            <img src="IMG_7795.PNG" alt="Product preview 2" />
+            <h3 data-i18n="shop2_title">Brainrot poster pack</h3>
+            <p data-i18n="shop2_desc">High-resolution posters ready to print for your room.</p>
+            <a class="card-link" href="https://www.etsy.com/shop/YOUR_SHOP" target="_blank" rel="noreferrer" data-i18n="shop_link">
               View on Etsy ↗
             </a>
           </article>
 
           <article class="card-simple">
-            <span class="chip">Etsy</span>
-            <img src="assets/IMG_7793.PNG" alt="Bundle" />
-            <h3>Bundle: wallpapers + extras</h3>
-            <p>Für alle, die alles haben wollen.</p>
-            <a class="card-link" href="https://www.etsy.com/shop/YOUR_SHOP" target="_blank" rel="noreferrer">
+            <span class="chip" data-i18n="shop_chip">Etsy</span>
+            <img src="IMG_7793.PNG" alt="Product preview 3" />
+            <h3 data-i18n="shop3_title">Bundle: wallpapers + extras</h3>
+            <p data-i18n="shop3_desc">A bundle for people who want the full creature universe.</p>
+            <a class="card-link" href="https://www.etsy.com/shop/YOUR_SHOP" target="_blank" rel="noreferrer" data-i18n="shop_link">
               View on Etsy ↗
             </a>
           </article>
@@ -875,60 +968,95 @@
       </div>
     </section>
 
-    <!-- FOLLOW / CONTACT -->
-    <section id="follow">
+    <!-- CONTACT & LINKS -->
+    <section id="contact">
       <div class="inner">
-        <div class="label">Links & contact</div>
-        <h2 class="title">Follow & contact</h2>
-        <p class="desc">
-          Hier sind alle wichtigen Links. Wenn du ein Projekt mit mir starten willst,
-          schreib mir einfach eine kurze Mail.
+        <div class="label" data-i18n="contact_label">Contact</div>
+        <h2 class="title" data-i18n="contact_title">Collabs, UGC & business inquiries</h2>
+        <p class="desc" data-i18n="contact_desc">
+          Use the form below for collaboration requests, UGC projects or any business-related questions.
+          I usually answer within 24–48 hours.
         </p>
 
-        <div class="follow-row">
-          <a class="follow-btn" href="https://www.tiktok.com/@mythosmondays" target="_blank" rel="noreferrer">
-            <span class="icon-circle">TT</span>
-            <div>
-              <strong>TikTok</strong><br />
-              Hauptkanal mit allen Brainrot-Videos.
-            </div>
-          </a>
+        <div class="split-2">
+          <div>
+            <!--
+              IMPORTANT:
+              Replace the action URL with your real Formspree endpoint,
+              e.g. https://formspree.io/f/abcd1234
+            -->
+            <form action="https://formspree.io/f/YOUR-FORMSPREE-ID" method="POST">
+              <div class="form-row-two">
+                <div>
+                  <label for="name" data-i18n="form_name_label">Name</label>
+                  <input id="name" name="name" type="text" placeholder="Your name or brand" required />
+                </div>
+                <div>
+                  <label for="email" data-i18n="form_email_label">Email</label>
+                  <input id="email" name="_replyto" type="email" placeholder="you@email.com" required />
+                </div>
+              </div>
 
-          <a class="follow-btn" href="https://youtube.com" target="_blank" rel="noreferrer">
-            <span class="icon-circle">YT</span>
-            <div>
-              <strong>YouTube</strong><br />
-              Shorts & Experimente mit den Charakteren.
-            </div>
-          </a>
+              <div class="form-row-two">
+                <div>
+                  <label for="project-type" data-i18n="form_project_label">Project type</label>
+                  <select id="project-type" name="project_type">
+                    <option value="TikTok/UGC video" data-i18n="form_opt_ugc">TikTok / UGC video</option>
+                    <option value="Monthly content package" data-i18n="form_opt_monthly">Monthly content package</option>
+                    <option value="Design / thumbnails" data-i18n="form_opt_design">Design / thumbnails</option>
+                    <option value="Landing page / website" data-i18n="form_opt_web">Landing page / website</option>
+                    <option value="Other" data-i18n="form_opt_other">Other / not sure yet</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="budget" data-i18n="form_budget_label">Budget (optional)</label>
+                  <input id="budget" name="budget" type="text" placeholder="e.g. €200–500" />
+                </div>
+              </div>
 
-          <a class="follow-btn" href="https://www.etsy.com/shop/YOUR_SHOP" target="_blank" rel="noreferrer">
-            <span class="icon-circle">E</span>
-            <div>
-              <strong>Etsy</strong><br />
-              Coloring-Books & digitale Produkte.
-            </div>
-          </a>
+              <div>
+                <label for="message" data-i18n="form_message_label">Message</label>
+                <textarea id="message" name="message" required placeholder="Tell me about your brand, product and what you want to create."></textarea>
+                <p class="form-helper" data-i18n="form_helper">
+                  Feel free to include links to your TikTok, YouTube or website. All details are kept private.
+                </p>
+              </div>
 
-          <a class="follow-btn" href="https://ko-fi.com/YOUR_PROFILE" target="_blank" rel="noreferrer">
-            <span class="icon-circle">K</span>
-            <div>
-              <strong>Ko-fi</strong><br />
-              Free Wallpapers & Support.
-            </div>
-          </a>
-        </div>
+              <button class="btn-main" type="submit" data-i18n="form_submit">
+                ✉ Send inquiry
+              </button>
+            </form>
+          </div>
 
-        <div class="contact-box">
-          <p>
-            Für Anfragen zu Kooperationen, Videos oder Projekten – bitte einfach per Mail melden.
-          </p>
-          <a class="pill-email" href="mailto:mythos.mondays.contact@gmail.com">
-            ✉ mythos.mondays.contact@gmail.com
-          </a>
-          <p style="font-size:0.8rem;margin-top:0.6rem;">
-            Antworte in Deutsch oder Englisch. Bitte kurz schreiben, worum es geht (z.B. Brand, Budget, Idee).
-          </p>
+          <aside class="contact-side">
+            <div class="contact-highlight" data-i18n="contact_box">
+              This page is the official creator website for the TikTok account <strong>@mythosmondays</strong>.
+              Brands and partners can verify collaborations and contact me securely here.
+            </div>
+
+            <ul class="contact-list">
+              <li>
+                <span data-i18n="contact_email_label">Email</span>
+                mythos.mondays.contact@gmail.com
+              </li>
+              <li>
+                <span data-i18n="contact_primary_label">Primary platform</span>
+                TikTok – <a href="https://www.tiktok.com/@mythosmondays" target="_blank" rel="noreferrer">@mythosmondays</a>
+              </li>
+              <li>
+                <span data-i18n="contact_secondary_label">Secondary platforms</span>
+                YouTube Shorts · Etsy · Ko-fi
+              </li>
+            </ul>
+
+            <div class="quick-links">
+              <strong data-i18n="quick_links_title">Quick links</strong>
+              <a href="https://www.tiktok.com/@mythosmondays" target="_blank" rel="noreferrer" data-i18n="quick_tiktok">TikTok profile ↗</a>
+              <a href="https://youtube.com" target="_blank" rel="noreferrer" data-i18n="quick_youtube">YouTube channel ↗</a>
+              <a href="https://www.etsy.com/shop/YOUR_SHOP" target="_blank" rel="noreferrer" data-i18n="quick_etsy">Etsy shop ↗</a>
+              <a href="https://ko-fi.com/YOUR_PROFILE" target="_blank" rel="noreferrer" data-i18n="quick_kofi">Ko-fi wallpapers ↗</a>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
@@ -949,10 +1077,10 @@
 </div>
 
 <script>
-  // Jahr automatisch
+  // Auto year
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  // Video-Karten klickbar machen
+  // Video cards open TikTok in new tab
   const videoCards = document.querySelectorAll(".video-card");
   videoCards.forEach(card => {
     card.addEventListener("click", () => {
@@ -961,18 +1089,628 @@
     });
   });
 
-  // Carousel-Pfeile
+  // Carousel arrows with looping
   const track = document.getElementById("video-track");
   const leftBtn = document.querySelector(".video-arrow.left");
   const rightBtn = document.querySelector(".video-arrow.right");
 
   function scrollByAmount(dir) {
     const amount = track.clientWidth * 0.9;
-    track.scrollBy({ left: dir * amount, behavior: "smooth" });
+    const maxScroll = track.scrollWidth - track.clientWidth;
+
+    if (dir > 0) {
+      if (track.scrollLeft >= maxScroll - 5) {
+        track.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        track.scrollBy({ left: amount, behavior: "smooth" });
+      }
+    } else {
+      if (track.scrollLeft <= 5) {
+        track.scrollTo({ left: maxScroll, behavior: "smooth" });
+      } else {
+        track.scrollBy({ left: -amount, behavior: "smooth" });
+      }
+    }
   }
 
   leftBtn.addEventListener("click", () => scrollByAmount(-1));
   rightBtn.addEventListener("click", () => scrollByAmount(1));
+
+  // i18n translations
+  const translations = {
+    en: {
+      brand_name: "Mythos Mondays",
+      brand_tagline: "Brainrot · AI Characters",
+      nav_videos: "Videos",
+      nav_free: "Free wallpapers",
+      nav_shop: "Shop",
+      nav_contact: "Contact",
+      nav_cta: "✨ Work with me",
+      hero_title: "Mythos Mondays\nOfficial brainrot & AI character hub.",
+      hero_subtitle: "I create viral brainrot videos with tiny screaming creatures and AI-generated 3D worlds. This is my official page for brands, partners and everyone who wants wallpapers or products.",
+      hero_btn_tiktok: "♫ Watch on TikTok",
+      hero_btn_shop: "🛒 Open shop section",
+      hero_stat_followers: "followers on TikTok",
+      hero_stat_likes: "total likes",
+      hero_stat_topvideo: "views on the top video",
+      hero_tagline: "Brainrot creator · AI animals",
+      hero_badge: "Official creator page",
+      stat_label_followers: "Followers",
+      stat_label_likes: "Likes",
+      stat_label_style: "Style",
+      stat_value_style: "Cute · Chaos · Brainrot",
+      hero_card_desc: "Short-form video concepts from hook to final frame: AI characters, storyboards and edits tuned for high watch time on TikTok, Shorts and Reels.",
+      social_tiktok: "TikTok channel",
+      social_youtube: "YouTube Shorts",
+
+      videos_label: "Videos",
+      videos_title: "Some of my favourite TikToks",
+      videos_desc: "Scroll through the clips. Tap a card to open the original TikTok in a new tab.",
+      video1_title: "TikTok #1",
+      video1_meta: "Brainrot · AI creatures",
+      video1_desc: "First clip in this selection (lowest views).",
+      video2_title: "TikTok #2",
+      video2_meta: "Brainrot · AI creatures",
+      video2_desc: "Second clip in the row – more views than #1.",
+      video3_title: "TikTok #3",
+      video3_meta: "Brainrot · AI creatures",
+      video3_desc: "Middle video of this selection.",
+      video4_title: "TikTok #4",
+      video4_meta: "Brainrot · AI creatures",
+      video4_desc: "Second highest views in this line-up.",
+      video5_title: "TikTok #5",
+      video5_meta: "Brainrot · AI creatures",
+      video5_desc: "The most-viewed video in this selection.",
+
+      free_label: "Free stuff",
+      free_title: "Free wallpapers & backgrounds",
+      free_desc: "Download some of my wallpapers for free. The actual download happens on Ko-fi.",
+      free_chip: "Free · Ko-fi",
+      free1_title: "Beach creature pack",
+      free1_desc: "Multiple 4K wallpapers with tiny creatures on the beach.",
+      free2_title: "Space cat wallpaper",
+      free2_desc: "Big eyes, small chaos and a lot of stars.",
+      free3_title: "Sneaker dolphin",
+      free3_desc: "Your phone background, but brainrot style.",
+      free_link: "Download on Ko-fi ↗",
+
+      shop_label: "Shop",
+      shop_title: "Digital products on Etsy",
+      shop_desc: "Coloring books, poster files and digital packs – all handled through my Etsy shop.",
+      shop_chip: "Etsy",
+      shop1_title: "Cute creature coloring book",
+      shop1_desc: "Printable PDF with many AI characters and scenes.",
+      shop2_title: "Brainrot poster pack",
+      shop2_desc: "High-resolution posters ready to print for your room.",
+      shop3_title: "Bundle: wallpapers + extras",
+      shop3_desc: "A bundle for people who want the full creature universe.",
+      shop_link: "View on Etsy ↗",
+
+      contact_label: "Contact",
+      contact_title: "Collabs, UGC & business inquiries",
+      contact_desc: "Use the form below for collaboration requests, UGC projects or any business-related questions. I usually answer within 24–48 hours.",
+      form_name_label: "Name",
+      form_email_label: "Email",
+      form_project_label: "Project type",
+      form_budget_label: "Budget (optional)",
+      form_message_label: "Message",
+      form_opt_ugc: "TikTok / UGC video",
+      form_opt_monthly: "Monthly content package",
+      form_opt_design: "Design / thumbnails",
+      form_opt_web: "Landing page / website",
+      form_opt_other: "Other / not sure yet",
+      form_helper: "Feel free to include links to your TikTok, YouTube or website. All details are kept private.",
+      form_submit: "✉ Send inquiry",
+      contact_box: "This page is the official creator website for the TikTok account @mythosmondays. Brands and partners can verify collaborations and contact me securely here.",
+      contact_email_label: "Email",
+      contact_primary_label: "Primary platform",
+      contact_secondary_label: "Secondary platforms",
+      quick_links_title: "Quick links",
+      quick_tiktok: "TikTok profile ↗",
+      quick_youtube: "YouTube channel ↗",
+      quick_etsy: "Etsy shop ↗",
+      quick_kofi: "Ko-fi wallpapers ↗"
+    },
+
+    de: {
+      brand_name: "Mythos Mondays",
+      brand_tagline: "Brainrot · KI-Charaktere",
+      nav_videos: "Videos",
+      nav_free: "Free Wallpapers",
+      nav_shop: "Shop",
+      nav_contact: "Kontakt",
+      nav_cta: "✨ Mit mir arbeiten",
+      hero_title: "Mythos Mondays\nOffizieller Brainrot- & KI-Charakter-Hub.",
+      hero_subtitle: "Ich erstelle virale Brainrot-Videos mit kleinen schreienden Kreaturen und KI-generierten 3D-Welten. Das hier ist meine offizielle Seite für Brands, Partner und alle, die Wallpapers oder Produkte wollen.",
+      hero_btn_tiktok: "♫ Auf TikTok ansehen",
+      hero_btn_shop: "🛒 Zum Shop-Bereich",
+      hero_stat_followers: "Follower auf TikTok",
+      hero_stat_likes: "insgesamt Likes",
+      hero_stat_topvideo: "Views auf dem Top-Video",
+      hero_tagline: "Brainrot-Creator · KI-Tiere",
+      hero_badge: "Offizielle Creator-Seite",
+      stat_label_followers: "Follower",
+      stat_label_likes: "Likes",
+      stat_label_style: "Stil",
+      stat_value_style: "Cute · Chaos · Brainrot",
+      hero_card_desc: "Short-Form-Konzepte von Hook bis Ende: KI-Charaktere, Storyboards und Edits, optimiert für Watchtime auf TikTok, Shorts und Reels.",
+      social_tiktok: "TikTok-Kanal",
+      social_youtube: "YouTube-Shorts",
+
+      videos_label: "Videos",
+      videos_title: "Ein paar meiner Lieblings-TikToks",
+      videos_desc: "Scroll durch die Clips. Klick auf eine Karte, um das Original-TikTok in einem neuen Tab zu öffnen.",
+      video1_title: "TikTok #1",
+      video1_meta: "Brainrot · KI-Kreaturen",
+      video1_desc: "Erster Clip in dieser Auswahl (niedrigste Views).",
+      video2_title: "TikTok #2",
+      video2_meta: "Brainrot · KI-Kreaturen",
+      video2_desc: "Zweiter Clip – mehr Views als #1.",
+      video3_title: "TikTok #3",
+      video3_meta: "Brainrot · KI-Kreaturen",
+      video3_desc: "Mittleres Video in dieser Reihe.",
+      video4_title: "TikTok #4",
+      video4_meta: "Brainrot · KI-Kreaturen",
+      video4_desc: "Zweithöchste Views in der Auswahl.",
+      video5_title: "TikTok #5",
+      video5_meta: "Brainrot · KI-Kreaturen",
+      video5_desc: "Video mit den meisten Views aus dieser Reihe.",
+
+      free_label: "Free Stuff",
+      free_title: "Kostenlose Wallpapers & Hintergründe",
+      free_desc: "Hier kannst du einige meiner Wallpapers gratis downloaden. Der Download läuft über Ko-fi.",
+      free_chip: "Free · Ko-fi",
+      free1_title: "Beach Creature Pack",
+      free1_desc: "Mehrere 4K-Wallpapers mit kleinen Strand-Kreaturen.",
+      free2_title: "Space-Cat-Wallpaper",
+      free2_desc: "Große Augen, viel Chaos und Sterne.",
+      free3_title: "Sneaker-Delfin",
+      free3_desc: "Dein Handy-Hintergrund, aber Brainrot.",
+      free_link: "Auf Ko-fi downloaden ↗",
+
+      shop_label: "Shop",
+      shop_title: "Digitale Produkte auf Etsy",
+      shop_desc: "Malbücher, Poster-Files und digitale Packs – alles über meinen Etsy-Shop.",
+      shop_chip: "Etsy",
+      shop1_title: "Cute Creature Coloring Book",
+      shop1_desc: "Druckbares PDF mit vielen KI-Charakteren und Szenen.",
+      shop2_title: "Brainrot Poster Pack",
+      shop2_desc: "Hochauflösende Poster zum Ausdrucken fürs Zimmer.",
+      shop3_title: "Bundle: Wallpapers + Extras",
+      shop3_desc: "Ein Bundle für alle, die das ganze Universum wollen.",
+      shop_link: "Auf Etsy ansehen ↗",
+
+      contact_label: "Kontakt",
+      contact_title: "Collabs, UGC & Business-Anfragen",
+      contact_desc: "Nutze das Formular für Kooperationen, UGC-Projekte oder andere Business-Anfragen. Ich antworte meist innerhalb von 24–48 Stunden.",
+      form_name_label: "Name",
+      form_email_label: "E-Mail",
+      form_project_label: "Projektart",
+      form_budget_label: "Budget (optional)",
+      form_message_label: "Nachricht",
+      form_opt_ugc: "TikTok / UGC-Video",
+      form_opt_monthly: "Monatliches Content-Paket",
+      form_opt_design: "Design / Thumbnails",
+      form_opt_web: "Landing Page / Website",
+      form_opt_other: "Sonstiges / unsicher",
+      form_helper: "Gerne Links zu deinem TikTok, YouTube oder deiner Website einfügen. Alle Infos bleiben privat.",
+      form_submit: "✉ Anfrage senden",
+      contact_box: "Diese Seite ist die offizielle Creator-Website für den TikTok-Account @mythosmondays. Brands und Partner können hier Kooperationen verifizieren und mich sicher kontaktieren.",
+      contact_email_label: "E-Mail",
+      contact_primary_label: "Hauptplattform",
+      contact_secondary_label: "Weitere Plattformen",
+      quick_links_title: "Schnelle Links",
+      quick_tiktok: "TikTok-Profil ↗",
+      quick_youtube: "YouTube-Kanal ↗",
+      quick_etsy: "Etsy-Shop ↗",
+      quick_kofi: "Ko-fi-Wallpapers ↗"
+    },
+
+    es: {
+      brand_name: "Mythos Mondays",
+      brand_tagline: "Brainrot · Personajes IA",
+      nav_videos: "Vídeos",
+      nav_free: "Fondos gratis",
+      nav_shop: "Tienda",
+      nav_contact: "Contacto",
+      nav_cta: "✨ Trabaja conmigo",
+      hero_title: "Mythos Mondays\nHub oficial de brainrot y personajes IA.",
+      hero_subtitle: "Creo vídeos virales de brainrot con pequeñas criaturas gritando y mundos 3D generados por IA. Esta es mi página oficial para marcas, socios y fans de mis productos.",
+      hero_btn_tiktok: "♫ Ver en TikTok",
+      hero_btn_shop: "🛒 Ir a la tienda",
+      hero_stat_followers: "seguidores en TikTok",
+      hero_stat_likes: "me gusta en total",
+      hero_stat_topvideo: "visualizaciones en el vídeo top",
+      hero_tagline: "Creador de brainrot · Animales IA",
+      hero_badge: "Página oficial del creador",
+      stat_label_followers: "Seguidores",
+      stat_label_likes: "Me gusta",
+      stat_label_style: "Estilo",
+      stat_value_style: "Cute · Caos · Brainrot",
+      hero_card_desc: "Conceptos de vídeo corto desde el hook hasta el final: personajes IA, storyboard y edición optimizada para retención en TikTok, Shorts y Reels.",
+      social_tiktok: "Canal de TikTok",
+      social_youtube: "YouTube Shorts",
+
+      videos_label: "Vídeos",
+      videos_title: "Algunos de mis TikToks favoritos",
+      videos_desc: "Desplázate por los clips. Haz clic en una tarjeta para abrir el TikTok original en una nueva pestaña.",
+      video1_title: "TikTok #1",
+      video1_meta: "Brainrot · Criaturas IA",
+      video1_desc: "Primer clip de esta selección (menos views).",
+      video2_title: "TikTok #2",
+      video2_meta: "Brainrot · Criaturas IA",
+      video2_desc: "Segundo clip – más views que #1.",
+      video3_title: "TikTok #3",
+      video3_meta: "Brainrot · Criaturas IA",
+      video3_desc: "Vídeo central de esta selección.",
+      video4_title: "TikTok #4",
+      video4_meta: "Brainrot · Criaturas IA",
+      video4_desc: "Segundo con más views.",
+      video5_title: "TikTok #5",
+      video5_meta: "Brainrot · Criaturas IA",
+      video5_desc: "El vídeo con más views de esta selección.",
+
+      free_label: "Gratis",
+      free_title: "Fondos y wallpapers gratis",
+      free_desc: "Descarga algunos de mis wallpapers gratis. La descarga real se hace en Ko-fi.",
+      free_chip: "Gratis · Ko-fi",
+      free1_title: "Pack criaturas de playa",
+      free1_desc: "Varios wallpapers 4K con criaturas en la playa.",
+      free2_title: "Wallpaper gato espacial",
+      free2_desc: "Ojos enormes, caos y muchas estrellas.",
+      free3_title: "Delfín con zapatillas",
+      free3_desc: "Tu fondo de móvil, pero brainrot.",
+      free_link: "Descargar en Ko-fi ↗",
+
+      shop_label: "Tienda",
+      shop_title: "Productos digitales en Etsy",
+      shop_desc: "Libros para colorear, pósters y packs digitales – todo a través de mi tienda de Etsy.",
+      shop_chip: "Etsy",
+      shop1_title: "Libro para colorear de criaturas",
+      shop1_desc: "PDF imprimible con muchos personajes IA.",
+      shop2_title: "Pack de pósters brainrot",
+      shop2_desc: "Pósters en alta resolución listos para imprimir.",
+      shop3_title: "Bundle: wallpapers + extras",
+      shop3_desc: "Un bundle para quienes quieren todo el universo.",
+      shop_link: "Ver en Etsy ↗",
+
+      contact_label: "Contacto",
+      contact_title: "Colabs, UGC y negocios",
+      contact_desc: "Usa el formulario para colaboraciones, proyectos UGC o preguntas de negocios. Suelo responder en 24–48 horas.",
+      form_name_label: "Nombre",
+      form_email_label: "Correo",
+      form_project_label: "Tipo de proyecto",
+      form_budget_label: "Presupuesto (opcional)",
+      form_message_label: "Mensaje",
+      form_opt_ugc: "Vídeo TikTok / UGC",
+      form_opt_monthly: "Pack mensual de contenido",
+      form_opt_design: "Diseño / miniaturas",
+      form_opt_web: "Landing page / web",
+      form_opt_other: "Otro / no estoy seguro",
+      form_helper: "Puedes añadir links a tu TikTok, YouTube o web. Toda la info se mantiene privada.",
+      form_submit: "✉ Enviar mensaje",
+      contact_box: "Esta página es el sitio oficial del creador para la cuenta de TikTok @mythosmondays. Las marcas pueden verificar colaboraciones y contactar conmigo de forma segura aquí.",
+      contact_email_label: "Correo",
+      contact_primary_label: "Plataforma principal",
+      contact_secondary_label: "Plataformas secundarias",
+      quick_links_title: "Links rápidos",
+      quick_tiktok: "Perfil de TikTok ↗",
+      quick_youtube: "Canal de YouTube ↗",
+      quick_etsy: "Tienda de Etsy ↗",
+      quick_kofi: "Wallpapers en Ko-fi ↗"
+    },
+
+    it: {
+      brand_name: "Mythos Mondays",
+      brand_tagline: "Brainrot · Personaggi IA",
+      nav_videos: "Video",
+      nav_free: "Sfondi gratis",
+      nav_shop: "Shop",
+      nav_contact: "Contatto",
+      nav_cta: "✨ Lavora con me",
+      hero_title: "Mythos Mondays\nHub ufficiale di brainrot e personaggi IA.",
+      hero_subtitle: "Creo video virali brainrot con piccole creature urlanti e mondi 3D generati dall’IA. Questa è la mia pagina ufficiale per brand, partner e fan dei miei prodotti.",
+      hero_btn_tiktok: "♫ Guarda su TikTok",
+      hero_btn_shop: "🛒 Vai allo shop",
+      hero_stat_followers: "follower su TikTok",
+      hero_stat_likes: "mi piace totali",
+      hero_stat_topvideo: "visualizzazioni sul top video",
+      hero_tagline: "Creator brainrot · Animali IA",
+      hero_badge: "Pagina ufficiale del creator",
+      stat_label_followers: "Follower",
+      stat_label_likes: "Mi piace",
+      stat_label_style: "Stile",
+      stat_value_style: "Cute · Caos · Brainrot",
+      hero_card_desc: "Concept per video brevi, dall’hook alla fine: personaggi IA, storyboard ed editing ottimizzato per la watchtime su TikTok, Shorts e Reels.",
+      social_tiktok: "Canale TikTok",
+      social_youtube: "YouTube Shorts",
+
+      videos_label: "Video",
+      videos_title: "Alcuni dei miei TikTok preferiti",
+      videos_desc: "Scorri tra i clip. Clicca su una card per aprire il TikTok originale in una nuova scheda.",
+      video1_title: "TikTok #1",
+      video1_meta: "Brainrot · Creature IA",
+      video1_desc: "Primo clip della selezione (meno visual).",
+      video2_title: "TikTok #2",
+      video2_meta: "Brainrot · Creature IA",
+      video2_desc: "Secondo clip – più visual di #1.",
+      video3_title: "TikTok #3",
+      video3_meta: "Brainrot · Creature IA",
+      video3_desc: "Video centrale della selezione.",
+      video4_title: "TikTok #4",
+      video4_meta: "Brainrot · Creature IA",
+      video4_desc: "Secondo con più visual.",
+      video5_title: "TikTok #5",
+      video5_meta: "Brainrot · Creature IA",
+      video5_desc: "Il video con più visual della selezione.",
+
+      free_label: "Gratis",
+      free_title: "Sfondi e wallpapers gratis",
+      free_desc: "Scarica alcuni dei miei wallpapers gratuitamente. Il download avviene su Ko-fi.",
+      free_chip: "Gratis · Ko-fi",
+      free1_title: "Pacchetto creature da spiaggia",
+      free1_desc: "Diversi wallpapers 4K con creature sulla spiaggia.",
+      free2_title: "Wallpaper gatto spaziale",
+      free2_desc: "Occhi enormi, caos e tante stelle.",
+      free3_title: "Delfino con sneakers",
+      free3_desc: "Lo sfondo del tuo telefono, ma brainrot.",
+      free_link: "Scarica su Ko-fi ↗",
+
+      shop_label: "Shop",
+      shop_title: "Prodotti digitali su Etsy",
+      shop_desc: "Libri da colorare, poster e pacchetti digitali – tutto tramite il mio shop Etsy.",
+      shop_chip: "Etsy",
+      shop1_title: "Libro da colorare creature carine",
+      shop1_desc: "PDF stampabile con molti personaggi IA.",
+      shop2_title: "Brainrot poster pack",
+      shop2_desc: "Poster in alta risoluzione pronti da stampare.",
+      shop3_title: "Bundle: wallpapers + extra",
+      shop3_desc: "Un bundle per chi vuole tutto l’universo.",
+      shop_link: "Vedi su Etsy ↗",
+
+      contact_label: "Contatto",
+      contact_title: "Collab, UGC e richieste business",
+      contact_desc: "Usa il form per richieste di collaborazione, progetti UGC o domande business. Di solito rispondo entro 24–48 ore.",
+      form_name_label: "Nome",
+      form_email_label: "Email",
+      form_project_label: "Tipo di progetto",
+      form_budget_label: "Budget (opzionale)",
+      form_message_label: "Messaggio",
+      form_opt_ugc: "Video TikTok / UGC",
+      form_opt_monthly: "Pacchetto contenuti mensile",
+      form_opt_design: "Design / miniature",
+      form_opt_web: "Landing page / sito",
+      form_opt_other: "Altro / non sono sicuro",
+      form_helper: "Puoi aggiungere link al tuo TikTok, YouTube o sito. Tutti i dettagli restano privati.",
+      form_submit: "✉ Invia richiesta",
+      contact_box: "Questa è la pagina ufficiale del creator per l’account TikTok @mythosmondays. I brand possono verificare le collaborazioni e contattarmi in modo sicuro qui.",
+      contact_email_label: "Email",
+      contact_primary_label: "Piattaforma principale",
+      contact_secondary_label: "Altre piattaforme",
+      quick_links_title: "Link veloci",
+      quick_tiktok: "Profilo TikTok ↗",
+      quick_youtube: "Canale YouTube ↗",
+      quick_etsy: "Shop Etsy ↗",
+      quick_kofi: "Wallpapers su Ko-fi ↗"
+    },
+
+    zh: {
+      brand_name: "Mythos Mondays",
+      brand_tagline: "Brainrot · AI 角色",
+      nav_videos: "视频",
+      nav_free: "免费壁纸",
+      nav_shop: "商店",
+      nav_contact: "联系",
+      nav_cta: "✨ 商务合作",
+      hero_title: "Mythos Mondays\n官方 Brainrot 与 AI 角色主页。",
+      hero_subtitle: "我用 AI 生成的小生物和 3D 世界创作洗脑短视频。这是我面向品牌与合作伙伴的官方页面，也给粉丝提供壁纸和数字产品。",
+      hero_btn_tiktok: "♫ 在 TikTok 上观看",
+      hero_btn_shop: "🛒 前往商店区",
+      hero_stat_followers: "TikTok 粉丝",
+      hero_stat_likes: "总点赞数",
+      hero_stat_topvideo: "爆款视频播放量",
+      hero_tagline: "Brainrot 创作者 · AI 动物",
+      hero_badge: "官方创作者页面",
+      stat_label_followers: "粉丝",
+      stat_label_likes: "点赞",
+      stat_label_style: "风格",
+      stat_value_style: "可爱 · 混乱 · Brainrot",
+      hero_card_desc: "从开头 Hook 到结尾的完整短视频方案：AI 角色、分镜和剪辑，专门为 TikTok、Shorts 和 Reels 的完播率优化。",
+      social_tiktok: "TikTok 主页",
+      social_youtube: "YouTube Shorts",
+
+      videos_label: "视频",
+      videos_title: "部分代表性 TikTok 视频",
+      videos_desc: "左右滑动浏览，点击卡片在新标签页中打开原始 TikTok。",
+      video1_title: "TikTok #1",
+      video1_meta: "Brainrot · AI 生物",
+      video1_desc: "这一组选集中播放量最低的一个。",
+      video2_title: "TikTok #2",
+      video2_meta: "Brainrot · AI 生物",
+      video2_desc: "第二个视频，比 #1 播放更多。",
+      video3_title: "TikTok #3",
+      video3_meta: "Brainrot · AI 生物",
+      video3_desc: "这一组选集中的中间视频。",
+      video4_title: "TikTok #4",
+      video4_meta: "Brainrot · AI 生物",
+      video4_desc: "本组选集中第二高播放量。",
+      video5_title: "TikTok #5",
+      video5_meta: "Brainrot · AI 生物",
+      video5_desc: "本组选集里播放量最高的视频。",
+
+      free_label: "免费内容",
+      free_title: "免费壁纸与背景图",
+      free_desc: "这里可以免费下载部分壁纸，实际下载在 Ko-fi 页面完成。",
+      free_chip: "免费 · Ko-fi",
+      free1_title: "海滩小生物套装",
+      free1_desc: "多张 4K 海滩生物壁纸。",
+      free2_title: "太空猫壁纸",
+      free2_desc: "大眼睛、小混乱和一整片星空。",
+      free3_title: "球鞋海豚",
+      free3_desc: "你的手机壁纸，但带点 brainrot 味道。",
+      free_link: "前往 Ko-fi 下载 ↗",
+
+      shop_label: "商店",
+      shop_title: "Etsy 上的数字产品",
+      shop_desc: "涂色本、海报文件和数字资源包，都在我的 Etsy 商店中销售。",
+      shop_chip: "Etsy",
+      shop1_title: "可爱生物涂色本",
+      shop1_desc: "可打印 PDF，包含许多 AI 角色和场景。",
+      shop2_title: "Brainrot 海报套装",
+      shop2_desc: "高分辨率海报文件，适合打印装饰房间。",
+      shop3_title: "套装：壁纸 + 额外素材",
+      shop3_desc: "为想要完整世界观的粉丝准备的整套资源。",
+      shop_link: "在 Etsy 查看 ↗",
+
+      contact_label: "联系",
+      contact_title: "合作、UGC 与商务咨询",
+      contact_desc: "如果你想合作、委托 UGC 视频或有商务问题，请使用下面的表单。我通常会在 24–48 小时内回复。",
+      form_name_label: "姓名",
+      form_email_label: "邮箱",
+      form_project_label: "项目类型",
+      form_budget_label: "预算（可选）",
+      form_message_label: "留言",
+      form_opt_ugc: "TikTok / UGC 视频",
+      form_opt_monthly: "每月内容套餐",
+      form_opt_design: "设计 / 缩略图",
+      form_opt_web: "落地页 / 网站",
+      form_opt_other: "其他 / 还不确定",
+      form_helper: "可以附上你的 TikTok、YouTube 或网站链接。所有信息都会保密。",
+      form_submit: "✉ 发送消息",
+      contact_box: "本页面是 TikTok 账号 @mythosmondays 的官方创作者网站。品牌和合作伙伴可以在这里确认合作并安全联系我。",
+      contact_email_label: "邮箱",
+      contact_primary_label: "主要平台",
+      contact_secondary_label: "其他平台",
+      quick_links_title: "快捷链接",
+      quick_tiktok: "TikTok 个人主页 ↗",
+      quick_youtube: "YouTube 频道 ↗",
+      quick_etsy: "Etsy 商店 ↗",
+      quick_kofi: "Ko-fi 壁纸 ↗"
+    },
+
+    ja: {
+      brand_name: "Mythos Mondays",
+      brand_tagline: "Brainrot · AI キャラクター",
+      nav_videos: "動画",
+      nav_free: "無料壁紙",
+      nav_shop: "ショップ",
+      nav_contact: "お問い合わせ",
+      nav_cta: "✨ コラボの相談",
+      hero_title: "Mythos Mondays\n公式 Brainrot & AI キャラクターサイト。",
+      hero_subtitle: "小さな叫ぶクリーチャーと AI が作る 3D 世界で、バズる brainrot 動画を作っています。ここはブランドやパートナー向けの公式ページであり、ファン向けの壁紙やプロダクトも紹介しています。",
+      hero_btn_tiktok: "♫ TikTok で見る",
+      hero_btn_shop: "🛒 ショップへ",
+      hero_stat_followers: "TikTok フォロワー",
+      hero_stat_likes: "合計いいね数",
+      hero_stat_topvideo: "トップ動画の再生回数",
+      hero_tagline: "Brainrot クリエイター · AI アニマル",
+      hero_badge: "公式クリエイターページ",
+      stat_label_followers: "フォロワー",
+      stat_label_likes: "いいね",
+      stat_label_style: "スタイル",
+      stat_value_style: "キュート · カオス · Brainrot",
+      hero_card_desc: "フックからエンディングまでを設計したショート動画コンセプト。AI キャラ、絵コンテ、編集まで行い、TikTok・Shorts・Reels の視聴維持率に最適化しています。",
+      social_tiktok: "TikTok チャンネル",
+      social_youtube: "YouTube Shorts",
+
+      videos_label: "動画",
+      videos_title: "お気に入り TikTok 動画",
+      videos_desc: "カードを左右にスクロールして、新しいタブでオリジナルの TikTok を開けます。",
+      video1_title: "TikTok #1",
+      video1_meta: "Brainrot · AI クリーチャー",
+      video1_desc: "このセレクションの中で再生数が一番低い動画。",
+      video2_title: "TikTok #2",
+      video2_meta: "Brainrot · AI クリーチャー",
+      video2_desc: "2 本目の動画 – #1 より再生数が多い。",
+      video3_title: "TikTok #3",
+      video3_meta: "Brainrot · AI クリーチャー",
+      video3_desc: "セレクションの真ん中の動画。",
+      video4_title: "TikTok #4",
+      video4_meta: "Brainrot · AI クリーチャー",
+      video4_desc: "再生数 2 位の動画。",
+      video5_title: "TikTok #5",
+      video5_meta: "Brainrot · AI クリーチャー",
+      video5_desc: "このセレクションで再生数 1 位の動画。",
+
+      free_label: "無料",
+      free_title: "無料壁紙 & バックグラウンド",
+      free_desc: "いくつかの壁紙を無料ダウンロードできます。実際のダウンロードは Ko-fi で行います。",
+      free_chip: "無料 · Ko-fi",
+      free1_title: "ビーチクリーチャー・パック",
+      free1_desc: "ビーチにいる小さなクリーチャーの 4K 壁紙セット。",
+      free2_title: "スペースキャット壁紙",
+      free2_desc: "大きな目とちょっとしたカオス、そして星空。",
+      free3_title: "スニーカーイルカ",
+      free3_desc: "スマホ壁紙を brainrot 風にしたもの。",
+      free_link: "Ko-fi でダウンロード ↗",
+
+      shop_label: "ショップ",
+      shop_title: "Etsy のデジタル商品",
+      shop_desc: "塗り絵ブック、ポスター、デジタルパックなどを Etsy ショップで販売しています。",
+      shop_chip: "Etsy",
+      shop1_title: "キュートクリーチャー塗り絵ブック",
+      shop1_desc: "AI キャラがたくさん入った印刷用 PDF。",
+      shop2_title: "Brainrot ポスターパック",
+      shop2_desc: "部屋に飾るのにぴったりな高解像度ポスター。",
+      shop3_title: "バンドル：壁紙＋おまけ",
+      shop3_desc: "世界観をまるごと楽しみたい人向けのセット。",
+      shop_link: "Etsy で見る ↗",
+
+      contact_label: "お問い合わせ",
+      contact_title: "コラボ・UGC・ビジネスのご相談",
+      contact_desc: "コラボ提案、UGC 動画制作、ビジネスに関する質問などは、下のフォームから送ってください。通常 24〜48 時間以内に返信します。",
+      form_name_label: "お名前",
+      form_email_label: "メールアドレス",
+      form_project_label: "プロジェクトタイプ",
+      form_budget_label: "予算（任意）",
+      form_message_label: "メッセージ",
+      form_opt_ugc: "TikTok / UGC 動画",
+      form_opt_monthly: "月額コンテンツパック",
+      form_opt_design: "デザイン / サムネイル",
+      form_opt_web: "ランディングページ / サイト",
+      form_opt_other: "その他 / まだ未定",
+      form_helper: "TikTok・YouTube・Web サイトのリンクも自由に書いてください。すべての情報は非公開で扱います。",
+      form_submit: "✉ メッセージを送信",
+      contact_box: "このページは TikTok アカウント @mythosmondays の公式クリエイターサイトです。ブランドやパートナーは、ここから安全にコラボを確認し連絡できます。",
+      contact_email_label: "メール",
+      contact_primary_label: "メインプラットフォーム",
+      contact_secondary_label: "その他のプラットフォーム",
+      quick_links_title: "クイックリンク",
+      quick_tiktok: "TikTok プロフィール ↗",
+      quick_youtube: "YouTube チャンネル ↗",
+      quick_etsy: "Etsy ショップ ↗",
+      quick_kofi: "Ko-fi 壁紙 ↗"
+    }
+  };
+
+  function setLanguage(lang) {
+    const dict = translations[lang] || translations.en;
+    document.documentElement.lang = lang === "zh" ? "zh-Hans" : (lang === "ja" ? "ja" : lang);
+
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      if (!dict[key]) return;
+      if (key === "hero_title") {
+        el.innerHTML = dict[key].replace("\n", "<br />");
+      } else {
+        el.textContent = dict[key];
+      }
+    });
+
+    document.querySelectorAll("[data-lang-btn]").forEach(btn => {
+      btn.classList.toggle("active", btn.getAttribute("data-lang-btn") === lang);
+    });
+  }
+
+  document.querySelectorAll("[data-lang-btn]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const lang = btn.getAttribute("data-lang-btn");
+      setLanguage(lang);
+    });
+  });
+
+  // default language: English
+  setLanguage("en");
 </script>
 </body>
 </html>
