@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mythos Mondays – Official Brainrot Creator Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Official portfolio website of Mythos Mondays – AI & brainrot creator with 370k+ followers on TikTok. Custom AI characters, short-form video editing, Canva designs and creative web visuals." />
+  <meta name="author" content="Mythos Mondays" />
+
+  <!-- Open Graph for TikTok / socials -->
+  <meta property="og:title" content="Mythos Mondays – Official Creator Page" />
+  <meta property="og:description" content="Brainrot & AI character creator – TikTok content, custom videos and creative visuals for brands." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-domain.github.io" />
+  <meta property="og:image" content="https://your-domain.github.io/assets/preview.jpg" />
+
+  <style>
+    :root {
+      --bg: #05060b;
+      --bg-alt: #0c1018;
+      --accent: #ff4b8b;
+      --accent-soft: rgba(255, 75, 139, 0.15);
+      --text-main: #f9fafb;
+      --text-muted: #a5afc5;
+      --border-subtle: rgba(255, 255, 255, 0.06);
+      --card-bg: rgba(11, 15, 25, 0.85);
+      --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.6);
+      --radius-lg: 20px;
+      --radius-pill: 999px;
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      background: radial-gradient(circle at top, #171b2f 0, #05060b 50%);
+      color: var(--text-main);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Layout */
+
+    .page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(24px);
+      background: linear-gradient(to bottom, rgba(5, 6, 11, 0.95), rgba(5, 6, 11, 0.7));
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .nav-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.8rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .brand-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid var(--accent);
+      overflow: hidden;
+      box-shadow: 0 0 0 3px rgba(255, 75, 139, 0.25);
+      background: radial-gradient(circle at 30% 0, #ffd28f, #283043);
+    }
+
+    .brand-avatar-inner {
+      width: 100%;
+      height: 100%;
+      background-image: url("assets/profile-placeholder.png"); /* TODO: replace with your crocodile avatar */
+      background-size: cover;
+      background-position: center;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .brand-tagline {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+
+    nav a {
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      color: var(--text-muted);
+      border: 1px solid transparent;
+    }
+
+    nav a:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.02);
+      border-color: var(--border-subtle);
+    }
+
+    .nav-cta {
+      padding: 0.35rem 1rem;
+      border-radius: var(--radius-pill);
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: linear-gradient(135deg, #ff4b8b, #ff9a62);
+      color: #05060b;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.7);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .nav-cta span {
+      font-size: 1.1rem;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    section {
+      padding: 3.5rem 1.25rem;
+    }
+
+    .section-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.6rem, 2.5vw, 2rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .section-description {
+      max-width: 640px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+
+    /* Hero */
+
+    #hero {
+      padding-top: 4rem;
+      padding-bottom: 3rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .hero-badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-badge {
+      font-size: 0.75rem;
+      padding: 0.35rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      background: rgba(10, 14, 25, 0.9);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--text-muted);
+    }
+
+    .hero-badge strong {
+      color: var(--text-main);
+    }
+
+    .hero-title {
+      font-size: clamp(2.2rem, 4vw, 3rem);
+      line-height: 1.02;
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-highlight {
+      background: linear-gradient(135deg, #ff9a62, #ff4b8b);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      max-width: 560px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.75rem 1.4rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid transparent;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #ff4b8b, #ff9a62);
+      color: #05060b;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .btn-ghost {
+      background: rgba(10, 14, 25, 0.9);
+      border-color: var(--border-subtle);
+      color: var(--text-muted);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--accent);
+      color: var(--text-main);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .hero-meta-item span {
+      display: block;
+    }
+
+    .hero-meta-label {
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+
+    .hero-meta-value {
+      font-size: 0.95rem;
+      color: var(--text-main);
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at top, #2c3259 0, #05060b 50%);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 1.3rem;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(circle at top, rgba(255, 75, 139, 0.14), transparent 60%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .hero-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-card-profile {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .hero-card-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, 0.9);
+      overflow: hidden;
+      background-image: url("assets/profile-placeholder.png");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-card-verified {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.15rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(12, 16, 32, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    .hero-card-verified span {
+      font-size: 0.9rem;
+      color: #4fd1ff;
+    }
+
+    .hero-card-body {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-card-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .stat-pill {
+      background: rgba(4, 7, 20, 0.85);
+      border-radius: 14px;
+      padding: 0.6rem 0.75rem;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      font-size: 0.8rem;
+    }
+
+    .stat-label {
+      display: block;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-muted);
+      margin-bottom: 0.1rem;
+    }
+
+    .stat-value {
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .hero-card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 0.4rem;
+    }
+
+    .social-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      background: rgba(4, 7, 18, 0.9);
+    }
+
+    /* About + Services */
+
+    .two-column {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+      gap: 2rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .about-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    .about-item {
+      border-radius: 12px;
+      padding: 0.75rem 0.9rem;
+      background: rgba(12, 16, 28, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      font-size: 0.85rem;
+    }
+
+    .about-item strong {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .service-card {
+      border-radius: 16px;
+      background: radial-gradient(circle at top left, var(--accent-soft), rgba(4, 7, 18, 0.98));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .service-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      margin-bottom: 0.4rem;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text-muted);
+    }
+
+    .service-title {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .service-list {
+      margin-top: 0.45rem;
+      padding-left: 1rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    /* Portfolio / Shop */
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1rem;
+    }
+
+    .portfolio-card, .shop-card {
+      border-radius: 16px;
+      background: rgba(8, 11, 22, 0.96);
+      border: 1px solid var(--border-subtle);
+      padding: 0.9rem;
+      font-size: 0.86rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.2rem 0.6rem;
+      font-size: 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .card-title {
+      font-weight: 600;
+      margin-bottom: 0.1rem;
+    }
+
+    .card-meta {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .card-link {
+      margin-top: 0.4rem;
+      font-size: 0.8rem;
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* Pricing / Testimonials / FAQ */
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .pricing-card {
+      border-radius: 18px;
+      background: rgba(8, 11, 22, 0.96);
+      border: 1px solid var(--border-subtle);
+      padding: 1rem 1.1rem;
+      font-size: 0.86rem;
+    }
+
+    .price-tag {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0.4rem 0;
+    }
+
+    .pricing-note {
+      font-size: 0.77rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .pricing-list {
+      padding-left: 1rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+
+    .testimonial-card {
+      border-radius: 18px;
+      background: rgba(9, 12, 22, 0.96);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 1rem;
+      font-size: 0.86rem;
+    }
+
+    .testimonial-quote {
+      font-style: italic;
+      margin-bottom: 0.6rem;
+    }
+
+    .testimonial-name {
+      font-weight: 600;
+      font-size: 0.8rem;
+    }
+
+    .testimonial-role {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .faq-list {
+      margin-top: 0.5rem;
+      display: grid;
+      gap: 0.7rem;
+      font-size: 0.86rem;
+    }
+
+    .faq-item {
+      border-radius: 14px;
+      background: rgba(8, 11, 20, 0.96);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 0.8rem 0.9rem;
+    }
+
+    .faq-q {
+      font-weight: 600;
+      font-size: 0.85rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .faq-a {
+      color: var(--text-muted);
+      font-size: 0.84rem;
+    }
+
+    /* Contact */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 2rem;
+    }
+
+    form {
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      margin-bottom: 0.1rem;
+      display: inline-block;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 0.7rem 0.85rem;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(6, 9, 18, 0.95);
+      color: var(--text-main);
+      font-size: 0.9rem;
+      outline: none;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px rgba(255, 75, 139, 0.6);
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .form-row-two {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .form-helper {
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      margin-top: -0.2rem;
+    }
+
+    .contact-sidebar {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    .contact-highlight {
+      padding: 0.9rem 1rem;
+      border-radius: 16px;
+      border: 1px dashed rgba(255, 255, 255, 0.4);
+      background: radial-gradient(circle at top left, var(--accent-soft), rgba(5, 6, 12, 0.95));
+      margin-bottom: 1rem;
+      color: var(--text-main);
+    }
+
+    .contact-list {
+      list-style: none;
+      display: grid;
+      gap: 0.5rem;
+      margin-top: 0.4rem;
+    }
+
+    .contact-list li span {
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      display: block;
+      margin-bottom: 0.1rem;
+    }
+
+    .contact-socials {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      font-size: 0.82rem;
+    }
+
+    /* Footer */
+
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 1.2rem 1.25rem 2rem;
+      background: #05060b;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+
+    .footer-links a {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 880px) {
+      .hero-grid,
+      .two-column,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      header {
+        position: static;
+      }
+
+      nav ul {
+        display: none;
+      }
+
+      .nav-cta {
+        margin-left: auto;
+      }
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 2.6rem 1.1rem;
+      }
+
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .hero-card-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <!-- ===== Header ===== -->
+  <header>
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-avatar">
+          <div class="brand-avatar-inner"></div>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Mythos Mondays</span>
+          <span class="brand-tagline">Brainrot & AI Character Creator</span>
+        </div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Work</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#pricing">Packages</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contact" class="nav-cta">
+        <span>✉️</span>
+        Book a project
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section id="hero">
+      <div class="section-inner hero-grid">
+        <div>
+          <div class="hero-badge-row">
+            <div class="hero-badge">
+              <span>🎥</span>
+              <span><strong>370k+</strong> TikTok followers</span>
+            </div>
+            <div class="hero-badge">
+              <span>🧠</span>
+              <span>Brainrot, AI characters & short-form storytelling</span>
+            </div>
+          </div>
+
+          <h1 class="hero-title">
+            Mythos Mondays – <span class="hero-highlight">official creator hub</span> for brands & collabs.
+          </h1>
+
+          <p class="hero-subtitle">
+            I create hyper-cute, surreal AI characters and high-retention brainrot videos that keep people
+            watching to the very last frame. If you want your product or idea turned into a scroll-stopping TikTok,
+            YouTube Short or ad – this is where we start.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn-primary">
+              ✉️ Hire me for a project
+            </a>
+            <a href="#portfolio" class="btn-ghost">
+              ▶️ Watch sample work
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <div class="hero-meta-item">
+              <span class="hero-meta-label">Niche</span>
+              <span class="hero-meta-value">AI characters · Brainrot · Cute 3D style</span>
+            </div>
+            <div class="hero-meta-item">
+              <span class="hero-meta-label">Based in</span>
+              <span class="hero-meta-value">Europe · working worldwide</span>
+            </div>
+            <div class="hero-meta-item">
+              <span class="hero-meta-label">Available for</span>
+              <span class="hero-meta-value">UGC, brand collabs, custom edits & web visuals</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Social proof & stats">
+          <div class="hero-card-header">
+            <div class="hero-card-profile">
+              <div class="hero-card-avatar"></div>
+              <div>
+                <div class="hero-card-verified">
+                  <span>✓</span> Official creator
+                </div>
+                <div style="font-size:0.85rem;font-weight:600;">@mythosmondays</div>
+                <div style="font-size:0.76rem;color:var(--text-muted);">TikTok · Brainrot Creator</div>
+              </div>
+            </div>
+            <div style="text-align:right;font-size:0.8rem;">
+              <div style="color:var(--text-muted);">Platform</div>
+              <div style="font-weight:600;">TikTok · YouTube Shorts</div>
+            </div>
+          </div>
+
+          <div class="hero-card-body">
+            <div class="hero-card-stats">
+              <div class="stat-pill">
+                <span class="stat-label">Followers</span>
+                <span class="stat-value">370k+</span>
+              </div>
+              <div class="stat-pill">
+                <span class="stat-label">Likes</span>
+                <span class="stat-value">31.9M+</span>
+              </div>
+              <div class="stat-pill">
+                <span class="stat-label">Top video</span>
+                <span class="stat-value">50M+ views</span>
+              </div>
+            </div>
+
+            <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:0.75rem;">
+              I design full short-form concepts from hook to final frame: AI-generated characters,
+              storyboards, sound-sync and edits optimised for watch-time.
+            </p>
+
+            <div class="hero-card-footer">
+              <div>
+                <div style="font-size:0.75rem;color:var(--text-muted);">Primary contact</div>
+                <div style="font-size:0.82rem;">mythos.mondays.contact@gmail.com</div>
+              </div>
+              <div class="social-icons" aria-label="Social links">
+                <a href="https://www.tiktok.com/@mythosmondays" class="social-icon" aria-label="TikTok" target="_blank" rel="noreferrer">♫</a>
+                <a href="https://youtube.com" class="social-icon" aria-label="YouTube" target="_blank" rel="noreferrer">▶</a>
+                <a href="https://github.com" class="social-icon" aria-label="GitHub" target="_blank" rel="noreferrer">{"{}"}</a>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===== About & Services ===== -->
+    <section id="about">
+      <div class="section-inner two-column">
+        <div>
+          <div class="section-label">About</div>
+          <h2 class="section-title">Who is behind Mythos Mondays?</h2>
+          <p class="section-description">
+            Mythos Mondays is a one-person studio creating looping, high-energy brainrot content with
+            AI-generated 3D characters. Every video is built around a strong hook, a playful universe,
+            and visuals that make people stop scrolling.
+          </p>
+
+          <div class="card">
+            <p style="font-size:0.9rem;">
+              I combine tools like Midjourney / custom AI pipelines, Canva and professional editing software
+              to deliver ready-to-post content for TikTok, YouTube Shorts, Reels and more.
+            </p>
+            <ul class="about-list">
+              <li class="about-item">
+                <strong>Core skills</strong>
+                AI visual design, character concepts, short-form scripting, pacing, meme culture.
+              </li>
+              <li class="about-item">
+                <strong>Tools</strong>
+                CapCut, Canva, AI image models, GitHub Pages, basic HTML/CSS for simple web experiences.
+              </li>
+              <li class="about-item">
+                <strong>Collab options</strong>
+                One-off UGC videos, recurring content packages, creative consulting for your channel.
+              </li>
+              <li class="about-item">
+                <strong>Languages</strong>
+                English & German – available for global campaigns.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="services">
+          <div class="section-label">Services</div>
+          <h2 class="section-title">What I can do for you</h2>
+          <p class="section-description">
+            Below are the main ways we can work together. All packages can be customised to your brand,
+            product and budget.
+          </p>
+
+          <div class="services-grid">
+            <article class="service-card">
+              <div class="service-pill">Service · UGC / Creator</div>
+              <h3 class="service-title">Custom brainrot TikTok / Reels</h3>
+              <p>
+                I create a full short-form concept around your product or idea, including AI characters and edits
+                optimised for watch-time.
+              </p>
+              <ul class="service-list">
+                <li>Concept & script (hook, mid, payoff)</li>
+                <li>AI character & scene generation</li>
+                <li>Full video editing & export</li>
+                <li>Usage rights for your brand channels</li>
+              </ul>
+            </article>
+
+            <article class="service-card">
+              <div class="service-pill">Service · Design</div>
+              <h3 class="service-title">Canva visuals & thumbnails</h3>
+              <p>
+                Scroll-stopping YouTube thumbnails, social banners and graphics built in Canva for easy future edits.
+              </p>
+              <ul class="service-list">
+                <li>Channel branding kits</li>
+                <li>Thumbnail sets for series</li>
+                <li>Template packs you can reuse</li>
+              </ul>
+            </article>
+
+            <article class="service-card">
+              <div class="service-pill">Service · Web</div>
+              <h3 class="service-title">Simple creator landing pages</h3>
+              <p>
+                Clean one-page websites (like this one) hosted on GitHub Pages – perfect for portfolios
+                or campaign landing pages.
+              </p>
+              <ul class="service-list">
+                <li>Responsive HTML/CSS layout</li>
+                <li>Contact form integration (Formspree / similar)</li>
+                <li>Link hubs to all your social platforms</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Portfolio ===== -->
+    <section id="portfolio">
+      <div class="section-inner">
+        <div class="section-label">Work</div>
+        <h2 class="section-title">Selected videos & concepts</h2>
+        <p class="section-description">
+          A quick snapshot of the kind of performance you can expect. More examples and private
+          case studies are available on request.
+        </p>
+
+        <div class="cards-grid">
+          <article class="portfolio-card">
+            <div class="badge">TikTok · Viral brainrot</div>
+            <h3 class="card-title">Baby sea-creatures on the beach</h3>
+            <p class="card-meta">50M+ views · retention-focused loop · AI characters & sound-synced beats</p>
+            <p>
+              Ultra-cute characters in sneakers running along the shoreline, combined with a catchy audio loop
+              that encourages re-watching.
+            </p>
+            <a class="card-link" href="https://www.tiktok.com/@mythosmondays" target="_blank" rel="noreferrer">
+              View on TikTok ↗
+            </a>
+          </article>
+
+          <article class="portfolio-card">
+            <div class="badge">TikTok · Storytelling</div>
+            <h3 class="card-title">Brainrot battle – Italian animals vs. others</h3>
+            <p class="card-meta">13M+ views · character lineup · dynamic motion & text</p>
+            <p>
+              A versus-style concept where stylised animal characters face off in a rapid-fire edit, designed to
+              hook viewers within the first 2 seconds.
+            </p>
+            <a class="card-link" href="https://www.tiktok.com/@mythosmondays" target="_blank" rel="noreferrer">
+              Watch sample clips ↗
+            </a>
+          </article>
+
+          <article class="portfolio-card">
+            <div class="badge">YouTube Shorts</div>
+            <h3 class="card-title">Cute AI pets in everyday chaos</h3>
+            <p class="card-meta">Cross-posted content · high CTR thumbnails</p>
+            <p>
+              Repurposed TikTok content tailored for YouTube Shorts with custom thumbnails and timing adjustments
+              for different audience behaviour.
+            </p>
+            <a class="card-link" href="https://youtube.com" target="_blank" rel="noreferrer">
+              Open YouTube channel ↗
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Shop / Products ===== -->
+    <section id="shop">
+      <div class="section-inner">
+        <div class="section-label">Shop</div>
+        <h2 class="section-title">Digital products & side projects</h2>
+        <p class="section-description">
+          Besides custom client work, I also create downloadable resources for creators – such as colouring books,
+          templates and presets.
+        </p>
+
+        <div class="cards-grid">
+          <article class="shop-card">
+            <div class="badge">Etsy · KDP</div>
+            <h3 class="card-title">AI-designed colouring books</h3>
+            <p class="card-meta">Digital / print-on-demand</p>
+            <p>
+              Cute and surreal AI characters in printable colouring pages. Perfect for kids, teens and anyone who
+              loves weirdly adorable worlds.
+            </p>
+            <a class="card-link" href="https://etsy.com" target="_blank" rel="noreferrer">
+              Visit Etsy shop ↗
+            </a>
+          </article>
+
+          <article class="shop-card">
+            <div class="badge">GitHub · Resources</div>
+            <h3 class="card-title">Free & paid creator templates</h3>
+            <p class="card-meta">Hosted on GitHub · HTML / Canva links</p>
+            <p>
+              Simple landing page templates, basic HTML/CSS starter kits and Canva links to help other creators
+              launch their own portfolios.
+            </p>
+            <a class="card-link" href="https://github.com" target="_blank" rel="noreferrer">
+              Explore GitHub repos ↗
+            </a>
+          </article>
+
+          <article class="shop-card">
+            <div class="badge">Coming soon</div>
+            <h3 class="card-title">Preset packs & sound ideas</h3>
+            <p class="card-meta">Planned</p>
+            <p>
+              A pack of transitions, text styles and sound concepts specifically tuned to the brainrot niche.
+              Join the waitlist via the contact form.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Pricing & Testimonials ===== -->
+    <section id="pricing">
+      <div class="section-inner">
+        <div class="section-label">Packages</div>
+        <h2 class="section-title">Example packages & starting points</h2>
+        <p class="section-description">
+          Every project is different, but these example packages give you a rough idea of scope and pricing.
+          Custom quotes are always possible.
+        </p>
+
+        <div class="pricing-grid">
+          <article class="pricing-card">
+            <div class="badge">Package · Starter</div>
+            <h3 class="card-title">Single TikTok / Reel</h3>
+            <p class="price-tag">from €XX</p>
+            <p class="pricing-note">Perfect to test if my style fits your brand.</p>
+            <ul class="pricing-list">
+              <li>1x short-form video (up to 30–45s)</li>
+              <li>Concept, AI visuals & edit included</li>
+              <li>1 feedback / revision round</li>
+              <li>Usage on your brand channels</li>
+            </ul>
+          </article>
+
+          <article class="pricing-card">
+            <div class="badge">Package · Growth</div>
+            <h3 class="card-title">Monthly content bundle</h3>
+            <p class="price-tag">from €XX / month</p>
+            <p class="pricing-note">For brands that want consistent brainrot-style content.</p>
+            <ul class="pricing-list">
+              <li>4–8 videos per month</li>
+              <li>Concepts based on your goals (reach, sales, awareness)</li>
+              <li>Priority communication via email</li>
+              <li>Basic performance feedback / ideas</li>
+            </ul>
+          </article>
+
+          <article class="pricing-card">
+            <div class="badge">Package · Custom</div>
+            <h3 class="card-title">Campaign / character universe</h3>
+            <p class="price-tag">custom quote</p>
+            <p class="pricing-note">Let’s build a whole character world around your brand.</p>
+            <ul class="pricing-list">
+              <li>Concept for recurring AI characters</li>
+              <li>Storylines & recurring series ideas</li>
+              <li>Multi-platform optimisation (TikTok, Shorts, Reels)</li>
+              <li>Optional simple landing page like this one</li>
+            </ul>
+          </article>
+        </div>
+
+        <div style="margin-top:2.5rem;">
+          <div class="section-label">Social proof</div>
+          <h2 class="section-title">What collaborators say</h2>
+          <p class="section-description">
+            A few words from people I have worked with. More detailed case studies are available privately.
+          </p>
+          <div class="testimonials-grid">
+            <article class="testimonial-card">
+              <p class="testimonial-quote">
+                “We wanted something weird, cute and attention-grabbing – Mythos delivered exactly that and our
+                video outperformed our usual content by a huge margin.”
+              </p>
+              <div class="testimonial-name">Brand collaboration – short-form ad</div>
+              <div class="testimonial-role">UGC / creator partnership</div>
+            </article>
+            <article class="testimonial-card">
+              <p class="testimonial-quote">
+                “Fast communication, strong ideas for hooks and a really unique visual style. The files were
+                delivered ready-to-post and performed well.”
+              </p>
+              <div class="testimonial-name">Online shop owner</div>
+              <div class="testimonial-role">3-video test package</div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ & Contact ===== -->
+    <section id="contact">
+      <div class="section-inner contact-grid">
+        <div>
+          <div class="section-label">Contact</div>
+          <h2 class="section-title">Let’s build something weird & memorable.</h2>
+          <p class="section-description">
+            Tell me a bit about your brand, your product and what you’d like to achieve. I read every message
+            personally and usually reply within 24–48 hours.
+          </p>
+
+          <!--
+            IMPORTANT:
+            For GitHub Pages you need a form handler (e.g. Formspree).
+            1. Go to https://formspree.io, create a form and get your endpoint.
+            2. Replace the value of action="" below with your Formspree URL.
+          -->
+          <form id="contact-form" action="https://formspree.io/f/YOUR-FORMSPREE-ID" method="POST">
+            <div class="form-row-two">
+              <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name / brand" required />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="_replyto" type="email" placeholder="you@email.com" required />
+              </div>
+            </div>
+
+            <div class="form-row-two">
+              <div>
+                <label for="project-type">Project type</label>
+                <select id="project-type" name="project_type">
+                  <option value="TikTok/UGC video">TikTok / UGC video</option>
+                  <option value="Monthly content package">Monthly content package</option>
+                  <option value="Canva / design work">Canva / design work</option>
+                  <option value="Landing page / website">Landing page / website</option>
+                  <option value="Other / not sure yet">Other / not sure yet</option>
+                </select>
+              </div>
+              <div>
+                <label for="budget">Budget (optional)</label>
+                <input id="budget" name="budget" type="text" placeholder="e.g. €200–500" />
+              </div>
+            </div>
+
+            <div>
+              <label for="message">Project details</label>
+              <textarea id="message" name="message" placeholder="Tell me about your brand, your product and what kind of video or visuals you need." required></textarea>
+              <p class="form-helper">
+                Include links to your existing social profiles if you have them. All information stays private.
+              </p>
+            </div>
+
+            <button class="btn-primary" type="submit">
+              ✉️ Send inquiry
+            </button>
+          </form>
+
+          <p id="form-status" class="form-helper" style="margin-top:0.6rem;"></p>
+        </div>
+
+        <aside class="contact-sidebar">
+          <div class="contact-highlight">
+            <strong>Business & media inquiries</strong><br />
+            For all partnerships, project requests, and media questions please use the form or email me directly.
+          </div>
+
+          <ul class="contact-list">
+            <li>
+              <span>Email</span>
+              mythos.mondays.contact@gmail.com
+              <!-- TODO: update if you change your address -->
+            </li>
+            <li>
+              <span>Primary platform</span>
+              TikTok – <a href="https://www.tiktok.com/@mythosmondays" target="_blank" rel="noreferrer">@mythosmondays</a>
+            </li>
+            <li>
+              <span>Secondary platforms</span>
+              YouTube Shorts · GitHub · Etsy (for digital products)
+            </li>
+          </ul>
+
+          <div class="contact-socials">
+            <strong>Quick links</strong>
+            <a href="https://www.tiktok.com/@mythosmondays" target="_blank" rel="noreferrer">TikTok profile ↗</a>
+            <a href="https://youtube.com" target="_blank" rel="noreferrer">YouTube channel ↗</a>
+            <a href="https://etsy.com" target="_blank" rel="noreferrer">Etsy shop ↗</a>
+            <a href="https://github.com" target="_blank" rel="noreferrer">GitHub profile ↗</a>
+          </div>
+
+          <div style="margin-top:1.2rem;">
+            <div class="section-label">FAQ</div>
+            <div class="faq-list">
+              <div class="faq-item">
+                <div class="faq-q">Do you appear on camera yourself?</div>
+                <div class="faq-a">
+                  No – my content is focused on AI-generated 3D characters and surreal universes. This keeps
+                  everything consistent and brand-friendly.
+                </div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q">Can I use the videos on paid ads?</div>
+                <div class="faq-a">
+                  Yes, that’s possible – we just need to agree on usage rights in advance (organic only vs. paid usage).
+                </div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q">Which languages do you work in?</div>
+                <div class="faq-a">
+                  I work in English and German. Subtitles or text elements can be adapted for your market.
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        © <span id="year"></span> Mythos Mondays · All rights reserved.
+      </div>
+      <div class="footer-links">
+        <a href="/imprint.html">Imprint</a>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  // Update year automatically
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Simple success message for the contact form
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
+
+  form.addEventListener("submit", function (event) {
+    // If you integrate a real service like Formspree,
+    // you can remove this preventDefault and let the form submit.
+    event.preventDefault();
+
+    status.textContent = "Thanks for your message! This demo form is set up – once the email service is connected, your inquiry will go straight to my inbox.";
+    form.reset();
+  });
+</script>
+</body>
+</html>
