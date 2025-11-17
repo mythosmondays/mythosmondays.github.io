@@ -4,10 +4,7 @@
   <meta charset="UTF-8" />
   <title>Mythos Mondays – Official Creator Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta
-    name="description"
-    content="Official creator page of Mythos Mondays – viral cute brainrot videos with AI characters. Watch highlights, get free wallpapers, visit the Etsy shop and send collaboration requests."
-  />
+  <meta name="description" content="Official creator page of Mythos Mondays – viral cute brainrot videos with AI characters. Watch highlights, get free wallpapers, visit the Etsy shop and send collaboration requests." />
 
   <style>
     :root {
@@ -27,12 +24,18 @@
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden; /* kein seitliches Scrollen */
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
       background: radial-gradient(circle at top, #1b2146 0, #05060b 55%);
       color: var(--text-main);
       line-height: 1.5;
-      scroll-behavior: smooth;
     }
 
     a { color: inherit; text-decoration: none; }
@@ -69,6 +72,7 @@
       display: flex;
       align-items: center;
       gap: 0.8rem;
+      min-width: 0;
     }
 
     .avatar-wrap {
@@ -79,6 +83,7 @@
       border: 2px solid var(--accent);
       box-shadow: 0 0 0 3px rgba(255,75,139,0.25);
       background: radial-gradient(circle at 30% 0, #ffd48f, #283046);
+      flex-shrink: 0;
     }
 
     .avatar {
@@ -99,6 +104,7 @@
       font-size: 0.95rem;
       letter-spacing: 0.04em;
       text-transform: uppercase;
+      white-space: nowrap;
     }
 
     .brand-sub {
@@ -130,6 +136,7 @@
       display: flex;
       align-items: center;
       gap: 0.7rem;
+      flex-shrink: 0;
     }
 
     .lang-switch {
@@ -141,6 +148,7 @@
       background: rgba(8,10,20,0.85);
       border: 1px solid rgba(255,255,255,0.1);
       font-size: 0.78rem;
+      white-space: nowrap;
     }
 
     .lang-switch span {
@@ -148,6 +156,7 @@
       cursor: pointer;
       padding: 0.15rem 0.35rem;
       border-radius: 999px;
+      user-select: none;
     }
 
     .lang-switch span.active {
@@ -169,6 +178,7 @@
       display: inline-flex;
       align-items: center;
       gap: 0.3rem;
+      white-space: nowrap;
     }
 
     main { flex: 1; }
@@ -325,6 +335,7 @@
       background-image: url("IMG_3108.jpeg");
       background-size: cover;
       background-position: center;
+      flex-shrink: 0;
     }
 
     .hero-name-block span {
@@ -353,7 +364,7 @@
       margin-top: 0.4rem;
     }
 
-    .badge-veri span {
+    .badge-veri span:first-child {
       font-size: 0.9rem;
       color: #4fd1ff;
     }
@@ -403,6 +414,7 @@
       background: rgba(4,7,15,0.95);
       font-size: 0.78rem;
       cursor: pointer;
+      text-align: center;
     }
 
     /* TikTok = Schwarz */
@@ -412,20 +424,16 @@
       border: 1px solid #000000;
     }
 
-    .social-tiktok:hover {
-      background: #222222;
-    }
+    .social-tiktok:hover { background: #222222; }
 
     /* YouTube = Rot */
     .social-youtube {
-      background: #FF0000;
+      background: #ff0000;
       color: white;
-      border: 1px solid #FF0000;
+      border: 1px solid #ff0000;
     }
 
-    .social-youtube:hover {
-      background: #cc0000;
-    }
+    .social-youtube:hover { background: #cc0000; }
 
     .icon-circle {
       width: 18px;
@@ -457,9 +465,7 @@
       scroll-snap-type: x mandatory;
       scrollbar-width: none;
     }
-    .video-track::-webkit-scrollbar {
-      display: none;
-    }
+    .video-track::-webkit-scrollbar { display: none; }
 
     .video-card {
       min-width: 230px;
@@ -517,8 +523,8 @@
       z-index: 5;
     }
 
-    .video-arrow.left { left: -12px; }
-    .video-arrow.right { right: -12px; }
+    .video-arrow.left { left: -8px; }
+    .video-arrow.right { right: -8px; }
 
     /* GRID CARDS (FREE) */
 
@@ -721,6 +727,9 @@
       .split-2 {
         grid-template-columns: minmax(0, 1fr);
       }
+      .nav-inner {
+        padding-inline: 1rem;
+      }
     }
 
     @media (max-width: 600px) {
@@ -729,6 +738,8 @@
       .video-arrow.right { right: 4px; }
       .nav-inner { padding-inline: 0.9rem; }
       .card-simple img { height: 210px; }
+      .lang-switch { font-size: 0.72rem; }
+      .brand-name { font-size: 0.9rem; }
     }
   </style>
 </head>
@@ -761,6 +772,10 @@
         <div class="lang-switch" aria-label="Language switch">
           <span data-lang-btn="en" class="active">EN</span>
           <span data-lang-btn="de">DE</span>
+          <span data-lang-btn="es">ES</span>
+          <span data-lang-btn="it">IT</span>
+          <span data-lang-btn="zh">中文</span>
+          <span data-lang-btn="ja">日本語</span>
         </div>
         <a href="#contact" class="nav-cta" data-i18n="nav_cta">✨ Work with me</a>
       </div>
@@ -775,7 +790,7 @@
         <div>
           <h1 class="hero-title" data-i18n="hero_title">
             <span class="hero-highlight">Mythos Mondays</span><br />
-            Official brainrot & AI character hub.
+            Official brainrot &amp; AI character hub.
           </h1>
           <p class="hero-sub" data-i18n="hero_subtitle">
             I create viral cute brainrot videos with tiny screaming creatures and AI-generated 3D worlds.
@@ -843,23 +858,15 @@
             </p>
 
             <div class="social-row">
-              <a
-                class="social-pill social-tiktok"
-                href="https://www.tiktok.com/@mythosmondays"
-                target="_blank"
-                rel="noreferrer"
-                data-i18n="social_tiktok"
-              >
+              <a class="social-pill social-tiktok"
+                 href="https://www.tiktok.com/@mythosmondays"
+                 target="_blank" rel="noreferrer" data-i18n="social_tiktok">
                 TikTok channel
               </a>
 
-              <a
-                class="social-pill social-youtube"
-                href="https://www.youtube.com/@mythosmondays"
-                target="_blank"
-                rel="noreferrer"
-                data-i18n="social_youtube"
-              >
+              <a class="social-pill social-youtube"
+                 href="https://www.youtube.com/@mythosmondays"
+                 target="_blank" rel="noreferrer" data-i18n="social_youtube">
                 YouTube channel
               </a>
             </div>
@@ -947,13 +954,7 @@
             <img src="IMG_7986.jpeg" alt="Tralaleros phone background" />
             <h3 data-i18n="free1_title">Tralaleros Phone Background 9:16</h3>
             <p data-i18n="free1_desc">High-resolution phone background in 9:16 format.</p>
-            <a
-              class="card-link"
-              href="https://ko-fi.com/s/df579d0092"
-              target="_blank"
-              rel="noreferrer"
-              data-i18n="free_link"
-            >
+            <a class="card-link" href="https://ko-fi.com/s/df579d0092" target="_blank" rel="noreferrer" data-i18n="free_link">
               Download on Ko-fi ↗
             </a>
           </article>
@@ -963,13 +964,7 @@
             <img src="IMG_9609.jpeg" alt="Tralaleros & Tralaleritas phone background" />
             <h3 data-i18n="free2_title">Tralaleros &amp; Tralaleritas Phone Background 9:16</h3>
             <p data-i18n="free2_desc">One wallpaper featuring both Tralaleros and Tralaleritas.</p>
-            <a
-              class="card-link"
-              href="https://ko-fi.com/s/bebed3d875"
-              target="_blank"
-              rel="noreferrer"
-              data-i18n="free_link"
-            >
+            <a class="card-link" href="https://ko-fi.com/s/bebed3d875" target="_blank" rel="noreferrer" data-i18n="free_link">
               Download on Ko-fi ↗
             </a>
           </article>
@@ -979,13 +974,7 @@
             <img src="IMG_9605.jpeg" alt="Saturnitas phone background" />
             <h3 data-i18n="free3_title">Saturnitas Phone Background 9:16</h3>
             <p data-i18n="free3_desc">Saturnitas as a clean 9:16 phone background.</p>
-            <a
-              class="card-link"
-              href="https://ko-fi.com/s/8f213a5331"
-              target="_blank"
-              rel="noreferrer"
-              data-i18n="free_link"
-            >
+            <a class="card-link" href="https://ko-fi.com/s/8f213a5331" target="_blank" rel="noreferrer" data-i18n="free_link">
               Download on Ko-fi ↗
             </a>
           </article>
@@ -1003,13 +992,7 @@
         </p>
 
         <div class="shop-cta-wrapper">
-          <a
-            class="btn-main"
-            href="https://www.etsy.com/de/shop/ChrisCreateShop"
-            target="_blank"
-            rel="noreferrer"
-            data-i18n="shop_btn"
-          >
+          <a class="btn-main" href="https://www.etsy.com/de/shop/ChrisCreateShop" target="_blank" rel="noreferrer" data-i18n="shop_btn">
             🛒 Open Etsy shop
           </a>
         </div>
@@ -1060,12 +1043,7 @@
 
               <div>
                 <label for="message" data-i18n="form_message_label">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  placeholder="Tell me about your brand, product and what you want to create."
-                ></textarea>
+                <textarea id="message" name="message" required placeholder="Tell me about your brand, product and what you want to create."></textarea>
                 <p class="form-helper" data-i18n="form_helper">
                   Feel free to include links to your TikTok, YouTube or website. All details are kept private.
                 </p>
@@ -1090,10 +1068,7 @@
               </li>
               <li>
                 <span data-i18n="contact_primary_label">Primary platform</span>
-                TikTok –
-                <a href="https://www.tiktok.com/@mythosmondays" target="_blank" rel="noreferrer">
-                  @mythosmondays
-                </a>
+                TikTok – <a href="https://www.tiktok.com/@mythosmondays" target="_blank" rel="noreferrer">@mythosmondays</a>
               </li>
               <li>
                 <span data-i18n="contact_secondary_label">Secondary platforms</span>
@@ -1103,38 +1078,10 @@
 
             <div class="quick-links">
               <strong data-i18n="quick_links_title">Quick links</strong>
-              <a
-                href="https://www.tiktok.com/@mythosmondays"
-                target="_blank"
-                rel="noreferrer"
-                data-i18n="quick_tiktok"
-              >
-                TikTok profile ↗
-              </a>
-              <a
-                href="https://www.youtube.com/@mythosmondays"
-                target="_blank"
-                rel="noreferrer"
-                data-i18n="quick_youtube"
-              >
-                YouTube channel ↗
-              </a>
-              <a
-                href="https://www.etsy.com/de/shop/ChrisCreateShop"
-                target="_blank"
-                rel="noreferrer"
-                data-i18n="quick_etsy"
-              >
-                Etsy shop ↗
-              </a>
-              <a
-                href="https://ko-fi.com/mythosmondays"
-                target="_blank"
-                rel="noreferrer"
-                data-i18n="quick_kofi"
-              >
-                Ko-fi wallpapers ↗
-              </a>
+              <a href="https://www.tiktok.com/@mythosmondays" target="_blank" rel="noreferrer" data-i18n="quick_tiktok">TikTok profile ↗</a>
+              <a href="https://www.youtube.com/@mythosmondays" target="_blank" rel="noreferrer" data-i18n="quick_youtube">YouTube channel ↗</a>
+              <a href="https://www.etsy.com/de/shop/ChrisCreateShop" target="_blank" rel="noreferrer" data-i18n="quick_etsy">Etsy shop ↗</a>
+              <a href="https://ko-fi.com/myhtosmondays" target="_blank" rel="noreferrer" data-i18n="quick_kofi">Ko-fi wallpapers ↗</a>
             </div>
           </aside>
         </div>
@@ -1196,7 +1143,7 @@
   leftBtn.addEventListener("click", () => scrollByAmount(-1));
   rightBtn.addEventListener("click", () => scrollByAmount(1));
 
-  // i18n translations (EN + DE)
+  // i18n translations: EN, DE, ES, IT, ZH, JA
   const translations = {
     en: {
       brand_name: "Mythos Mondays",
@@ -1208,8 +1155,7 @@
       nav_cta: "✨ Work with me",
 
       hero_title: "Mythos Mondays\nOfficial brainrot & AI character hub.",
-      hero_subtitle:
-        "I create viral cute brainrot videos with tiny screaming creatures and AI-generated 3D worlds. This is my official page for brands, partners and everyone who wants wallpapers or products.",
+      hero_subtitle: "I create viral cute brainrot videos with tiny screaming creatures and AI-generated 3D worlds. This is my official page for brands, partners and everyone who wants wallpapers or products.",
       hero_btn_tiktok: "♫ Watch on TikTok",
       hero_btn_free: "🖼 Free wallpapers",
       hero_btn_etsy: "🛒 Etsy shop",
@@ -1222,8 +1168,7 @@
       stat_label_likes: "Likes",
       stat_label_style: "Style",
       stat_value_style: "Cute · Chaos · Brainrot",
-      hero_card_desc:
-        "Creator of the original baby brainrot memes and similar cute AI character content for TikTok, YouTube Shorts and Reels.",
+      hero_card_desc: "Creator of the original baby brainrot memes and similar cute AI character content for TikTok, YouTube Shorts and Reels.",
       social_tiktok: "TikTok channel",
       social_youtube: "YouTube channel",
 
@@ -1260,14 +1205,12 @@
 
       shop_label: "Shop",
       shop_title: "Digital products on Etsy",
-      shop_desc:
-        "All digital products like coloring books, poster files and bundles are available in my Etsy shop.",
+      shop_desc: "All digital products like coloring books, poster files and bundles are available in my Etsy shop.",
       shop_btn: "🛒 Open Etsy shop",
 
       contact_label: "Contact",
       contact_title: "Collabs, UGC & business inquiries",
-      contact_desc:
-        "Use the form below for collaboration requests, UGC projects or any business-related questions. I usually answer within 24–48 hours.",
+      contact_desc: "Use the form below for collaboration requests, UGC projects or any business-related questions. I usually answer within 24–48 hours.",
       form_name_label: "Name",
       form_email_label: "Email",
       form_project_label: "Project type",
@@ -1278,12 +1221,10 @@
       form_opt_design: "Design / thumbnails",
       form_opt_web: "Landing page / website",
       form_opt_other: "Other / not sure yet",
-      form_helper:
-        "Feel free to include links to your TikTok, YouTube or website. All details are kept private.",
+      form_helper: "Feel free to include links to your TikTok, YouTube or website. All details are kept private.",
       form_submit: "✉ Send inquiry",
 
-      contact_box:
-        "This page is the official creator website for the TikTok account @mythosmondays. Brands and partners can verify collaborations and contact me securely here.",
+      contact_box: "This page is the official creator website for the TikTok account @mythosmondays. Brands and partners can verify collaborations and contact me securely here.",
       contact_email_label: "Email",
       contact_primary_label: "Primary platform",
       contact_secondary_label: "Secondary platforms",
@@ -1304,8 +1245,7 @@
       nav_cta: "✨ Mit mir arbeiten",
 
       hero_title: "Mythos Mondays\nOffizieller Brainrot- & KI-Charakter-Hub.",
-      hero_subtitle:
-        "Ich erstelle virale, süße Brainrot-Videos mit kleinen schreienden Kreaturen und KI-generierten 3D-Welten. Das hier ist meine offizielle Seite für Brands, Partner und alle, die Wallpapers oder Produkte wollen.",
+      hero_subtitle: "Ich erstelle virale, süße Brainrot-Videos mit kleinen schreienden Kreaturen und KI-generierten 3D-Welten. Das hier ist meine offizielle Seite für Brands, Partner und alle, die Wallpapers oder Produkte wollen.",
       hero_btn_tiktok: "♫ Auf TikTok ansehen",
       hero_btn_free: "🖼 Free Wallpapers",
       hero_btn_etsy: "🛒 Etsy-Shop",
@@ -1318,15 +1258,13 @@
       stat_label_likes: "Likes",
       stat_label_style: "Stil",
       stat_value_style: "Cute · Chaos · Brainrot",
-      hero_card_desc:
-        "Creator der originalen Baby-Brainrot-Memes und ähnlicher, süßer KI-Charakter-Content für TikTok, YouTube-Shorts und Reels.",
+      hero_card_desc: "Creator der originalen Baby-Brainrot-Memes und ähnlicher, süßer KI-Charakter-Content für TikTok, YouTube-Shorts und Reels.",
       social_tiktok: "TikTok-Kanal",
       social_youtube: "YouTube-Kanal",
 
       videos_label: "Videos",
       videos_title: "Meine bekanntesten Videos",
-      videos_desc:
-        "Scroll durch die Clips. Klick auf eine Karte, um das Original-TikTok in einem neuen Tab zu öffnen.",
+      videos_desc: "Scroll durch die Clips. Klick auf eine Karte, um das Original-TikTok in einem neuen Tab zu öffnen.",
       video1_title: "Tralaleritos",
       video1_meta: "Brainrot · KI-Kreaturen",
       video1_desc: "Das originale Tralaleritos Baby-Brainrot-Video.",
@@ -1345,8 +1283,7 @@
 
       free_label: "Free Stuff",
       free_title: "Kostenlose Wallpapers & Hintergründe",
-      free_desc:
-        "Hier kannst du einige meiner Wallpapers gratis herunterladen. Der Download läuft direkt über Ko-fi.",
+      free_desc: "Hier kannst du einige meiner Wallpapers gratis herunterladen. Der Download läuft direkt über Ko-fi.",
       free_chip: "Free · Ko-fi",
       free1_title: "Tralaleros Phone Background 9:16",
       free1_desc: "Hochauflösender Handy-Hintergrund im 9:16-Format.",
@@ -1358,14 +1295,12 @@
 
       shop_label: "Shop",
       shop_title: "Digitale Produkte auf Etsy",
-      shop_desc:
-        "Alle digitalen Produkte wie Coloring Books, Poster-Files und Bundles findest du in meinem Etsy-Shop.",
+      shop_desc: "Alle digitalen Produkte wie Coloring Books, Poster-Files und Bundles findest du in meinem Etsy-Shop.",
       shop_btn: "🛒 Etsy-Shop öffnen",
 
       contact_label: "Kontakt",
       contact_title: "Collabs, UGC & Business-Anfragen",
-      contact_desc:
-        "Nutze das Formular für Kooperationen, UGC-Projekte oder andere Business-Anfragen. Ich antworte meist innerhalb von 24–48 Stunden.",
+      contact_desc: "Nutze das Formular für Kooperationen, UGC-Projekte oder andere Business-Anfragen. Ich antworte meist innerhalb von 24–48 Stunden.",
       form_name_label: "Name",
       form_email_label: "E-Mail",
       form_project_label: "Projektart",
@@ -1376,12 +1311,10 @@
       form_opt_design: "Design / Thumbnails",
       form_opt_web: "Landing Page / Website",
       form_opt_other: "Sonstiges / unsicher",
-      form_helper:
-        "Gerne Links zu deinem TikTok, YouTube oder deiner Website einfügen. Alle Infos bleiben privat.",
+      form_helper: "Gerne Links zu deinem TikTok, YouTube oder deiner Website einfügen. Alle Infos bleiben privat.",
       form_submit: "✉ Anfrage senden",
 
-      contact_box:
-        "Diese Seite ist die offizielle Creator-Website für den TikTok-Account @mythosmondays. Brands und Partner können hier Kooperationen verifizieren und mich sicher kontaktieren.",
+      contact_box: "Diese Seite ist die offizielle Creator-Website für den TikTok-Account @mythosmondays. Brands und Partner können hier Kooperationen verifizieren und mich sicher kontaktieren.",
       contact_email_label: "E-Mail",
       contact_primary_label: "Hauptplattform",
       contact_secondary_label: "Weitere Plattformen",
@@ -1390,20 +1323,383 @@
       quick_youtube: "YouTube-Kanal ↗",
       quick_etsy: "Etsy-Shop ↗",
       quick_kofi: "Ko-fi-Wallpapers ↗"
+    },
+
+    es: {
+      brand_name: "Mythos Mondays",
+      brand_tagline: "Brainrot · Personajes IA",
+      nav_videos: "Vídeos",
+      nav_free: "Fondos gratis",
+      nav_shop: "Tienda",
+      nav_contact: "Contacto",
+      nav_cta: "✨ Trabaja conmigo",
+
+      hero_title: "Mythos Mondays\nCentro oficial de brainrot y personajes IA.",
+      hero_subtitle: "Creo vídeos virales y adorables de brainrot con pequeñas criaturas chillando y mundos 3D generados con IA. Esta es mi página oficial para marcas, colaboradores y fans de mis fondos y productos.",
+      hero_btn_tiktok: "♫ Ver en TikTok",
+      hero_btn_free: "🖼 Fondos gratis",
+      hero_btn_etsy: "🛒 Tienda en Etsy",
+      hero_stat_followers: "seguidores en TikTok",
+      hero_stat_likes: "me gusta en total",
+      hero_stat_topvideo: "reproducciones en el vídeo top",
+      hero_tagline: "Creador brainrot · Animales IA",
+      hero_badge: "Página oficial del creador",
+      stat_label_followers: "Seguidores",
+      stat_label_likes: "Me gusta",
+      stat_label_style: "Estilo",
+      stat_value_style: "Cute · Chaos · Brainrot",
+      hero_card_desc: "Creador de los memes originales de baby brainrot y contenido similar de personajes IA para TikTok, YouTube Shorts y Reels.",
+      social_tiktok: "Canal de TikTok",
+      social_youtube: "Canal de YouTube",
+
+      videos_label: "Vídeos",
+      videos_title: "Mis vídeos más populares",
+      videos_desc: "Desplázate por los clips. Haz clic en una tarjeta para abrir el TikTok original en una nueva pestaña.",
+      video1_title: "Tralaleritos",
+      video1_meta: "Brainrot · Criaturas IA",
+      video1_desc: "El vídeo original de baby brainrot Tralaleritos.",
+      video2_title: "Tralaleritas",
+      video2_meta: "Brainrot · Criaturas IA",
+      video2_desc: "Las Tralaleritas uniéndose al caos.",
+      video3_title: "Tripi Tropis",
+      video3_meta: "Brainrot · Criaturas IA",
+      video3_desc: "Tripi Tropis en la playa.",
+      video4_title: "Saturnitas",
+      video4_meta: "Brainrot · Criaturas IA",
+      video4_desc: "Las Saturnitas mirándote al alma.",
+      video5_title: "Lirilitos",
+      video5_meta: "Brainrot · Criaturas IA",
+      video5_desc: "Lirilitos – pequeños, ruidosos y en todas partes.",
+
+      free_label: "Gratis",
+      free_title: "Fondos de pantalla gratuitos",
+      free_desc: "Descarga algunos de mis fondos gratis. La descarga se hace directamente a través de Ko-fi.",
+      free_chip: "Gratis · Ko-fi",
+      free1_title: "Fondo para móvil Tralaleros 9:16",
+      free1_desc: "Fondo para móvil en alta resolución, formato 9:16.",
+      free2_title: "Fondo Tralaleros & Tralaleritas 9:16",
+      free2_desc: "Un wallpaper con Tralaleros y Tralaleritas juntos.",
+      free3_title: "Fondo Saturnitas 9:16",
+      free3_desc: "Saturnitas como fondo limpio 9:16.",
+      free_link: "Descargar en Ko-fi ↗",
+
+      shop_label: "Tienda",
+      shop_title: "Productos digitales en Etsy",
+      shop_desc: "Todos mis productos digitales como libros para colorear, pósters y bundles están disponibles en mi tienda de Etsy.",
+      shop_btn: "🛒 Abrir tienda en Etsy",
+
+      contact_label: "Contacto",
+      contact_title: "Colabs, UGC y consultas",
+      contact_desc: "Usa el formulario para colaboraciones, proyectos UGC o cualquier duda comercial. Normalmente respondo en 24–48 horas.",
+      form_name_label: "Nombre",
+      form_email_label: "Correo",
+      form_project_label: "Tipo de proyecto",
+      form_budget_label: "Presupuesto (opcional)",
+      form_message_label: "Mensaje",
+      form_opt_ugc: "Vídeo TikTok / UGC",
+      form_opt_monthly: "Paquete mensual de contenido",
+      form_opt_design: "Diseño / miniaturas",
+      form_opt_web: "Landing page / web",
+      form_opt_other: "Otro / no estoy seguro",
+      form_helper: "Puedes incluir enlaces a tu TikTok, YouTube o web. Toda la información se trata de forma privada.",
+      form_submit: "✉ Enviar solicitud",
+
+      contact_box: "Esta página es la web oficial del creador de la cuenta de TikTok @mythosmondays. Las marcas pueden verificar colaboraciones y contactar conmigo de forma segura.",
+      contact_email_label: "Correo",
+      contact_primary_label: "Plataforma principal",
+      contact_secondary_label: "Plataformas secundarias",
+      quick_links_title: "Enlaces rápidos",
+      quick_tiktok: "Perfil de TikTok ↗",
+      quick_youtube: "Canal de YouTube ↗",
+      quick_etsy: "Tienda de Etsy ↗",
+      quick_kofi: "Wallpapers en Ko-fi ↗"
+    },
+
+    it: {
+      brand_name: "Mythos Mondays",
+      brand_tagline: "Brainrot · Personaggi IA",
+      nav_videos: "Video",
+      nav_free: "Sfondi gratis",
+      nav_shop: "Shop",
+      nav_contact: "Contatto",
+      nav_cta: "✨ Lavora con me",
+
+      hero_title: "Mythos Mondays\nHub ufficiale di brainrot e personaggi IA.",
+      hero_subtitle: "Creo video virali e super carini in stile brainrot con piccole creature urlanti e mondi 3D generati con IA. Questa è la mia pagina ufficiale per brand, partner e fan dei miei wallpaper e prodotti.",
+      hero_btn_tiktok: "♫ Guarda su TikTok",
+      hero_btn_free: "🖼 Sfondi gratis",
+      hero_btn_etsy: "🛒 Etsy shop",
+      hero_stat_followers: "follower su TikTok",
+      hero_stat_likes: "mi piace totali",
+      hero_stat_topvideo: "visualizzazioni sul video top",
+      hero_tagline: "Creator brainrot · Animali IA",
+      hero_badge: "Pagina ufficiale del creator",
+      stat_label_followers: "Follower",
+      stat_label_likes: "Like",
+      stat_label_style: "Stile",
+      stat_value_style: "Cute · Chaos · Brainrot",
+      hero_card_desc: "Creator dei meme originali baby brainrot e di contenuti simili con personaggi IA per TikTok, YouTube Shorts e Reels.",
+      social_tiktok: "Canale TikTok",
+      social_youtube: "Canale YouTube",
+
+      videos_label: "Video",
+      videos_title: "I miei video più popolari",
+      videos_desc: "Scorri tra i clip. Clicca su una card per aprire il TikTok originale in una nuova scheda.",
+      video1_title: "Tralaleritos",
+      video1_meta: "Brainrot · Creature IA",
+      video1_desc: "Il video originale baby brainrot Tralaleritos.",
+      video2_title: "Tralaleritas",
+      video2_meta: "Brainrot · Creature IA",
+      video2_desc: "Le Tralaleritas che si uniscono al caos.",
+      video3_title: "Tripi Tropis",
+      video3_meta: "Brainrot · Creature IA",
+      video3_desc: "Tripi Tropis in spiaggia.",
+      video4_title: "Saturnitas",
+      video4_meta: "Brainrot · Creature IA",
+      video4_desc: "Le Saturnitas che ti fissano nell’anima.",
+      video5_title: "Lirilitos",
+      video5_meta: "Brainrot · Creature IA",
+      video5_desc: "Lirilitos – piccoli, rumorosi e ovunque.",
+
+      free_label: "Free",
+      free_title: "Sfondi e wallpaper gratuiti",
+      free_desc: "Scarica alcuni dei miei wallpaper gratis. Il download avviene direttamente tramite Ko-fi.",
+      free_chip: "Gratis · Ko-fi",
+      free1_title: "Sfondo telefono Tralaleros 9:16",
+      free1_desc: "Sfondo per smartphone in alta risoluzione, formato 9:16.",
+      free2_title: "Sfondo Tralaleros & Tralaleritas 9:16",
+      free2_desc: "Un wallpaper con Tralaleros e Tralaleritas insieme.",
+      free3_title: "Sfondo Saturnitas 9:16",
+      free3_desc: "Saturnitas come sfondo pulito 9:16.",
+      free_link: "Scarica su Ko-fi ↗",
+
+      shop_label: "Shop",
+      shop_title: "Prodotti digitali su Etsy",
+      shop_desc: "Tutti i prodotti digitali come libri da colorare, poster e bundle sono disponibili nel mio negozio Etsy.",
+      shop_btn: "🛒 Apri Etsy shop",
+
+      contact_label: "Contatto",
+      contact_title: "Collab, UGC e richieste business",
+      contact_desc: "Usa il form per richieste di collaborazione, progetti UGC o altre domande business. Di solito rispondo entro 24–48 ore.",
+      form_name_label: "Nome",
+      form_email_label: "Email",
+      form_project_label: "Tipo di progetto",
+      form_budget_label: "Budget (opzionale)",
+      form_message_label: "Messaggio",
+      form_opt_ugc: "Video TikTok / UGC",
+      form_opt_monthly: "Pacchetto contenuti mensile",
+      form_opt_design: "Design / thumbnail",
+      form_opt_web: "Landing page / sito web",
+      form_opt_other: "Altro / non so ancora",
+      form_helper: "Puoi inserire link al tuo TikTok, YouTube o sito. Tutti i dettagli restano privati.",
+      form_submit: "✉ Invia richiesta",
+
+      contact_box: "Questa è la pagina ufficiale del creator dell’account TikTok @mythosmondays. I brand possono verificare le collaborazioni e contattarmi in modo sicuro.",
+      contact_email_label: "Email",
+      contact_primary_label: "Piattaforma principale",
+      contact_secondary_label: "Altre piattaforme",
+      quick_links_title: "Link veloci",
+      quick_tiktok: "Profilo TikTok ↗",
+      quick_youtube: "Canale YouTube ↗",
+      quick_etsy: "Etsy shop ↗",
+      quick_kofi: "Wallpaper su Ko-fi ↗"
+    },
+
+    zh: {
+      brand_name: "Mythos Mondays",
+      brand_tagline: "Brainrot · AI 角色",
+      nav_videos: "视频",
+      nav_free: "免费壁纸",
+      nav_shop: "商店",
+      nav_contact: "联系",
+      nav_cta: "✨ 商务合作",
+
+      hero_title: "Mythos Mondays\n官方 Brainrot 与 AI 角色主页。",
+      hero_subtitle: "我创作可爱又有点疯狂的 brainrot 短视频，里面有尖叫的小生物和由 AI 生成的 3D 世界。这是为品牌和粉丝准备的官方网站，可以获取壁纸和数字产品。",
+      hero_btn_tiktok: "♫ 在 TikTok 上观看",
+      hero_btn_free: "🖼 免费壁纸",
+      hero_btn_etsy: "🛒 Etsy 商店",
+      hero_stat_followers: "TikTok 关注者",
+      hero_stat_likes: "总点赞数",
+      hero_stat_topvideo: "爆款视频播放量",
+      hero_tagline: "Brainrot 创作者 · AI 动物",
+      hero_badge: "官方创作者页面",
+      stat_label_followers: "关注者",
+      stat_label_likes: "点赞",
+      stat_label_style: "风格",
+      stat_value_style: "可爱 · 混乱 · Brainrot",
+      hero_card_desc: "原始 baby brainrot 表情包以及更多可爱 AI 角色内容的创作者，主要发布在 TikTok、YouTube Shorts 和 Reels。",
+      social_tiktok: "TikTok 主页",
+      social_youtube: "YouTube 频道",
+
+      videos_label: "视频",
+      videos_title: "最受欢迎的视频",
+      videos_desc: "滑动浏览这些短片。点击卡片，在新标签页中打开原始 TikTok 视频。",
+      video1_title: "Tralaleritos",
+      video1_meta: "Brainrot · AI 生物",
+      video1_desc: "最初的 Tralaleritos baby brainrot 视频。",
+      video2_title: "Tralaleritas",
+      video2_meta: "Brainrot · AI 生物",
+      video2_desc: "Tralaleritas 加入混乱大军。",
+      video3_title: "Tripi Tropis",
+      video3_meta: "Brainrot · AI 生物",
+      video3_desc: "海滩上的 Tripi Tropis。",
+      video4_title: "Saturnitas",
+      video4_meta: "Brainrot · AI 生物",
+      video4_desc: "直视你灵魂深处的 Saturnitas。",
+      video5_title: "Lirilitos",
+      video5_meta: "Brainrot · AI 生物",
+      video5_desc: "Lirilitos——小小的、吵闹的、无处不在。",
+
+      free_label: "免费资源",
+      free_title: "免费壁纸和背景图",
+      free_desc: "可以免费领取一些壁纸，下载通过 Ko-fi 完成。",
+      free_chip: "免费 · Ko-fi",
+      free1_title: "Tralaleros 手机壁纸 9:16",
+      free1_desc: "高分辨率 9:16 竖屏手机壁纸。",
+      free2_title: "Tralaleros & Tralaleritas 手机壁纸 9:16",
+      free2_desc: "一张同时包含 Tralaleros 与 Tralaleritas 的壁纸。",
+      free3_title: "Saturnitas 手机壁纸 9:16",
+      free3_desc: "简洁的 Saturnitas 9:16 竖屏壁纸。",
+      free_link: "在 Ko-fi 下载 ↗",
+
+      shop_label: "商店",
+      shop_title: "Etsy 上的数字产品",
+      shop_desc: "所有数字产品，如涂色书、海报文件和素材包，都在我的 Etsy 商店中提供。",
+      shop_btn: "🛒 打开 Etsy 商店",
+
+      contact_label: "联系",
+      contact_title: "合作、UGC 与商务咨询",
+      contact_desc: "使用下方表单发送合作、UGC 项目或其他商务相关问题。我通常会在 24–48 小时内回复。",
+      form_name_label: "姓名",
+      form_email_label: "邮箱",
+      form_project_label: "项目类型",
+      form_budget_label: "预算（可选）",
+      form_message_label: "留言",
+      form_opt_ugc: "TikTok / UGC 视频",
+      form_opt_monthly: "每月内容套餐",
+      form_opt_design: "设计 / 缩略图",
+      form_opt_web: "落地页 / 网站",
+      form_opt_other: "其他 / 还不确定",
+      form_helper: "可以附上你的 TikTok、YouTube 或网站链接。所有信息都会保密。",
+      form_submit: "✉ 发送询问",
+
+      contact_box: "本页面是 TikTok 账号 @mythosmondays 的官方创作者网站。品牌与合作方可以在这里验证合作并安全联系我。",
+      contact_email_label: "邮箱",
+      contact_primary_label: "主要平台",
+      contact_secondary_label: "其他平台",
+      quick_links_title: "快速链接",
+      quick_tiktok: "TikTok 主页 ↗",
+      quick_youtube: "YouTube 频道 ↗",
+      quick_etsy: "Etsy 商店 ↗",
+      quick_kofi: "Ko-fi 壁纸 ↗"
+    },
+
+    ja: {
+      brand_name: "Mythos Mondays",
+      brand_tagline: "Brainrot · AI キャラクター",
+      nav_videos: "動画",
+      nav_free: "無料壁紙",
+      nav_shop: "ショップ",
+      nav_contact: "お問い合わせ",
+      nav_cta: "✨ コラボ依頼",
+
+      hero_title: "Mythos Mondays\n公式 Brainrot & AI キャラクターハブ。",
+      hero_subtitle: "小さな叫ぶクリーチャーと AI が作り出す 3D ワールドで、バズるキュートな brainrot 動画を制作しています。ここはブランドやパートナー、そして壁紙やデジタル商品が欲しい人のための公式サイトです。",
+      hero_btn_tiktok: "♫ TikTok で見る",
+      hero_btn_free: "🖼 無料壁紙",
+      hero_btn_etsy: "🛒 Etsy ショップ",
+      hero_stat_followers: "TikTok フォロワー",
+      hero_stat_likes: "合計いいね数",
+      hero_stat_topvideo: "トップ動画の再生数",
+      hero_tagline: "Brainrot クリエイター · AI アニマル",
+      hero_badge: "公式クリエイターページ",
+      stat_label_followers: "フォロワー",
+      stat_label_likes: "いいね",
+      stat_label_style: "スタイル",
+      stat_value_style: "Cute · Chaos · Brainrot",
+      hero_card_desc: "オリジナル baby brainrot ミームや、その他キュートな AI キャラクター動画を TikTok・YouTube Shorts・Reels に投稿しています。",
+      social_tiktok: "TikTok チャンネル",
+      social_youtube: "YouTube チャンネル",
+
+      videos_label: "動画",
+      videos_title: "人気動画",
+      videos_desc: "クリップをスクロールしてチェック。カードをタップすると、元の TikTok 動画が新しいタブで開きます。",
+      video1_title: "Tralaleritos",
+      video1_meta: "Brainrot · AI クリーチャー",
+      video1_desc: "元祖 Tralaleritos baby brainrot 動画。",
+      video2_title: "Tralaleritas",
+      video2_meta: "Brainrot · AI クリーチャー",
+      video2_desc: "カオスに参戦する Tralaleritas。",
+      video3_title: "Tripi Tropis",
+      video3_meta: "Brainrot · AI クリーチャー",
+      video3_desc: "ビーチで遊ぶ Tripi Tropis。",
+      video4_title: "Saturnitas",
+      video4_meta: "Brainrot · AI クリーチャー",
+      video4_desc: "魂まで見透かしてきそうな Saturnitas。",
+      video5_title: "Lirilitos",
+      video5_meta: "Brainrot · AI クリーチャー",
+      video5_desc: "Lirilitos – 小さくて、うるさくて、どこにでもいる。",
+
+      free_label: "フリー素材",
+      free_title: "無料の壁紙 & 背景",
+      free_desc: "いくつかの壁紙を無料でダウンロードできます。ダウンロードは Ko-fi 経由です。",
+      free_chip: "無料 · Ko-fi",
+      free1_title: "Tralaleros スマホ壁紙 9:16",
+      free1_desc: "9:16 縦長・高解像度スマホ用壁紙。",
+      free2_title: "Tralaleros & Tralaleritas スマホ壁紙 9:16",
+      free2_desc: "Tralaleros と Tralaleritas が一緒に写った壁紙。",
+      free3_title: "Saturnitas スマホ壁紙 9:16",
+      free3_desc: "シンプルな Saturnitas 9:16 壁紙。",
+      free_link: "Ko-fi でダウンロード ↗",
+
+      shop_label: "ショップ",
+      shop_title: "Etsy のデジタル商品",
+      shop_desc: "塗り絵ブックやポスター、デジタルバンドルなど、すべてのデジタル商品は Etsy ショップで販売しています。",
+      shop_btn: "🛒 Etsy ショップを開く",
+
+      contact_label: "お問い合わせ",
+      contact_title: "コラボ・UGC・ビジネスのご相談",
+      contact_desc: "下のフォームからコラボ依頼、UGC プロジェクト、その他ビジネス関連のご質問を送ってください。通常 24〜48 時間以内に返信します。",
+      form_name_label: "お名前",
+      form_email_label: "メールアドレス",
+      form_project_label: "プロジェクトタイプ",
+      form_budget_label: "予算（任意）",
+      form_message_label: "メッセージ",
+      form_opt_ugc: "TikTok / UGC 動画",
+      form_opt_monthly: "月額コンテンツパック",
+      form_opt_design: "デザイン / サムネイル",
+      form_opt_web: "ランディングページ / Web サイト",
+      form_opt_other: "その他 / まだ未定",
+      form_helper: "TikTok・YouTube・Web サイトのリンクも自由に記入してください。内容はすべて秘密に扱われます。",
+      form_submit: "✉ メッセージを送信",
+
+      contact_box: "このサイトは TikTok アカウント @mythosmondays の公式クリエイターページです。ブランドやパートナーはここからコラボを確認し、安全に連絡できます。",
+      contact_email_label: "メール",
+      contact_primary_label: "メインプラットフォーム",
+      contact_secondary_label: "その他のプラットフォーム",
+      quick_links_title: "クイックリンク",
+      quick_tiktok: "TikTok プロフィール ↗",
+      quick_youtube: "YouTube チャンネル ↗",
+      quick_etsy: "Etsy ショップ ↗",
+      quick_kofi: "Ko-fi 壁紙 ↗"
     }
   };
 
   function setLanguage(lang) {
-    const dict = translations[lang] || translations["en"];
-    document.documentElement.lang = lang === "de" ? "de" : "en";
+    const fallback = translations.en;
+    const dict = translations[lang] || fallback;
+    document.documentElement.lang = lang;
 
     document.querySelectorAll("[data-i18n]").forEach(el => {
       const key = el.getAttribute("data-i18n");
-      if (!dict[key]) return;
+      let value = (dict && dict[key]) || fallback[key];
+      if (!value) return;
+
       if (key === "hero_title") {
-        el.innerHTML = dict[key].replace("\n", "<br />");
+        el.innerHTML = value.replace("\n", "<br />");
       } else {
-        el.textContent = dict[key];
+        el.textContent = value;
       }
     });
 
@@ -1415,8 +1711,7 @@
   document.querySelectorAll("[data-lang-btn]").forEach(btn => {
     btn.addEventListener("click", () => {
       const lang = btn.getAttribute("data-lang-btn");
-      if (lang === "de") setLanguage("de");
-      else setLanguage("en");
+      setLanguage(lang);
     });
   });
 
@@ -1425,4 +1720,3 @@
 </script>
 </body>
 </html>
-
