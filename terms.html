@@ -1,35 +1,804 @@
-<h1>Terms of Service</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Terms of Use – Mythos Mondays</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Terms of Use for Mythos Mondays – official creator page for the TikTok account @mythosmondays." />
+  <link rel="canonical" href="https://mythosmondays.github.io/terms.html" />
 
-<p>Welcome to the official creator website of <strong>Mythos Mondays</strong>.  
-These Terms of Service outline the rules for using this website and for purchasing 
-digital products through linked platforms such as Etsy and Ko-fi.</p>
+  <style>
+    :root {
+      --bg: #05060b;
+      --bg-soft: #0c101b;
+      --card: #101523;
+      --accent: #ff4b8b;
+      --accent2: #ffb45a;
+      --accent-soft: rgba(255, 75, 139, 0.12);
+      --text-main: #f9fafb;
+      --text-muted: #a7afc4;
+      --border: rgba(255,255,255,0.12);
+      --radius: 18px;
+      --shadow: 0 18px 50px rgba(0,0,0,0.7);
+      --max-width: 960px;
+    }
 
-<h2>1. General Information</h2>
-<p>This website provides information about digital content, AI-generated artwork, 
-TikTok videos, collaborations, and downloadable media.</p>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-<h2>2. External Shops</h2>
-<p>Digital purchases (wallpapers, coloring books, downloads, etc.) are handled through 
-third-party platforms including Etsy and Ko-fi.</p>
-<p>For any purchase made on these platforms, their respective Terms apply.</p>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      background: radial-gradient(circle at top, #1b2146 0, #05060b 55%);
+      color: var(--text-main);
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
 
-<h2>3. Contact Form Usage</h2>
-<p>By submitting a message through the contact form, you confirm:</p>
-<ul>
-  <li>The data you provide is correct.</li>
-  <li>You agree to be contacted via the provided email address.</li>
-</ul>
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
 
-<h2>4. Intellectual Property</h2>
-<p>All AI-generated creations, designs, videos, and digital products on this website 
-are protected. Reproduction, resale, or distribution is not permitted without permission.</p>
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-<h2>5. Liability</h2>
-<p>The content on this website is provided “as is” without warranty.  
-Mythos Mondays is not responsible for external links or third-party platforms.</p>
+    /* HEADER */
 
-<h2>6. Changes to Terms</h2>
-<p>These Terms may be updated at any time.  
-Continued use of the website indicates acceptance of any changes.</p>
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(to bottom, rgba(5,6,11,0.96), rgba(5,6,11,0.8));
+      border-bottom: 1px solid var(--border);
+    }
 
-<p>© Mythos Mondays – Official creator page</p>
+    .nav-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.7rem 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .avatar-wrap {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      overflow: hidden;
+      border: 2px solid var(--accent);
+      box-shadow: 0 0 0 3px rgba(255,75,139,0.25);
+      background: radial-gradient(circle at 30% 0, #ffd48f, #283046);
+    }
+
+    .avatar {
+      width: 100%;
+      height: 100%;
+      background-image: url("IMG_3108.jpeg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .brand-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 0.8rem;
+      font-size: 0.85rem;
+    }
+
+    nav a {
+      padding: 0.25rem 0.8rem;
+      border-radius: 999px;
+      color: var(--text-muted);
+      border: 1px solid transparent;
+    }
+
+    nav a:hover {
+      color: var(--text-main);
+      border-color: var(--border);
+      background: rgba(255,255,255,0.02);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .lang-switch {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(8,10,20,0.85);
+      border: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.78rem;
+    }
+
+    .lang-switch span {
+      opacity: 0.7;
+      cursor: pointer;
+      padding: 0.15rem 0.35rem;
+      border-radius: 999px;
+    }
+
+    .lang-switch span.active {
+      opacity: 1;
+      font-weight: 600;
+      background: rgba(255,255,255,0.1);
+    }
+
+    .nav-cta {
+      padding: 0.4rem 1.1rem;
+      border-radius: 999px;
+      border: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #05060b;
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    main { flex: 1; }
+
+    section {
+      padding: 3rem 1.2rem;
+    }
+
+    .inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .label {
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      margin-bottom: 0.5rem;
+    }
+
+    .title {
+      font-size: clamp(1.9rem, 3vw, 2.3rem);
+      font-weight: 800;
+      margin-bottom: 0.6rem;
+    }
+
+    .desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 720px;
+      margin-bottom: 1.6rem;
+    }
+
+    .legal-card {
+      background: var(--bg-soft);
+      border-radius: 22px;
+      border: 1px solid var(--border);
+      padding: 1.8rem 1.5rem 2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .legal-section + .legal-section {
+      margin-top: 1.4rem;
+      padding-top: 1.4rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .legal-section h2 {
+      font-size: 1.05rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .legal-section p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .legal-section ul {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      padding-left: 1.2rem;
+      margin: 0.2rem 0 0.4rem;
+    }
+
+    .legal-section li {
+      margin-bottom: 0.15rem;
+    }
+
+    .back-home {
+      margin-top: 1.6rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.88rem;
+      color: var(--accent2);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.2rem 1.2rem 2rem;
+      background: #05060b;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.8rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    @media (max-width: 880px) {
+      nav ul { display: none; }
+      header { position: static; }
+    }
+
+    @media (max-width: 600px) {
+      section { padding: 2.4rem 1.1rem; }
+      .nav-inner { padding-inline: 0.9rem; }
+      .legal-card { padding: 1.4rem 1.2rem 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header>
+    <div class="nav-inner">
+      <div class="nav-left">
+        <a href="/" class="avatar-wrap" aria-label="Back to home">
+          <div class="avatar"></div>
+        </a>
+        <div class="brand-text">
+          <a href="/" class="brand-name" data-i18n="brand_name">Mythos Mondays</a>
+          <span class="brand-sub" data-i18n="brand_tagline">Brainrot · AI Characters</span>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="/#videos" data-i18n="nav_videos">Videos</a></li>
+          <li><a href="/#free" data-i18n="nav_free">Free wallpapers</a></li>
+          <li><a href="/#shop" data-i18n="nav_shop">Shop</a></li>
+          <li><a href="/#contact" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-right">
+        <div class="lang-switch" aria-label="Language switch">
+          <span data-lang-btn="en" class="active">EN</span>
+          <span data-lang-btn="de">DE</span>
+          <span data-lang-btn="es">ES</span>
+          <span data-lang-btn="it">IT</span>
+          <span data-lang-btn="zh">中文</span>
+          <span data-lang-btn="ja">日本語</span>
+        </div>
+        <a href="/#contact" class="nav-cta" data-i18n="nav_cta">✨ Work with me</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="inner">
+        <div class="label" data-i18n="terms_label">Legal</div>
+        <h1 class="title" data-i18n="terms_title">Terms of Use</h1>
+        <p class="desc" data-i18n="terms_intro">
+          These Terms of Use explain how you may use the official Mythos Mondays website,
+          digital products and contact options.
+        </p>
+
+        <div class="legal-card">
+          <div class="legal-section">
+            <h2 data-i18n="terms_1_heading">1. Scope of these terms</h2>
+            <p data-i18n="terms_1_text">
+              These Terms of Use apply to all visits and use of this website, including
+              viewing content, downloading free wallpapers and contacting Mythos Mondays
+              for collaborations or purchases of digital products.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2 data-i18n="terms_2_heading">2. Creator and contact</h2>
+            <p data-i18n="terms_2_text">
+              The website and all content presented here are operated by Mythos Mondays –
+              a digital creator brand. All business and collaboration requests can be sent
+              via the contact form or directly by email to mythos.mondays.contact@gmail.com.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2 data-i18n="terms_3_heading">3. Use of this website</h2>
+            <p data-i18n="terms_3_text">
+              You may use this website for personal and non-commercial purposes, for example
+              to discover content, download wallpapers for your own devices or submit a
+              collaboration request. When using the site, you agree to:
+            </p>
+            <ul>
+              <li data-i18n="terms_3_li1">Not misuse the contact form or email for spam, harassment or illegal activity.</li>
+              <li data-i18n="terms_3_li2">Not attempt to hack, overload or technically disrupt this website.</li>
+              <li data-i18n="terms_3_li3">Not pretend to be Mythos Mondays or any partner brand.</li>
+              <li data-i18n="terms_3_li4">Respect applicable law in your country when using the content.</li>
+            </ul>
+          </div>
+
+          <div class="legal-section">
+            <h2 data-i18n="terms_4_heading">4. Intellectual property and copyrights</h2>
+            <p data-i18n="terms_4_text">
+              All videos, characters, images, wallpapers, logos, texts and designs on this
+              website are protected by copyright and remain the property of Mythos Mondays,
+              unless explicitly stated otherwise. You may not resell, redistribute, claim
+              authorship of or use the content in your own commercial projects without
+              written permission.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2 data-i18n="terms_5_heading">5. Digital products and external shops</h2>
+            <p data-i18n="terms_5_text">
+              Some products (such as coloring books, wallpapers or digital packs) are sold
+              via external platforms like Etsy or Ko-fi. For these purchases, the separate
+              terms and policies of the respective platform also apply. In general:
+            </p>
+            <ul>
+              <li data-i18n="terms_5_li1">Digital products are for personal use only, unless a license explicitly allows commercial use.</li>
+              <li data-i18n="terms_5_li2">Due to the nature of digital downloads, refunds are usually only possible in clear cases of technical issues or accidental duplicate purchases.</li>
+              <li data-i18n="terms_5_li3">Access to files is provided by the external shop system; please keep your purchase emails and links safe.</li>
+              <li data-i18n="terms_5_li4">Any questions about an order can be sent using the contact options on this site or on the shop platform.</li>
+            </ul>
+          </div>
+
+          <div class="legal-section">
+            <h2 data-i18n="terms_6_heading">6. No guarantee for availability</h2>
+            <p data-i18n="terms_6_text">
+              This website is operated with care, but uninterrupted availability or permanent
+              error-free function cannot be guaranteed. Content, links, prices and offers may
+              be changed, updated or removed at any time without prior notice.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2 data-i18n="terms_7_heading">7. Liability limitations</h2>
+            <p data-i18n="terms_7_text">
+              Mythos Mondays is not liable for indirect or consequential damages that arise
+              from the use or inability to use this website or digital products, except where
+              such limitation is not permitted by applicable law. Nothing in these terms
+              removes mandatory consumer rights that you may have under the law in your country.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2 data-i18n="terms_8_heading">8. Links to third-party websites</h2>
+            <p data-i18n="terms_8_text">
+              This site may contain links to external websites or platforms (such as TikTok,
+              YouTube, Etsy or Ko-fi). Mythos Mondays has no control over those sites and is
+              not responsible for their content, availability or privacy practices. Please
+              check the separate terms and policies of each external service.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2 data-i18n="terms_9_heading">9. Changes to these terms</h2>
+            <p data-i18n="terms_9_text">
+              These Terms of Use may be updated from time to time, for example when new
+              features, products or legal requirements arise. The version published on this
+              page is the current version. Continued use of the website after changes means
+              that you accept the updated terms.
+            </p>
+          </div>
+        </div>
+
+        <a href="/" class="back-home" data-i18n="terms_back">
+          ← Back to main page
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© <span id="year"></span> Mythos Mondays · Official creator page.</div>
+      <div class="footer-links">
+        <a href="imprint.html">Imprint</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const translations = {
+      en: {
+        brand_name: "Mythos Mondays",
+        brand_tagline: "Brainrot · AI Characters",
+        nav_videos: "Videos",
+        nav_free: "Free wallpapers",
+        nav_shop: "Shop",
+        nav_contact: "Contact",
+        nav_cta: "✨ Work with me",
+
+        terms_label: "Legal",
+        terms_title: "Terms of Use",
+        terms_intro: "These Terms of Use explain how you may use the official Mythos Mondays website, digital products and contact options.",
+
+        terms_1_heading: "1. Scope of these terms",
+        terms_1_text: "These Terms of Use apply to all visits and use of this website, including viewing content, downloading free wallpapers and contacting Mythos Mondays for collaborations or purchases of digital products.",
+
+        terms_2_heading: "2. Creator and contact",
+        terms_2_text: "The website and all content presented here are operated by Mythos Mondays – a digital creator brand. All business and collaboration requests can be sent via the contact form or directly by email to mythos.mondays.contact@gmail.com.",
+
+        terms_3_heading: "3. Use of this website",
+        terms_3_text: "You may use this website for personal and non-commercial purposes, for example to discover content, download wallpapers for your own devices or submit a collaboration request. When using the site, you agree to:",
+        terms_3_li1: "Not misuse the contact form or email for spam, harassment or illegal activity.",
+        terms_3_li2: "Not attempt to hack, overload or technically disrupt this website.",
+        terms_3_li3: "Not pretend to be Mythos Mondays or any partner brand.",
+        terms_3_li4: "Respect applicable law in your country when using the content.",
+
+        terms_4_heading: "4. Intellectual property and copyrights",
+        terms_4_text: "All videos, characters, images, wallpapers, logos, texts and designs on this website are protected by copyright and remain the property of Mythos Mondays, unless explicitly stated otherwise. You may not resell, redistribute, claim authorship of or use the content in your own commercial projects without written permission.",
+
+        terms_5_heading: "5. Digital products and external shops",
+        terms_5_text: "Some products (such as coloring books, wallpapers or digital packs) are sold via external platforms like Etsy or Ko-fi. For these purchases, the separate terms and policies of the respective platform also apply. In general:",
+        terms_5_li1: "Digital products are for personal use only, unless a license explicitly allows commercial use.",
+        terms_5_li2: "Due to the nature of digital downloads, refunds are usually only possible in clear cases of technical issues or accidental duplicate purchases.",
+        terms_5_li3: "Access to files is provided by the external shop system; please keep your purchase emails and links safe.",
+        terms_5_li4: "Any questions about an order can be sent using the contact options on this site or on the shop platform.",
+
+        terms_6_heading: "6. No guarantee for availability",
+        terms_6_text: "This website is operated with care, but uninterrupted availability or permanent error-free function cannot be guaranteed. Content, links, prices and offers may be changed, updated or removed at any time without prior notice.",
+
+        terms_7_heading: "7. Liability limitations",
+        terms_7_text: "Mythos Mondays is not liable for indirect or consequential damages that arise from the use or inability to use this website or digital products, except where such limitation is not permitted by applicable law. Nothing in these terms removes mandatory consumer rights that you may have under the law in your country.",
+
+        terms_8_heading: "8. Links to third-party websites",
+        terms_8_text: "This site may contain links to external websites or platforms (such as TikTok, YouTube, Etsy or Ko-fi). Mythos Mondays has no control over those sites and is not responsible for their content, availability or privacy practices. Please check the separate terms and policies of each external service.",
+
+        terms_9_heading: "9. Changes to these terms",
+        terms_9_text: "These Terms of Use may be updated from time to time, for example when new features, products or legal requirements arise. The version published on this page is the current version. Continued use of the website after changes means that you accept the updated terms.",
+
+        terms_back: "← Back to main page"
+      },
+
+      de: {
+        brand_name: "Mythos Mondays",
+        brand_tagline: "Brainrot · KI-Charaktere",
+        nav_videos: "Videos",
+        nav_free: "Free Wallpapers",
+        nav_shop: "Shop",
+        nav_contact: "Kontakt",
+        nav_cta: "✨ Mit mir arbeiten",
+
+        terms_label: "Rechtliches",
+        terms_title: "Nutzungsbedingungen",
+        terms_intro: "Diese Nutzungsbedingungen erklären, wie du die offizielle Mythos-Mondays-Website, digitale Produkte und die Kontaktmöglichkeiten verwenden darfst.",
+
+        terms_1_heading: "1. Geltungsbereich",
+        terms_1_text: "Diese Nutzungsbedingungen gelten für alle Besuche und jede Nutzung dieser Website – einschließlich des Ansehens von Inhalten, des Downloads kostenloser Wallpapers sowie der Kontaktaufnahme mit Mythos Mondays für Kooperationen oder den Kauf digitaler Produkte.",
+
+        terms_2_heading: "2. Creator und Kontakt",
+        terms_2_text: "Die Website und alle hier gezeigten Inhalte werden von Mythos Mondays – einer digitalen Creator-Marke – betrieben. Geschäftliche Anfragen und Kooperationsanfragen können über das Kontaktformular oder per E-Mail an mythos.mondays.contact@gmail.com gesendet werden.",
+
+        terms_3_heading: "3. Nutzung der Website",
+        terms_3_text: "Du darfst diese Website für persönliche und nicht-kommerzielle Zwecke nutzen – zum Beispiel, um Inhalte zu entdecken, Wallpapers für deine Geräte herunterzuladen oder eine Kooperationsanfrage zu stellen. Bei der Nutzung stimmst du zu:",
+        terms_3_li1: "Das Kontaktformular oder die E-Mail nicht für Spam, Belästigung oder rechtswidrige Zwecke zu missbrauchen.",
+        terms_3_li2: "Keine Versuche zu unternehmen, die Website zu hacken, zu überlasten oder technisch zu stören.",
+        terms_3_li3: "Dich nicht als Mythos Mondays oder als Partner-Marke auszugeben.",
+        terms_3_li4: "Die in deinem Land geltenden Gesetze bei der Nutzung der Inhalte zu beachten.",
+
+        terms_4_heading: "4. Urheberrecht und geistiges Eigentum",
+        terms_4_text: "Alle Videos, Charaktere, Bilder, Wallpapers, Logos, Texte und Designs auf dieser Website sind urheberrechtlich geschützt und bleiben – sofern nicht anders angegeben – Eigentum von Mythos Mondays. Eine Weiterveräußerung, Verbreitung, kommerzielle Nutzung oder das Ausgeben der Inhalte als eigene Werke ist ohne schriftliche Erlaubnis nicht gestattet.",
+
+        terms_5_heading: "5. Digitale Produkte und externe Shops",
+        terms_5_text: "Einige Produkte (z. B. Malbücher, Wallpapers oder digitale Bundles) werden über externe Plattformen wie Etsy oder Ko-fi verkauft. Für diese Käufe gelten zusätzlich die jeweiligen Nutzungsbedingungen und Richtlinien der Plattform. Im Allgemeinen gilt:",
+        terms_5_li1: "Digitale Produkte sind – sofern nicht ausdrücklich anders lizenziert – nur für den privaten Gebrauch bestimmt.",
+        terms_5_li2: "Aufgrund der Art von digitalen Downloads sind Rückerstattungen in der Regel nur bei technischen Problemen oder eindeutig versehentlichen Doppelkäufen möglich.",
+        terms_5_li3: "Der Zugang zu Dateien wird über das System des jeweiligen Shops bereitgestellt – bewahre daher deine Bestell-E-Mails und Links gut auf.",
+        terms_5_li4: "Fragen zu einer Bestellung können über die Kontaktmöglichkeiten auf dieser Website oder direkt über die Shop-Plattform gestellt werden.",
+
+        terms_6_heading: "6. Keine Garantie für Verfügbarkeit",
+        terms_6_text: "Die Website wird mit Sorgfalt betrieben, dennoch kann keine Garantie für eine durchgehend verfügbare oder dauerhaft fehlerfreie Funktion übernommen werden. Inhalte, Links, Preise und Angebote können jederzeit ohne vorherige Ankündigung geändert, aktualisiert oder entfernt werden.",
+
+        terms_7_heading: "7. Haftungsbeschränkung",
+        terms_7_text: "Mythos Mondays haftet nicht für mittelbare oder Folgeschäden, die aus der Nutzung oder der zeitweisen Nichtnutzbarkeit der Website oder digitaler Produkte entstehen, soweit eine solche Haftungsbeschränkung nach geltendem Recht zulässig ist. Zwingende Verbraucherschutzrechte, die dir nach dem Recht deines Landes zustehen, bleiben hiervon unberührt.",
+
+        terms_8_heading: "8. Links zu externen Websites",
+        terms_8_text: "Diese Website kann Links zu externen Websites oder Plattformen (z. B. TikTok, YouTube, Etsy oder Ko-fi) enthalten. Mythos Mondays hat keinen Einfluss auf diese Seiten und übernimmt keine Verantwortung für deren Inhalte, Erreichbarkeit oder Datenschutzpraktiken. Bitte beachte jeweils die dort geltenden Nutzungsbedingungen und Richtlinien.",
+
+        terms_9_heading: "9. Änderungen dieser Bedingungen",
+        terms_9_text: "Diese Nutzungsbedingungen können von Zeit zu Zeit angepasst werden, beispielsweise wenn neue Funktionen, Produkte oder rechtliche Anforderungen hinzukommen. Die auf dieser Seite veröffentlichte Version ist die jeweils aktuelle. Eine fortgesetzte Nutzung der Website nach Änderungen gilt als Zustimmung zu den aktualisierten Bedingungen.",
+
+        terms_back: "← Zurück zur Hauptseite"
+      },
+
+      es: {
+        brand_name: "Mythos Mondays",
+        brand_tagline: "Brainrot · Personajes IA",
+        nav_videos: "Videos",
+        nav_free: "Fondos gratis",
+        nav_shop: "Tienda",
+        nav_contact: "Contacto",
+        nav_cta: "✨ Trabaja conmigo",
+
+        terms_label: "Legal",
+        terms_title: "Términos de uso",
+        terms_intro: "Estos términos de uso explican cómo puedes utilizar la página oficial de Mythos Mondays, sus productos digitales y las opciones de contacto.",
+
+        terms_1_heading: "1. Ámbito de aplicación",
+        terms_1_text: "Estos términos se aplican a todas las visitas y al uso de este sitio web, incluido ver contenido, descargar fondos de pantalla gratuitos y contactar con Mythos Mondays para colaboraciones o compras de productos digitales.",
+
+        terms_2_heading: "2. Creador y contacto",
+        terms_2_text: "El sitio web y todo el contenido mostrado pertenecen a la marca creativa Mythos Mondays. Las solicitudes comerciales y de colaboración pueden enviarse mediante el formulario de contacto o por correo electrónico a mythos.mondays.contact@gmail.com.",
+
+        terms_3_heading: "3. Uso del sitio web",
+        terms_3_text: "Puedes utilizar este sitio web con fines personales y no comerciales, por ejemplo para descubrir contenido, descargar fondos de pantalla para tus dispositivos o enviar una solicitud de colaboración. Al usar el sitio aceptas:",
+        terms_3_li1: "No utilizar el formulario de contacto ni el correo electrónico para spam, acoso o actividades ilegales.",
+        terms_3_li2: "No intentar hackear, sobrecargar ni interrumpir técnicamente el sitio.",
+        terms_3_li3: "No hacerte pasar por Mythos Mondays ni por marcas asociadas.",
+        terms_3_li4: "Respetar la legislación aplicable en tu país al usar el contenido.",
+
+        terms_4_heading: "4. Propiedad intelectual y derechos de autor",
+        terms_4_text: "Todos los vídeos, personajes, imágenes, fondos de pantalla, logotipos, textos y diseños de este sitio están protegidos por derechos de autor y siguen siendo propiedad de Mythos Mondays, salvo que se indique lo contrario. No está permitido revender, redistribuir, atribuirse la autoría ni utilizar el contenido en proyectos comerciales propios sin permiso por escrito.",
+
+        terms_5_heading: "5. Productos digitales y tiendas externas",
+        terms_5_text: "Algunos productos (como libros para colorear, fondos de pantalla o packs digitales) se venden a través de plataformas externas como Etsy o Ko-fi. Para estas compras también se aplican los términos y políticas de la plataforma correspondiente. En general:",
+        terms_5_li1: "Los productos digitales son solo para uso personal, salvo que una licencia indique claramente un uso comercial.",
+        terms_5_li2: "Debido a la naturaleza de las descargas digitales, los reembolsos normalmente solo son posibles en casos claros de problemas técnicos o compras duplicadas por error.",
+        terms_5_li3: "El acceso a los archivos lo proporciona el sistema de la tienda externa; conserva tus correos de compra y enlaces.",
+        terms_5_li4: "Cualquier duda sobre un pedido puede enviarse mediante las opciones de contacto de este sitio o de la plataforma de la tienda.",
+
+        terms_6_heading: "6. No se garantiza la disponibilidad",
+        terms_6_text: "Este sitio web se gestiona con cuidado, pero no se puede garantizar una disponibilidad continua ni un funcionamiento completamente libre de errores. El contenido, los enlaces, precios y ofertas pueden modificarse o eliminarse en cualquier momento sin previo aviso.",
+
+        terms_7_heading: "7. Limitación de responsabilidad",
+        terms_7_text: "Mythos Mondays no será responsable de daños indirectos o consecuentes derivados del uso o de la imposibilidad de utilizar este sitio web o los productos digitales, salvo cuando dicha limitación no esté permitida por la legislación aplicable. Nada de lo aquí indicado afecta a los derechos obligatorios del consumidor que puedas tener según la ley de tu país.",
+
+        terms_8_heading: "8. Enlaces a sitios de terceros",
+        terms_8_text: "Este sitio puede contener enlaces a páginas o plataformas externas (como TikTok, YouTube, Etsy o Ko-fi). Mythos Mondays no controla esos sitios y no se hace responsable de su contenido, disponibilidad ni prácticas de privacidad. Consulta siempre los términos y políticas de cada servicio externo.",
+
+        terms_9_heading: "9. Cambios en los términos",
+        terms_9_text: "Estos términos de uso pueden actualizarse ocasionalmente, por ejemplo cuando haya nuevas funciones, productos o requisitos legales. La versión publicada en esta página es la versión vigente. Si continúas usando el sitio después de los cambios, se entiende que aceptas los términos actualizados.",
+
+        terms_back: "← Volver a la página principal"
+      },
+
+      it: {
+        brand_name: "Mythos Mondays",
+        brand_tagline: "Brainrot · Personaggi IA",
+        nav_videos: "Video",
+        nav_free: "Sfondi gratis",
+        nav_shop: "Shop",
+        nav_contact: "Contatto",
+        nav_cta: "✨ Lavora con me",
+
+        terms_label: "Legale",
+        terms_title: "Termini di utilizzo",
+        terms_intro: "Questi termini di utilizzo spiegano come puoi utilizzare il sito ufficiale di Mythos Mondays, i prodotti digitali e i canali di contatto.",
+
+        terms_1_heading: "1. Ambito di applicazione",
+        terms_1_text: "I presenti termini si applicano a tutte le visite e all’utilizzo di questo sito, inclusa la visualizzazione dei contenuti, il download di sfondi gratuiti e il contatto con Mythos Mondays per collaborazioni o acquisti di prodotti digitali.",
+
+        terms_2_heading: "2. Creator e contatti",
+        terms_2_text: "Il sito e tutti i contenuti qui presentati sono gestiti dal brand creativo Mythos Mondays. Le richieste commerciali e di collaborazione possono essere inviate tramite il modulo di contatto o all’indirizzo email mythos.mondays.contact@gmail.com.",
+
+        terms_3_heading: "3. Utilizzo del sito",
+        terms_3_text: "Puoi utilizzare questo sito per scopi personali e non commerciali, ad esempio per scoprire contenuti, scaricare sfondi per i tuoi dispositivi o inviare una richiesta di collaborazione. Utilizzando il sito accetti di:",
+        terms_3_li1: "Non usare il modulo di contatto o l’email per spam, molestie o attività illegali.",
+        terms_3_li2: "Non tentare di hackerare, sovraccaricare o disturbare tecnicamente il sito.",
+        terms_3_li3: "Non fingerti Mythos Mondays o un brand partner.",
+        terms_3_li4: "Rispettare le leggi applicabili nel tuo paese quando utilizzi i contenuti.",
+
+        terms_4_heading: "4. Proprietà intellettuale e copyright",
+        terms_4_text: "Tutti i video, personaggi, immagini, sfondi, loghi, testi e design presenti su questo sito sono protetti da copyright e rimangono di proprietà di Mythos Mondays, salvo diversa indicazione. Non è consentito rivendere, ridistribuire, dichiarare come propri o usare i contenuti in progetti commerciali senza autorizzazione scritta.",
+
+        terms_5_heading: "5. Prodotti digitali e shop esterni",
+        terms_5_text: "Alcuni prodotti (come libri da colorare, sfondi o pacchetti digitali) vengono venduti tramite piattaforme esterne come Etsy o Ko-fi. Per tali acquisti si applicano anche i termini e le policy della relativa piattaforma. In generale:",
+        terms_5_li1: "I prodotti digitali sono destinati al solo uso personale, a meno che una licenza non consenta esplicitamente l’uso commerciale.",
+        terms_5_li2: "A causa della natura dei download digitali, i rimborsi sono di solito possibili solo in caso di problemi tecnici evidenti o di acquisti doppi accidentali.",
+        terms_5_li3: "L’accesso ai file è fornito dal sistema dello shop esterno; conserva con cura le email e i link relativi all’acquisto.",
+        terms_5_li4: "Per qualsiasi domanda su un ordine puoi utilizzare i contatti presenti su questo sito o sulla piattaforma dello shop.",
+
+        terms_6_heading: "6. Nessuna garanzia di disponibilità",
+        terms_6_text: "Il sito viene gestito con cura, ma non si può garantire una disponibilità continua o un funzionamento completamente privo di errori. Contenuti, link, prezzi e offerte possono essere modificati o rimossi in qualsiasi momento senza preavviso.",
+
+        terms_7_heading: "7. Limitazione di responsabilità",
+        terms_7_text: "Mythos Mondays non è responsabile per danni indiretti o consequenziali derivanti dall’uso o dall’impossibilità di utilizzare il sito o i prodotti digitali, salvo laddove tale limitazione non sia consentita dalla legge applicabile. Nulla in questi termini limita i diritti dei consumatori previsti in modo inderogabile dalla legge del tuo paese.",
+
+        terms_8_heading: "8. Link a siti di terzi",
+        terms_8_text: "Questo sito può contenere link a siti o piattaforme esterne (ad esempio TikTok, YouTube, Etsy o Ko-fi). Mythos Mondays non ha controllo su tali siti e non è responsabile dei loro contenuti, della disponibilità o delle pratiche sulla privacy. Consulta sempre i termini e le policy di ogni servizio esterno.",
+
+        terms_9_heading: "9. Modifiche ai termini",
+        terms_9_text: "I presenti termini di utilizzo possono essere aggiornati di tanto in tanto, ad esempio in caso di nuove funzioni, prodotti o requisiti legali. La versione pubblicata in questa pagina è quella attualmente in vigore. L’uso continuato del sito dopo le modifiche implica l’accettazione dei termini aggiornati.",
+
+        terms_back: "← Torna alla pagina principale"
+      },
+
+      zh: {
+        brand_name: "Mythos Mondays",
+        brand_tagline: "Brainrot · AI 角色",
+        nav_videos: "视频",
+        nav_free: "免费壁纸",
+        nav_shop: "商店",
+        nav_contact: "联系",
+        nav_cta: "✨ 合作联系我",
+
+        terms_label: "法律",
+        terms_title: "使用条款",
+        terms_intro: "本使用条款说明你如何使用 Mythos Mondays 官方网站、数字产品以及联系渠道。",
+
+        terms_1_heading: "1. 适用范围",
+        terms_1_text: "本条款适用于你对本网站的所有访问和使用行为，包括浏览内容、下载免费壁纸，以及联系 Mythos Mondays 进行合作或购买数字产品。",
+
+        terms_2_heading: "2. 创作者与联系方式",
+        terms_2_text: "本网站及其展示的所有内容由数字创作者品牌 Mythos Mondays 运营。所有商务与合作请求可以通过联系表单或邮件发送至 mythos.mondays.contact@gmail.com。",
+
+        terms_3_heading: "3. 网站使用规则",
+        terms_3_text: "你可以出于个人、非商业目的使用本网站，例如发现内容、为自己的设备下载壁纸或提交合作请求。在使用网站时，你同意：",
+        terms_3_li1: "不将联系表单或邮箱用于垃圾信息、骚扰或任何违法活动。",
+        terms_3_li2: "不尝试黑客攻击、过载或以其他方式技术性破坏本网站。",
+        terms_3_li3: "不冒充 Mythos Mondays 或任何合作品牌。",
+        terms_3_li4: "在使用内容时遵守你所在国家/地区的相关法律。",
+
+        terms_4_heading: "4. 知识产权与版权",
+        terms_4_text: "本网站上的所有视频、角色、图片、壁纸、标志、文字与设计均受版权保护，除非另有说明，均归 Mythos Mondays 所有。未经书面许可，你不得转售、再分发、声称为自己创作或将这些内容用于自己的商业项目。",
+
+        terms_5_heading: "5. 数字产品与外部商店",
+        terms_5_text: "部分产品（如涂色书、壁纸或数字素材包）通过 Etsy、Ko-fi 等外部平台销售。对于这些购买行为，相应平台的条款与政策同样适用。一般而言：",
+        terms_5_li1: "数字产品仅供个人使用，除非许可中明确允许商业使用。",
+        terms_5_li2: "由于数字下载的特性，通常只有在出现技术问题或明显的重复购买时才可能退款。",
+        terms_5_li3: "文件访问由外部商店系统提供，请妥善保管你的购买邮件和下载链接。",
+        terms_5_li4: "如对订单有任何疑问，可以通过本网站或商店平台上的联系方式进行咨询。",
+
+        terms_6_heading: "6. 可用性不作保证",
+        terms_6_text: "本网站在运营中会尽量保持稳定，但无法保证持续可用或完全无错误。网站内容、链接、价格和优惠可能随时更改或删除，恕不另行通知。",
+
+        terms_7_heading: "7. 责任限制",
+        terms_7_text: "除非适用法律不允许，本网站对因使用或无法使用本网站或数字产品而产生的间接或后果性损失不承担责任。本条款不影响你在所在国家法律下享有的任何强制性消费者权利。",
+
+        terms_8_heading: "8. 第三方链接",
+        terms_8_text: "本网站可能包含指向第三方网站或平台（如 TikTok、YouTube、Etsy、Ko-fi）的链接。Mythos Mondays 无法控制这些外部网站，也不对其内容、可用性或隐私做法负责。使用前请查阅各服务的单独条款与政策。",
+
+        terms_9_heading: "9. 条款变更",
+        terms_9_text: "本使用条款可能会不时更新，例如在新增功能、产品或法律要求变化时。以本页面上发布的版本为准。你在条款更新后继续使用本网站，即视为接受更新后的条款。",
+
+        terms_back: "← 返回主页"
+      },
+
+      ja: {
+        brand_name: "Mythos Mondays",
+        brand_tagline: "Brainrot · AI キャラクター",
+        nav_videos: "動画",
+        nav_free: "無料壁紙",
+        nav_shop: "ショップ",
+        nav_contact: "お問い合わせ",
+        nav_cta: "✨ コラボ依頼はこちら",
+
+        terms_label: "リーガル",
+        terms_title: "利用規約",
+        terms_intro: "本利用規約は、Mythos Mondays 公式サイトおよびデジタル商品、連絡手段の利用方法について説明するものです。",
+
+        terms_1_heading: "1. 適用範囲",
+        terms_1_text: "本規約は、本サイトへのすべてのアクセスおよび利用に適用されます。これには、コンテンツの閲覧、無料壁紙のダウンロード、Mythos Mondays へのコラボ依頼やデジタル商品の購入に関する連絡が含まれます。",
+
+        terms_2_heading: "2. クリエイターと連絡先",
+        terms_2_text: "本サイトおよび掲載されているすべてのコンテンツは、デジタルクリエイターブランド Mythos Mondays によって運営されています。ビジネスやコラボ依頼は、お問い合わせフォームまたはメール（mythos.mondays.contact@gmail.com）から送信できます。",
+
+        terms_3_heading: "3. サイトの利用",
+        terms_3_text: "本サイトは、個人的かつ非商業的な目的で利用できます。たとえば、コンテンツの閲覧、自分の端末用の壁紙のダウンロード、コラボ依頼の送信などです。サイトを利用することで、次のことに同意したものとみなされます。",
+        terms_3_li1: "お問い合わせフォームやメールアドレスを、スパム・嫌がらせ・違法行為などに利用しないこと。",
+        terms_3_li2: "本サイトをハッキングしたり、過負荷をかけたり、技術的に妨害しないこと。",
+        terms_3_li3: "Mythos Mondays またはパートナーブランドになりすまさないこと。",
+        terms_3_li4: "コンテンツを利用する際には、自国の法令を遵守すること。",
+
+        terms_4_heading: "4. 知的財産権・著作権",
+        terms_4_text: "本サイトに掲載されているすべての動画、キャラクター、画像、壁紙、ロゴ、テキスト、デザインは著作権で保護されており、特に明記がない限り Mythos Mondays に帰属します。書面による許可なく、転売・再配布・自作としての公表・商業プロジェクトでの使用を行うことはできません。",
+
+        terms_5_heading: "5. デジタル商品と外部ショップ",
+        terms_5_text: "一部の商品（塗り絵ブック、壁紙、デジタルパックなど）は Etsy や Ko-fi などの外部プラットフォームを通じて販売されます。これらの購入には、各プラットフォームの利用規約やポリシーも適用されます。一般的に次のとおりです。",
+        terms_5_li1: "デジタル商品は、特別なライセンスで商業利用が許可されている場合を除き、個人利用のみを目的としています。",
+        terms_5_li2: "デジタルダウンロードという性質上、返金は主に技術的な問題や明らかな二重購入があった場合に限られます。",
+        terms_5_li3: "ファイルへのアクセスは外部ショップのシステムによって提供されるため、購入メールやダウンロードリンクは大切に保管してください。",
+        terms_5_li4: "注文に関する質問は、本サイトまたはショッププラットフォーム上の連絡手段からお問い合わせいただけます。",
+
+        terms_6_heading: "6. 可用性の保証なし",
+        terms_6_text: "本サイトは十分な注意を払って運営されていますが、常時利用可能であることや完全にエラーがないことは保証できません。コンテンツ、リンク、価格、オファーなどは、予告なく変更・更新・削除されることがあります。",
+
+        terms_7_heading: "7. 責任の制限",
+        terms_7_text: "適用法で認められない場合を除き、本サイトまたはデジタル商品の利用もしくは利用不能によって生じたいかなる間接的または結果的損害についても、Mythos Mondays は責任を負いません。本規約は、あなたの居住国の法律に基づき保障される強行的な消費者の権利を制限するものではありません。",
+
+        terms_8_heading: "8. 第三者サイトへのリンク",
+        terms_8_text: "本サイトには、TikTok、YouTube、Etsy、Ko-fi などの外部サイトやプラットフォームへのリンクが含まれる場合があります。Mythos Mondays はこれら外部サイトを管理しておらず、その内容や利用可能性、プライバシー慣行について責任を負いません。各サービスの利用規約およびポリシーを必ず確認してください。",
+
+        terms_9_heading: "9. 規約の変更",
+        terms_9_text: "本利用規約は、新しい機能・商品・法的要件などに対応するため、必要に応じて変更される場合があります。本ページに掲載されているものが最新のバージョンです。変更後も本サイトを利用し続けることで、更新された規約に同意したものとみなされます。",
+
+        terms_back: "← メインページに戻る"
+      }
+    };
+
+    function setLanguage(lang) {
+      const dict = translations[lang] || translations.en;
+      document.documentElement.lang = lang === "de" ? "de" : "en";
+
+      document.querySelectorAll("[data-i18n]").forEach(function (el) {
+        const key = el.getAttribute("data-i18n");
+        if (!dict[key]) return;
+        el.textContent = dict[key];
+      });
+
+      document.querySelectorAll("[data-lang-btn]").forEach(function (btn) {
+        btn.classList.toggle("active", btn.getAttribute("data-lang-btn") === lang);
+      });
+    }
+
+    document.querySelectorAll("[data-lang-btn]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        const lang = btn.getAttribute("data-lang-btn");
+        setLanguage(lang);
+      });
+    });
+
+    // Default language
+    setLanguage("en");
+
+    // Year in footer
+    const yearEl = document.getElementById("year");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+  });
+</script>
+
+</body>
+</html>
