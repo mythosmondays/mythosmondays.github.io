@@ -1,28 +1,676 @@
-<h1>Imprint / Legal Notice</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Imprint – Mythos Mondays</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Imprint and legal notice for Mythos Mondays – official creator page for the TikTok account @mythosmondays." />
+  <link rel="canonical" href="https://mythosmondays.github.io/imprint.html" />
 
-<p><strong>Business Name:</strong> Mythos Mondays</p>
-<p><strong>Type of Business:</strong> Independent Digital Creator / Sole Proprietorship</p>
+  <style>
+    :root {
+      --bg: #05060b;
+      --bg-soft: #0c101b;
+      --card: #101523;
+      --accent: #ff4b8b;
+      --accent2: #ffb45a;
+      --accent-soft: rgba(255, 75, 139, 0.12);
+      --text-main: #f9fafb;
+      --text-muted: #a7afc4;
+      --border: rgba(255,255,255,0.12);
+      --radius: 18px;
+      --shadow: 0 18px 50px rgba(0,0,0,0.7);
+      --max-width: 960px;
+    }
 
-<p><strong>Contact Email:</strong> <a href="mailto:mythos.mondays.contact@gmail.com">mythos.mondays.contact@gmail.com</a></p>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-<p><strong>Responsible for content according to § 5 TMG (Germany):</strong><br>
-Mythos Mondays – Digital Creator</p>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      background: radial-gradient(circle at top, #1b2146 0, #05060b 55%);
+      color: var(--text-main);
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
 
-<h2>Address Notice</h2>
-<p>This creator business is operated digitally and does not maintain a public business address.  
-All communication takes place securely through the email address provided above.</p>
-<p>If required by law enforcement or platform verification teams, full legal identification details can be provided upon official request.</p>
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
 
-<h2>Platform Responsibility</h2>
-<p>This website serves as the official creator page for the TikTok account 
-<strong>@mythosmondays</strong> and associated platforms (YouTube, Etsy, Ko-fi).</p>
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-<h2>Liability for Content</h2>
-<p>All content on this website is created with care. However, Mythos Mondays assumes no liability 
-for completeness, accuracy, or timeliness of external information.</p>
+    /* HEADER */
 
-<h2>External Links</h2>
-<p>This website contains links to external third-party websites. Mythos Mondays has no control over the content of these websites.  
-Responsibility lies solely with the respective provider.</p>
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(to bottom, rgba(5,6,11,0.96), rgba(5,6,11,0.8));
+      border-bottom: 1px solid var(--border);
+    }
 
-<p>© Mythos Mondays – Official creator page</p>
+    .nav-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.7rem 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .avatar-wrap {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      overflow: hidden;
+      border: 2px solid var(--accent);
+      box-shadow: 0 0 0 3px rgba(255,75,139,0.25);
+      background: radial-gradient(circle at 30% 0, #ffd48f, #283046);
+    }
+
+    .avatar {
+      width: 100%;
+      height: 100%;
+      background-image: url("IMG_3108.jpeg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .brand-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 0.8rem;
+      font-size: 0.85rem;
+    }
+
+    nav a {
+      padding: 0.25rem 0.8rem;
+      border-radius: 999px;
+      color: var(--text-muted);
+      border: 1px solid transparent;
+    }
+
+    nav a:hover {
+      color: var(--text-main);
+      border-color: var(--border);
+      background: rgba(255,255,255,0.02);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .lang-switch {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(8,10,20,0.85);
+      border: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.78rem;
+    }
+
+    .lang-switch span {
+      opacity: 0.7;
+      cursor: pointer;
+      padding: 0.15rem 0.35rem;
+      border-radius: 999px;
+    }
+
+    .lang-switch span.active {
+      opacity: 1;
+      font-weight: 600;
+      background: rgba(255,255,255,0.1);
+    }
+
+    .nav-cta {
+      padding: 0.4rem 1.1rem;
+      border-radius: 999px;
+      border: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #05060b;
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    main { flex: 1; }
+
+    section {
+      padding: 3rem 1.2rem;
+    }
+
+    .inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .label {
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      margin-bottom: 0.5rem;
+    }
+
+    .title {
+      font-size: clamp(1.9rem, 3vw, 2.3rem);
+      font-weight: 800;
+      margin-bottom: 0.6rem;
+    }
+
+    .desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 720px;
+      margin-bottom: 1.6rem;
+    }
+
+    .legal-card {
+      background: var(--bg-soft);
+      border-radius: 22px;
+      border: 1px solid var(--border);
+      padding: 1.8rem 1.5rem 2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .legal-section + .legal-section {
+      margin-top: 1.4rem;
+      padding-top: 1.4rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .legal-section h2 {
+      font-size: 1.05rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .legal-section p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .legal-section ul {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      padding-left: 1.2rem;
+      margin: 0.2rem 0 0.4rem;
+    }
+
+    .legal-section li {
+      margin-bottom: 0.15rem;
+    }
+
+    .back-home {
+      margin-top: 1.6rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.88rem;
+      color: var(--accent2);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.2rem 1.2rem 2rem;
+      background: #05060b;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.8rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    @media (max-width: 880px) {
+      nav ul { display: none; }
+      header { position: static; }
+    }
+
+    @media (max-width: 600px) {
+      section { padding: 2.4rem 1.1rem; }
+      .nav-inner { padding-inline: 0.9rem; }
+      .legal-card { padding: 1.4rem 1.2rem 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header>
+    <div class="nav-inner">
+      <div class="nav-left">
+        <a href="/" class="avatar-wrap" aria-label="Back to home">
+          <div class="avatar"></div>
+        </a>
+        <div class="brand-text">
+          <a href="/" class="brand-name" data-i18n="brand_name">Mythos Mondays</a>
+          <span class="brand-sub" data-i18n="brand_tagline">Brainrot · AI Characters</span>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="/#videos" data-i18n="nav_videos">Videos</a></li>
+          <li><a href="/#free" data-i18n="nav_free">Free wallpapers</a></li>
+          <li><a href="/#shop" data-i18n="nav_shop">Shop</a></li>
+          <li><a href="/#contact" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-right">
+        <div class="lang-switch" aria-label="Language switch">
+          <span data-lang-btn="en" class="active">EN</span>
+          <span data-lang-btn="de">DE</span>
+          <span data-lang-btn="es">ES</span>
+          <span data-lang-btn="it">IT</span>
+          <span data-lang-btn="zh">中文</span>
+          <span data-lang-btn="ja">日本語</span>
+        </div>
+        <a href="/#contact" class="nav-cta" data-i18n="nav_cta">✨ Work with me</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="inner">
+        <div class="label" data-i18n="imprint_label">Legal</div>
+        <h1 class="title" data-i18n="imprint_title">Imprint & Legal Notice</h1>
+        <p class="desc" data-i18n="imprint_intro">
+          This page provides basic legal information and contact details for the Mythos Mondays
+          creator brand and this official website.
+        </p>
+
+        <div class="legal-card">
+          <div class="legal-section">
+            <h2 data-i18n="imprint_1_heading">1. Service provider</h2>
+            <p data-i18n="imprint_1_text">
+              The website mythosmondays.github.io and the brand “Mythos Mondays” are operated as a
+              digital creator project by an individual content creator. For all legal and business
+              enquiries, please use the email address below.
+            </p>
+            <p data-i18n="imprint_1_text2">
+              Responsible for content (within the meaning of general media and platform guidelines):
+              Mythos Mondays – Digital Creator
+              <br />
+              Email: mythos.mondays.contact@gmail.com
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2 data-i18n="imprint_2_heading">2. Purpose of this website</h2>
+            <p data-i18n="imprint_2_text">
+              This website is the official creator hub for the TikTok account @mythosmondays. It
+              showcases AI-generated characters and videos, offers free wallpapers and links to
+              external shops for digital products. The site does not provide journalistic news,
+              financial advice or legally binding information.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2 data-i18n="imprint_3_heading">3. Contact options</h2>
+            <p data-i18n="imprint_3_text">
+              Brands, agencies and private customers can reach Mythos Mondays either via the contact
+              form on the main page or directly by email at
+              mythos.mondays.contact@gmail.com. All messages are handled confidentially and only for
+              the purpose of responding to your enquiry.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2 data-i18n="imprint_4_heading">4. Liability for content</h2>
+            <p data-i18n="imprint_4_text">
+              All content on this website is created and selected with care. However, no guarantee is
+              given for completeness, accuracy or up-to-date status. Mythos Mondays reserves the
+              right to change, update or remove content at any time. If you notice any legal or
+              copyright issues, please send an email so that the matter can be reviewed and, if
+              necessary, corrected or removed.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2 data-i18n="imprint_5_heading">5. Links to external platforms</h2>
+            <p data-i18n="imprint_5_text">
+              This website contains links to external platforms (such as TikTok, YouTube, Etsy and
+              Ko-fi). Despite careful selection, Mythos Mondays has no influence over the content or
+              availability of those third-party sites and assumes no liability for them. The terms of
+              use and privacy policies of the respective platforms apply.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2 data-i18n="imprint_6_heading">6. Copyright and usage rights</h2>
+            <p data-i18n="imprint_6_text">
+              All videos, images, characters, wallpapers, texts and designs on this website are
+              protected by copyright and remain the property of Mythos Mondays, unless explicitly
+              stated otherwise. Any reproduction, editing, distribution or other use outside personal
+             , non-commercial purposes requires prior written permission.
+            </p>
+          </div>
+        </div>
+
+        <a href="/" class="back-home" data-i18n="imprint_back">
+          ← Back to main page
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© <span id="year"></span> Mythos Mondays · Official creator page.</div>
+      <div class="footer-links">
+        <a href="imprint.html">Imprint</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const translations = {
+      en: {
+        brand_name: "Mythos Mondays",
+        brand_tagline: "Brainrot · AI Characters",
+        nav_videos: "Videos",
+        nav_free: "Free wallpapers",
+        nav_shop: "Shop",
+        nav_contact: "Contact",
+        nav_cta: "✨ Work with me",
+
+        imprint_label: "Legal",
+        imprint_title: "Imprint & Legal Notice",
+        imprint_intro: "This page provides basic legal information and contact details for the Mythos Mondays creator brand and this official website.",
+
+        imprint_1_heading: "1. Service provider",
+        imprint_1_text: "The website mythosmondays.github.io and the brand “Mythos Mondays” are operated as a digital creator project by an individual content creator. For all legal and business enquiries, please use the email address below.",
+        imprint_1_text2: "Responsible for content (within the meaning of general media and platform guidelines): Mythos Mondays – Digital Creator\nEmail: mythos.mondays.contact@gmail.com",
+
+        imprint_2_heading: "2. Purpose of this website",
+        imprint_2_text: "This website is the official creator hub for the TikTok account @mythosmondays. It showcases AI-generated characters and videos, offers free wallpapers and links to external shops for digital products. The site does not provide journalistic news, financial advice or legally binding information.",
+
+        imprint_3_heading: "3. Contact options",
+        imprint_3_text: "Brands, agencies and private customers can reach Mythos Mondays either via the contact form on the main page or directly by email at mythos.mondays.contact@gmail.com. All messages are handled confidentially and only for the purpose of responding to your enquiry.",
+
+        imprint_4_heading: "4. Liability for content",
+        imprint_4_text: "All content on this website is created and selected with care. However, no guarantee is given for completeness, accuracy or up-to-date status. Mythos Mondays reserves the right to change, update or remove content at any time. If you notice any legal or copyright issues, please send an email so that the matter can be reviewed and, if necessary, corrected or removed.",
+
+        imprint_5_heading: "5. Links to external platforms",
+        imprint_5_text: "This website contains links to external platforms (such as TikTok, YouTube, Etsy and Ko-fi). Despite careful selection, Mythos Mondays has no influence over the content or availability of those third-party sites and assumes no liability for them. The terms of use and privacy policies of the respective platforms apply.",
+
+        imprint_6_heading: "6. Copyright and usage rights",
+        imprint_6_text: "All videos, images, characters, wallpapers, texts and designs on this website are protected by copyright and remain the property of Mythos Mondays, unless explicitly stated otherwise. Any reproduction, editing, distribution or other use outside personal, non-commercial purposes requires prior written permission.",
+
+        imprint_back: "← Back to main page"
+      },
+
+      de: {
+        brand_name: "Mythos Mondays",
+        brand_tagline: "Brainrot · KI-Charaktere",
+        nav_videos: "Videos",
+        nav_free: "Free Wallpapers",
+        nav_shop: "Shop",
+        nav_contact: "Kontakt",
+        nav_cta: "✨ Mit mir arbeiten",
+
+        imprint_label: "Rechtliches",
+        imprint_title: "Impressum & rechtliche Hinweise",
+        imprint_intro: "Auf dieser Seite findest du grundlegende rechtliche Informationen und Kontaktdaten zur Creator-Marke Mythos Mondays und dieser offiziellen Website.",
+
+        imprint_1_heading: "1. Diensteanbieter",
+        imprint_1_text: "Die Website mythosmondays.github.io und die Marke „Mythos Mondays“ werden als digitales Creator-Projekt von einer einzelnen natürlichen Person betrieben. Für alle rechtlichen und geschäftlichen Anfragen nutze bitte die unten angegebene E-Mail-Adresse.",
+        imprint_1_text2: "Verantwortlich für die Inhalte (im Sinne allgemeiner Medien- und Plattformrichtlinien): Mythos Mondays – Digital Creator\nE-Mail: mythos.mondays.contact@gmail.com",
+
+        imprint_2_heading: "2. Zweck dieser Website",
+        imprint_2_text: "Diese Website dient als offizieller Creator-Hub für den TikTok-Account @mythosmondays. Sie zeigt KI-generierte Charaktere und Videos, bietet kostenlose Wallpapers und verweist auf externe Shops für digitale Produkte. Die Seite stellt keine journalistischen Nachrichten, Finanzberatung oder rechtsverbindlichen Informationen bereit.",
+
+        imprint_3_heading: "3. Kontaktmöglichkeiten",
+        imprint_3_text: "Marken, Agenturen und Privatkund:innen können Mythos Mondays über das Kontaktformular auf der Startseite oder direkt per E-Mail an mythos.mondays.contact@gmail.com erreichen. Alle Nachrichten werden vertraulich behandelt und ausschließlich zur Bearbeitung deiner Anfrage verwendet.",
+
+        imprint_4_heading: "4. Haftung für Inhalte",
+        imprint_4_text: "Alle Inhalte auf dieser Website werden mit Sorgfalt erstellt und ausgewählt. Dennoch wird keine Gewähr für Vollständigkeit, Richtigkeit oder Aktualität übernommen. Mythos Mondays behält sich vor, Inhalte jederzeit zu ändern, zu aktualisieren oder zu entfernen. Solltest du auf rechtliche oder urheberrechtliche Probleme aufmerksam werden, sende bitte eine E-Mail, damit der Sachverhalt geprüft und gegebenenfalls korrigiert oder entfernt werden kann.",
+
+        imprint_5_heading: "5. Links zu externen Plattformen",
+        imprint_5_text: "Diese Website enthält Links zu externen Plattformen (z. B. TikTok, YouTube, Etsy oder Ko-fi). Trotz sorgfältiger Auswahl besteht kein Einfluss auf deren Inhalte oder Verfügbarkeit; eine Haftung hierfür wird nicht übernommen. Es gelten jeweils die Nutzungsbedingungen und Datenschutzrichtlinien der entsprechenden Plattformen.",
+
+        imprint_6_heading: "6. Urheberrecht und Nutzungsrechte",
+        imprint_6_text: "Alle Videos, Bilder, Charaktere, Wallpapers, Texte und Designs auf dieser Website sind urheberrechtlich geschützt und – sofern nicht anders angegeben – Eigentum von Mythos Mondays. Jede Vervielfältigung, Bearbeitung, Verbreitung oder sonstige Nutzung außerhalb des rein privaten, nicht-kommerziellen Gebrauchs bedarf der vorherigen schriftlichen Zustimmung.",
+
+        imprint_back: "← Zurück zur Hauptseite"
+      },
+
+      es: {
+        brand_name: "Mythos Mondays",
+        brand_tagline: "Brainrot · Personajes IA",
+        nav_videos: "Videos",
+        nav_free: "Fondos gratis",
+        nav_shop: "Tienda",
+        nav_contact: "Contacto",
+        nav_cta: "✨ Trabaja conmigo",
+
+        imprint_label: "Legal",
+        imprint_title: "Aviso legal",
+        imprint_intro: "En esta página encontrarás información legal básica y los datos de contacto de la marca creativa Mythos Mondays y de este sitio oficial.",
+
+        imprint_1_heading: "1. Prestador del servicio",
+        imprint_1_text: "El sitio web mythosmondays.github.io y la marca «Mythos Mondays» se gestionan como un proyecto creativo digital por una persona física. Para cualquier consulta legal o comercial, utiliza la dirección de correo electrónico indicada más abajo.",
+        imprint_1_text2: "Responsable del contenido (según las directrices generales de medios y plataformas): Mythos Mondays – Digital Creator\nCorreo electrónico: mythos.mondays.contact@gmail.com",
+
+        imprint_2_heading: "2. Finalidad del sitio web",
+        imprint_2_text: "Este sitio es el hub oficial del creador para la cuenta de TikTok @mythosmondays. Muestra personajes y vídeos generados con IA, ofrece fondos de pantalla gratuitos y enlaza a tiendas externas con productos digitales. El sitio no proporciona noticias periodísticas, asesoramiento financiero ni información jurídicamente vinculante.",
+
+        imprint_3_heading: "3. Formas de contacto",
+        imprint_3_text: "Marcas, agencias y clientes particulares pueden contactar con Mythos Mondays a través del formulario de contacto de la página principal o directamente por correo electrónico a mythos.mondays.contact@gmail.com. Todos los mensajes se tratan de forma confidencial y únicamente para responder a tu consulta.",
+
+        imprint_4_heading: "4. Responsabilidad sobre los contenidos",
+        imprint_4_text: "Los contenidos de este sitio se crean y seleccionan con cuidado, pero no se garantiza su exhaustividad, precisión ni actualización permanente. Mythos Mondays se reserva el derecho de modificar, actualizar o eliminar contenidos en cualquier momento. Si detectas un problema legal o de derechos de autor, envía un correo electrónico para que podamos revisarlo y, si procede, corregirlo o eliminarlo.",
+
+        imprint_5_heading: "5. Enlaces a plataformas externas",
+        imprint_5_text: "Este sitio puede contener enlaces a plataformas externas (como TikTok, YouTube, Etsy o Ko-fi). A pesar de la selección cuidadosa, Mythos Mondays no tiene control sobre dichos sitios y no asume responsabilidad por su contenido ni por su disponibilidad. Se aplican las condiciones de uso y políticas de privacidad de cada plataforma.",
+
+        imprint_6_heading: "6. Derechos de autor y uso del contenido",
+        imprint_6_text: "Todos los vídeos, imágenes, personajes, fondos de pantalla, textos y diseños de este sitio están protegidos por derechos de autor y siguen siendo propiedad de Mythos Mondays, salvo indicación contraria. Cualquier reproducción, edición, difusión o uso fuera del ámbito personal y no comercial requiere autorización previa por escrito.",
+
+        imprint_back: "← Volver a la página principal"
+      },
+
+      it: {
+        brand_name: "Mythos Mondays",
+        brand_tagline: "Brainrot · Personaggi IA",
+        nav_videos: "Video",
+        nav_free: "Sfondi gratis",
+        nav_shop: "Shop",
+        nav_contact: "Contatto",
+        nav_cta: "✨ Lavora con me",
+
+        imprint_label: "Legale",
+        imprint_title: "Imprint & note legali",
+        imprint_intro: "Questa pagina contiene le principali informazioni legali e i dati di contatto del brand creativo Mythos Mondays e di questo sito ufficiale.",
+
+        imprint_1_heading: "1. Fornitore del servizio",
+        imprint_1_text: "Il sito mythosmondays.github.io e il brand «Mythos Mondays» sono gestiti come progetto creativo digitale da una singola persona fisica. Per qualsiasi richiesta legale o commerciale utilizza l’indirizzo email indicato di seguito.",
+        imprint_1_text2: "Responsabile dei contenuti (ai sensi delle linee guida generali per media e piattaforme): Mythos Mondays – Digital Creator\nEmail: mythos.mondays.contact@gmail.com",
+
+        imprint_2_heading: "2. Finalità del sito",
+        imprint_2_text: "Questo sito è l’hub ufficiale del creator per l’account TikTok @mythosmondays. Presenta personaggi e video generati con IA, offre sfondi gratuiti e rimanda a shop esterni per prodotti digitali. Il sito non fornisce notizie giornalistiche, consulenza finanziaria o informazioni giuridicamente vincolanti.",
+
+        imprint_3_heading: "3. Modalità di contatto",
+        imprint_3_text: "Brand, agenzie e clienti privati possono contattare Mythos Mondays tramite il form presente nella home page oppure scrivendo a mythos.mondays.contact@gmail.com. Tutti i messaggi vengono trattati in modo riservato e utilizzati esclusivamente per rispondere alla tua richiesta.",
+
+        imprint_4_heading: "4. Responsabilità per i contenuti",
+        imprint_4_text: "I contenuti di questo sito sono creati e selezionati con cura, tuttavia non viene fornita alcuna garanzia di completezza, accuratezza o costante aggiornamento. Mythos Mondays si riserva il diritto di modificare, aggiornare o rimuovere contenuti in qualsiasi momento. Se noti problemi legali o di copyright, invia un’email affinché la situazione possa essere verificata ed eventualmente corretta o rimossa.",
+
+        imprint_5_heading: "5. Link a piattaforme esterne",
+        imprint_5_text: "Il sito può contenere link a piattaforme esterne (come TikTok, YouTube, Etsy o Ko-fi). Nonostante un’accurata selezione, Mythos Mondays non ha alcun controllo su tali siti e non si assume responsabilità per i loro contenuti o per la loro disponibilità. Si applicano i termini di utilizzo e le privacy policy delle rispettive piattaforme.",
+
+        imprint_6_heading: "6. Copyright e diritti di utilizzo",
+        imprint_6_text: "Tutti i video, le immagini, i personaggi, gli sfondi, i testi e i design presenti su questo sito sono protetti da copyright e – salvo diversa indicazione – rimangono di proprietà di Mythos Mondays. Qualsiasi riproduzione, modifica, distribuzione o altro utilizzo al di fuori dell’ambito strettamente personale e non commerciale richiede il previo consenso scritto.",
+
+        imprint_back: "← Torna alla pagina principale"
+      },
+
+      zh: {
+        brand_name: "Mythos Mondays",
+        brand_tagline: "Brainrot · AI 角色",
+        nav_videos: "视频",
+        nav_free: "免费壁纸",
+        nav_shop: "商店",
+        nav_contact: "联系",
+        nav_cta: "✨ 合作联系我",
+
+        imprint_label: "法律",
+        imprint_title: "法律声明",
+        imprint_intro: "本页提供关于 Mythos Mondays 创作者品牌及其官方网站的基本法律信息和联系方式。",
+
+        imprint_1_heading: "1. 服务提供者",
+        imprint_1_text: "网站 mythosmondays.github.io 以及“Mythos Mondays”品牌由一名个人创作者以数字创作项目的形式运营。如有法律或商务相关问题，请使用下方电子邮件地址联系。",
+        imprint_1_text2: "内容负责人（依据通用媒体与平台指引）：Mythos Mondays – Digital Creator\n电子邮箱：mythos.mondays.contact@gmail.com",
+
+        imprint_2_heading: "2. 本网站的目的",
+        imprint_2_text: "本网站是 TikTok 账号 @mythosmondays 的官方创作者主页，用于展示 AI 生成的角色和视频，提供免费壁纸，并链接至外部商店销售数字产品。本站不提供新闻报道、金融投资建议或具有法律约束力的信息。",
+
+        imprint_3_heading: "3. 联系方式",
+        imprint_3_text: "品牌方、代理机构及个人客户可以通过主页上的联系表单，或直接发送邮件至 mythos.mondays.contact@gmail.com 与 Mythos Mondays 联系。所有消息仅用于答复你的询问，并会被保密处理。",
+
+        imprint_4_heading: "4. 内容责任",
+        imprint_4_text: "本站内容在创作和选择时都经过认真处理，但不对其完整性、准确性以及实时性作出保证。Mythos Mondays 保留随时修改、更新或删除内容的权利。如你发现任何法律或版权问题，请发送邮件说明，以便我们进行审查并在必要时纠正或删除相关内容。",
+
+        imprint_5_heading: "5. 指向外部平台的链接",
+        imprint_5_text: "本网站包含指向外部平台的链接（如 TikTok、YouTube、Etsy、Ko-fi 等）。尽管这些链接经过谨慎选择，但 Mythos Mondays 无法控制这些第三方网站，对其内容或可用性不承担责任。使用时请遵守各平台各自的使用条款和隐私政策。",
+
+        imprint_6_heading: "6. 版权与使用权",
+        imprint_6_text: "本网站上的所有视频、图片、角色、壁纸、文字和设计均受版权保护，除非另有说明，均归 Mythos Mondays 所有。除个人、非商业用途外，任何复制、修改、传播或其他形式的使用，都需事先获得书面许可。",
+
+        imprint_back: "← 返回主页"
+      },
+
+      ja: {
+        brand_name: "Mythos Mondays",
+        brand_tagline: "Brainrot · AI キャラクター",
+        nav_videos: "動画",
+        nav_free: "無料壁紙",
+        nav_shop: "ショップ",
+        nav_contact: "お問い合わせ",
+        nav_cta: "✨ コラボ依頼はこちら",
+
+        imprint_label: "リーガル",
+        imprint_title: "インプリント / 法的通知",
+        imprint_intro: "このページでは、クリエイターブランド Mythos Mondays と本公式サイトに関する基本的な法的情報と連絡先を案内します。",
+
+        imprint_1_heading: "1. サービス提供者",
+        imprint_1_text: "本サイト mythosmondays.github.io とブランド「Mythos Mondays」は、個人クリエイターによるデジタルプロジェクトとして運営されています。法的またはビジネスに関するお問い合わせは、下記メールアドレスまでご連絡ください。",
+        imprint_1_text2: "コンテンツ責任者（一般的なメディアおよびプラットフォームガイドラインに基づく）：Mythos Mondays – Digital Creator\nメール：mythos.mondays.contact@gmail.com",
+
+        imprint_2_heading: "2. 本サイトの目的",
+        imprint_2_text: "本サイトは TikTok アカウント @mythosmondays の公式クリエイターハブです。AI で生成されたキャラクターや動画を紹介し、無料壁紙を配布し、デジタル商品の外部ショップへのリンクを提供しています。ニュースサイトや投資アドバイス、法的に拘束力のある情報を提供するものではありません。",
+
+        imprint_3_heading: "3. 連絡方法",
+        imprint_3_text: "ブランド・代理店・個人の方は、トップページのコンタクトフォーム、またはメール（mythos.mondays.contact@gmail.com）から Mythos Mondays に連絡できます。いただいたメッセージはすべて秘密として扱い、ご質問への回答の目的にのみ使用します。",
+
+        imprint_4_heading: "4. コンテンツに関する責任",
+        imprint_4_text: "本サイトのコンテンツは注意深く作成・選定されていますが、その完全性・正確性・最新性について保証するものではありません。Mythos Mondays は、コンテンツを予告なく変更・更新・削除する権利を有します。法的または著作権上の問題と思われる点を見つけた場合は、メールにてご連絡ください。確認のうえ、必要に応じて修正または削除を行います。",
+
+        imprint_5_heading: "5. 外部プラットフォームへのリンク",
+        imprint_5_text: "本サイトには TikTok、YouTube、Etsy、Ko-fi など外部プラットフォームへのリンクが含まれる場合があります。慎重に選択していますが、これら第三者サイトの内容や利用可能性について Mythos Mondays は一切の責任を負いません。各サービスの利用規約およびプライバシーポリシーをご確認ください。",
+
+        imprint_6_heading: "6. 著作権および利用権",
+        imprint_6_text: "本サイトに掲載されているすべての動画・画像・キャラクター・壁紙・テキスト・デザインは著作権で保護されており、特に明記がない限り Mythos Mondays に帰属します。個人的かつ非商業的な利用の範囲を超えて、複製・編集・配布・再利用を行う場合は、事前の書面による許可が必要です。",
+
+        imprint_back: "← メインページに戻る"
+      }
+    };
+
+    function setLanguage(lang) {
+      const dict = translations[lang] || translations.en;
+      document.documentElement.lang = lang === "de" ? "de" : "en";
+
+      document.querySelectorAll("[data-i18n]").forEach(function (el) {
+        const key = el.getAttribute("data-i18n");
+        if (!dict[key]) return;
+        el.textContent = dict[key];
+      });
+
+      document.querySelectorAll("[data-lang-btn]").forEach(function (btn) {
+        btn.classList.toggle("active", btn.getAttribute("data-lang-btn") === lang);
+      });
+    }
+
+    document.querySelectorAll("[data-lang-btn]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        const lang = btn.getAttribute("data-lang-btn");
+        setLanguage(lang);
+      });
+    });
+
+    // Default language
+    setLanguage("en");
+
+    // Year in footer
+    const yearEl = document.getElementById("year");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+  });
+</script>
+
+</body>
+</html>
