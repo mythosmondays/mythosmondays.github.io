@@ -1,51 +1,587 @@
-<h1>Privacy Policy</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Privacy Policy – Mythos Mondays</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Privacy Policy for Mythos Mondays – official creator page for the TikTok account @mythosmondays." />
+  <link rel="canonical" href="https://mythosmondays.github.io/privacy.html" />
 
-<p>This Privacy Policy explains how personal data is collected and processed on the official 
-website of <strong>Mythos Mondays</strong>.</p>
+  <style>
+    :root {
+      --bg: #05060b;
+      --bg-soft: #0c101b;
+      --card: #101523;
+      --accent: #ff4b8b;
+      --accent2: #ffb45a;
+      --accent-soft: rgba(255, 75, 139, 0.12);
+      --text-main: #f9fafb;
+      --text-muted: #a7afc4;
+      --border: rgba(255,255,255,0.12);
+      --radius: 18px;
+      --shadow: 0 18px 50px rgba(0,0,0,0.7);
+      --max-width: 960px;
+    }
 
-<h2>1. Data Controller</h2>
-<p><strong>Mythos Mondays</strong><br>
-Email: <a href="mailto:mythos.mondays.contact@gmail.com">mythos.mondays.contact@gmail.com</a></p>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-<h2>2. Data We Collect</h2>
-<p>We only collect the data you actively provide, including:</p>
-<ul>
-  <li>Name and email address (via contact form)</li>
-  <li>Message content and optional project details</li>
-  <li>Budget information (optional)</li>
-</ul>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      background: radial-gradient(circle at top, #1b2146 0, #05060b 55%);
+      color: var(--text-main);
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
 
-<h2>3. Purpose of Processing</h2>
-<p>Your information is used solely to respond to collaboration requests, business inquiries, 
-and customer communication.</p>
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
 
-<h2>4. Legal Basis (GDPR)</h2>
-<ul>
-  <li><strong>Art. 6(1)(b)</strong> – Contract initiation / pre-contractual communication</li>
-  <li><strong>Art. 6(1)(f)</strong> – Legitimate interest (responding to inquiries)</li>
-</ul>
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-<h2>5. Data Sharing</h2>
-<p>No data is shared with third parties.  
-No data is sold.  
-No tracking cookies or analytics tools are used.</p>
+    /* HEADER */
 
-<h2>6. Data Storage Duration</h2>
-<p>Messages are stored only as long as necessary to process communication and legal retention periods.</p>
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(to bottom, rgba(5,6,11,0.96), rgba(5,6,11,0.8));
+      border-bottom: 1px solid var(--border);
+    }
 
-<h2>7. Your Rights</h2>
-<ul>
-  <li>Right of access</li>
-  <li>Right to rectification</li>
-  <li>Right to erasure</li>
-  <li>Right to restriction of processing</li>
-  <li>Right to object</li>
-</ul>
+    .nav-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.7rem 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
 
-<p>To exercise your rights, simply contact:<br>
-<a href="mailto:mythos.mondays.contact@gmail.com">mythos.mondays.contact@gmail.com</a></p>
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
 
-<h2>8. Contact</h2>
-<p>For all privacy-related questions, please use the contact email above.</p>
+    .avatar-wrap {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      overflow: hidden;
+      border: 2px solid var(--accent);
+      box-shadow: 0 0 0 3px rgba(255,75,139,0.25);
+      background: radial-gradient(circle at 30% 0, #ffd48f, #283046);
+    }
 
-<p>© Mythos Mondays</p>
+    .avatar {
+      width: 100%;
+      height: 100%;
+      background-image: url("IMG_3108.jpeg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .brand-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 0.8rem;
+      font-size: 0.85rem;
+    }
+
+    nav a {
+      padding: 0.25rem 0.8rem;
+      border-radius: 999px;
+      color: var(--text-muted);
+      border: 1px solid transparent;
+    }
+
+    nav a:hover {
+      color: var(--text-main);
+      border-color: var(--border);
+      background: rgba(255,255,255,0.02);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .lang-switch {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(8,10,20,0.85);
+      border: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.78rem;
+    }
+
+    .lang-switch span {
+      opacity: 0.7;
+      cursor: pointer;
+      padding: 0.15rem 0.35rem;
+      border-radius: 999px;
+    }
+
+    .lang-switch span.active {
+      opacity: 1;
+      font-weight: 600;
+      background: rgba(255,255,255,0.1);
+    }
+
+    .nav-cta {
+      padding: 0.4rem 1.1rem;
+      border-radius: 999px;
+      border: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #05060b;
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    main { flex: 1; }
+
+    section {
+      padding: 3rem 1.2rem;
+    }
+
+    .inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .label {
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      margin-bottom: 0.5rem;
+    }
+
+    .title {
+      font-size: clamp(1.9rem, 3vw, 2.3rem);
+      font-weight: 800;
+      margin-bottom: 0.6rem;
+    }
+
+    .desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 720px;
+      margin-bottom: 1.6rem;
+    }
+
+    .legal-card {
+      background: var(--bg-soft);
+      border-radius: 22px;
+      border: 1px solid var(--border);
+      padding: 1.8rem 1.5rem 2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .legal-section + .legal-section {
+      margin-top: 1.4rem;
+      padding-top: 1.4rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .legal-section h2 {
+      font-size: 1.05rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .legal-section p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .legal-section ul {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      padding-left: 1.2rem;
+      margin: 0.2rem 0 0.4rem;
+    }
+
+    .legal-section li {
+      margin-bottom: 0.15rem;
+    }
+
+    .back-home {
+      margin-top: 1.6rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.88rem;
+      color: var(--accent2);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.2rem 1.2rem 2rem;
+      background: #05060b;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.8rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    @media (max-width: 880px) {
+      nav ul { display: none; }
+      header { position: static; }
+    }
+
+    @media (max-width: 600px) {
+      section { padding: 2.4rem 1.1rem; }
+      .nav-inner { padding-inline: 0.9rem; }
+      .legal-card { padding: 1.4rem 1.2rem 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header>
+    <div class="nav-inner">
+      <div class="nav-left">
+        <a href="/" class="avatar-wrap" aria-label="Back to home">
+          <div class="avatar"></div>
+        </a>
+        <div class="brand-text">
+          <a href="/" class="brand-name" data-i18n="brand_name">Mythos Mondays</a>
+          <span class="brand-sub" data-i18n="brand_tagline">Brainrot · AI Characters</span>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="/#videos" data-i18n="nav_videos">Videos</a></li>
+          <li><a href="/#free" data-i18n="nav_free">Free wallpapers</a></li>
+          <li><a href="/#shop" data-i18n="nav_shop">Shop</a></li>
+          <li><a href="/#contact" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-right">
+        <div class="lang-switch" aria-label="Language switch">
+          <span data-lang-btn="en" class="active">EN</span>
+          <span data-lang-btn="de">DE</span>
+          <span data-lang-btn="es">ES</span>
+          <span data-lang-btn="it">IT</span>
+          <span data-lang-btn="zh">中文</span>
+          <span data-lang-btn="ja">日本語</span>
+        </div>
+        <a href="/#contact" class="nav-cta" data-i18n="nav_cta">✨ Work with me</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="inner">
+        <div class="label" data-i18n="privacy_label">Legal</div>
+        <h1 class="title" data-i18n="privacy_title">Privacy Policy</h1>
+        <p class="desc" data-i18n="privacy_intro">
+          This Privacy Policy explains how personal data is collected and processed on the official
+          website of Mythos Mondays.
+        </p>
+
+        <div class="legal-card">
+          <div class="legal-section">
+            <h2 data-i18n="privacy_1_heading">1. Data Controller</h2>
+            <p data-i18n="privacy_1_text">
+              The data controller for this website is:
+              Mythos Mondays – Digital Creator. Contact email:
+              mythos.mondays.contact@gmail.com.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2 data-i18n="privacy_2_heading">2. Data We Collect</h2>
+            <p data-i18n="privacy_2_text">
+              We only collect the data you actively provide, mainly through the contact form:
+            </p>
+            <ul>
+              <li data-i18n="privacy_2_li1">Name and email address</li>
+              <li data-i18n="privacy_2_li2">Message content and project details</li>
+              <li data-i18n="privacy_2_li3">Budget information (optional)</li>
+            </ul>
+          </div>
+
+          <div class="legal-section">
+            <h2 data-i18n="privacy_3_heading">3. Purpose of Processing</h2>
+            <p data-i18n="privacy_3_text">
+              Your information is used solely to respond to collaboration requests, business inquiries,
+              and customer communication. Your data will not be used for unrelated purposes.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2 data-i18n="privacy_4_heading">4. Legal Basis (GDPR)</h2>
+            <p data-i18n="privacy_4_text">
+              The processing of your data is based on the following legal grounds under the
+              EU General Data Protection Regulation (GDPR):
+            </p>
+            <ul>
+              <li data-i18n="privacy_4_li1">
+                Art. 6(1)(b) GDPR – performance of a contract or pre-contractual communication.
+              </li>
+              <li data-i18n="privacy_4_li2">
+                Art. 6(1)(f) GDPR – legitimate interest in responding to inquiries and managing
+                collaborations.
+              </li>
+            </ul>
+          </div>
+
+          <div class="legal-section">
+            <h2 data-i18n="privacy_5_heading">5. Data Sharing</h2>
+            <p data-i18n="privacy_5_text">
+              Your data is not sold and is not shared with third parties. No tracking cookies,
+              marketing trackers or analytics tools are used on this website.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2 data-i18n="privacy_6_heading">6. Storage Period</h2>
+            <p data-i18n="privacy_6_text">
+              Messages and related personal data are stored only as long as necessary to process
+              your request and for any applicable legal retention periods.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2 data-i18n="privacy_7_heading">7. Your Rights</h2>
+            <p data-i18n="privacy_7_text">
+              You have the following rights regarding your personal data:
+            </p>
+            <ul>
+              <li data-i18n="privacy_7_li1">Right of access (information about stored data)</li>
+              <li data-i18n="privacy_7_li2">Right to rectification (correction of inaccurate data)</li>
+              <li data-i18n="privacy_7_li3">Right to erasure (“right to be forgotten”)</li>
+              <li data-i18n="privacy_7_li4">Right to restriction of processing</li>
+              <li data-i18n="privacy_7_li5">Right to object to processing</li>
+            </ul>
+            <p data-i18n="privacy_7_text2">
+              To exercise these rights, simply send an email to:
+              mythos.mondays.contact@gmail.com.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2 data-i18n="privacy_8_heading">8. Contact</h2>
+            <p data-i18n="privacy_8_text">
+              For all privacy-related questions, you can contact Mythos Mondays at any time via
+              email: mythos.mondays.contact@gmail.com.
+            </p>
+          </div>
+        </div>
+
+        <a href="/" class="back-home" data-i18n="privacy_back">
+          ← Back to main page
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© <span id="year"></span> Mythos Mondays · Official creator page.</div>
+      <div class="footer-links">
+        <a href="imprint.html">Imprint</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  // Auto year
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Translations (EN + DE; others fallback to EN)
+  const translations = {
+    en: {
+      brand_name: "Mythos Mondays",
+      brand_tagline: "Brainrot · AI Characters",
+      nav_videos: "Videos",
+      nav_free: "Free wallpapers",
+      nav_shop: "Shop",
+      nav_contact: "Contact",
+      nav_cta: "✨ Work with me",
+
+      privacy_label: "Legal",
+      privacy_title: "Privacy Policy",
+      privacy_intro: "This Privacy Policy explains how personal data is collected and processed on the official website of Mythos Mondays.",
+
+      privacy_1_heading: "1. Data Controller",
+      privacy_1_text: "The data controller for this website is: Mythos Mondays – Digital Creator. Contact email: mythos.mondays.contact@gmail.com.",
+
+      privacy_2_heading: "2. Data We Collect",
+      privacy_2_text: "We only collect the data you actively provide, mainly through the contact form:",
+      privacy_2_li1: "Name and email address",
+      privacy_2_li2: "Message content and project details",
+      privacy_2_li3: "Budget information (optional)",
+
+      privacy_3_heading: "3. Purpose of Processing",
+      privacy_3_text: "Your information is used solely to respond to collaboration requests, business inquiries, and customer communication. Your data will not be used for unrelated purposes.",
+
+      privacy_4_heading: "4. Legal Basis (GDPR)",
+      privacy_4_text: "The processing of your data is based on the following legal grounds under the EU General Data Protection Regulation (GDPR):",
+      privacy_4_li1: "Art. 6(1)(b) GDPR – performance of a contract or pre-contractual communication.",
+      privacy_4_li2: "Art. 6(1)(f) GDPR – legitimate interest in responding to inquiries and managing collaborations.",
+
+      privacy_5_heading: "5. Data Sharing",
+      privacy_5_text: "Your data is not sold and is not shared with third parties. No tracking cookies, marketing trackers or analytics tools are used on this website.",
+
+      privacy_6_heading: "6. Storage Period",
+      privacy_6_text: "Messages and related personal data are stored only as long as necessary to process your request and for any applicable legal retention periods.",
+
+      privacy_7_heading: "7. Your Rights",
+      privacy_7_text: "You have the following rights regarding your personal data:",
+      privacy_7_li1: "Right of access (information about stored data)",
+      privacy_7_li2: "Right to rectification (correction of inaccurate data)",
+      privacy_7_li3: "Right to erasure (“right to be forgotten”)",
+      privacy_7_li4: "Right to restriction of processing",
+      privacy_7_li5: "Right to object to processing",
+      privacy_7_text2: "To exercise these rights, simply send an email to: mythos.mondays.contact@gmail.com.",
+
+      privacy_8_heading: "8. Contact",
+      privacy_8_text: "For all privacy-related questions, you can contact Mythos Mondays at any time via email: mythos.mondays.contact@gmail.com.",
+
+      privacy_back: "← Back to main page"
+    },
+
+    de: {
+      brand_name: "Mythos Mondays",
+      brand_tagline: "Brainrot · KI-Charaktere",
+      nav_videos: "Videos",
+      nav_free: "Free Wallpapers",
+      nav_shop: "Shop",
+      nav_contact: "Kontakt",
+      nav_cta: "✨ Mit mir arbeiten",
+
+      privacy_label: "Rechtliches",
+      privacy_title: "Datenschutzerklärung",
+      privacy_intro: "Diese Datenschutzerklärung erklärt, wie personenbezogene Daten auf der offiziellen Website von Mythos Mondays erhoben und verarbeitet werden.",
+
+      privacy_1_heading: "1. Verantwortliche Stelle",
+      privacy_1_text: "Verantwortlich für die Datenverarbeitung auf dieser Website ist: Mythos Mondays – Digital Creator. Kontakt-E-Mail: mythos.mondays.contact@gmail.com.",
+
+      privacy_2_heading: "2. Welche Daten werden erhoben?",
+      privacy_2_text: "Wir erheben ausschließlich Daten, die du aktiv bereitstellst – hauptsächlich über das Kontaktformular:",
+      privacy_2_li1: "Name und E-Mail-Adresse",
+      privacy_2_li2: "Nachrichtentext und Projektbeschreibung",
+      privacy_2_li3: "Budgetangaben (optional)",
+
+      privacy_3_heading: "3. Zweck der Verarbeitung",
+      privacy_3_text: "Deine Daten werden ausschließlich verwendet, um auf Kooperationsanfragen, Business-Anfragen und sonstige Kommunikation zu antworten. Eine Nutzung zu anderen Zwecken erfolgt nicht.",
+
+      privacy_4_heading: "4. Rechtsgrundlagen (DSGVO)",
+      privacy_4_text: "Die Verarbeitung deiner Daten erfolgt auf folgenden Rechtsgrundlagen der EU-Datenschutz-Grundverordnung (DSGVO):",
+      privacy_4_li1: "Art. 6 Abs. 1 lit. b DSGVO – Vertragserfüllung bzw. Anbahnung eines Vertrages.",
+      privacy_4_li2: "Art. 6 Abs. 1 lit. f DSGVO – berechtigtes Interesse an der Beantwortung von Anfragen und der Abwicklung von Kooperationen.",
+
+      privacy_5_heading: "5. Weitergabe von Daten",
+      privacy_5_text: "Deine Daten werden nicht verkauft und nicht an Dritte weitergegeben. Auf dieser Website werden keine Tracking-Cookies, Marketing-Tracker oder Analysetools eingesetzt.",
+
+      privacy_6_heading: "6. Speicherdauer",
+      privacy_6_text: "Nachrichten und zugehörige personenbezogene Daten werden nur so lange gespeichert, wie dies zur Bearbeitung deiner Anfrage und zur Einhaltung gesetzlicher Aufbewahrungsfristen erforderlich ist.",
+
+      privacy_7_heading: "7. Deine Rechte",
+      privacy_7_text: "Dir stehen im Zusammenhang mit deinen personenbezogenen Daten insbesondere folgende Rechte zu:",
+      privacy_7_li1: "Auskunftsrecht (Information über gespeicherte Daten)",
+      privacy_7_li2: "Recht auf Berichtigung unrichtiger Daten",
+      privacy_7_li3: "Recht auf Löschung („Recht auf Vergessenwerden“)",
+      privacy_7_li4: "Recht auf Einschränkung der Verarbeitung",
+      privacy_7_li5: "Widerspruchsrecht gegen die Verarbeitung",
+      privacy_7_text2: "Zur Ausübung deiner Rechte genügt eine E-Mail an: mythos.mondays.contact@gmail.com.",
+
+      privacy_8_heading: "8. Kontakt",
+      privacy_8_text: "Bei allen Fragen zum Datenschutz kannst du Mythos Mondays jederzeit per E-Mail unter mythos.mondays.contact@gmail.com erreichen.",
+
+      privacy_back: "← Zurück zur Hauptseite"
+    }
+  };
+
+  function setLanguage(lang) {
+    const dict = translations[lang] || translations["en"];
+    document.documentElement.lang = lang === "de" ? "de" : "en";
+
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      if (!dict[key]) return;
+      el.textContent = dict[key];
+    });
+
+    document.querySelectorAll("[data-lang-btn]").forEach(btn => {
+      btn.classList.toggle("active", btn.getAttribute("data-lang-btn") === lang);
+    });
+  }
+
+  document.querySelectorAll("[data-lang-btn]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const lang = btn.getAttribute("data-lang-btn");
+      if (lang === "de") setLanguage("de"); else setLanguage("en");
+    });
+  });
+
+  // default language
+  setLanguage("en");
+</script>
+</body>
+</html>
